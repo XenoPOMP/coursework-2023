@@ -10,4 +10,31 @@ header.appHeader {
   top: 0;
   left: 0;
   padding: globalPadding(1);
+
+  .squareButton {
+    @extend %flexCenter;
+
+    cursor: pointer;
+    aspect-ratio: 1;
+    height: 100%;
+    background: var(--head-button-back);
+    border-radius: 50%;
+
+    transition: background-color .15s ease;
+
+    svg {
+      width: 50%;
+
+      &:hover, &:active {
+        rect {
+          fill: var(--head-icon-color);
+        }
+      }
+
+      rect {
+        fill: var(--head-icon-color-inactive);
+        transition: fill .15s ease;
+      }
+    }
+  }
 }
