@@ -1,0 +1,13 @@
+@import "src/assets/styles/templates";
+
+header.appHeader {
+  @extend %flexCenter;
+
+  justify-content: space-between;
+  height: var(--header-height);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: globalPadding(1);
+}

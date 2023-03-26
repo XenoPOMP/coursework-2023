@@ -1,0 +1,3 @@
+@function globalPadding($modifier) {
+  @return calc(var(--global-padding) * $modifier);
+}
