@@ -8,6 +8,10 @@
 
   svg {
     height: 100%;
+
+    path {
+      transition: fill .15s ease;
+    }
   }
 
   &.monochrome {
