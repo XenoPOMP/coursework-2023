@@ -3,10 +3,10 @@ import { LayoutProps } from './Layout.props';
 import GlobalProvider from '@providers/GlobalProvider/GlobalProvider';
 import Header from '@ui/Header/Header';
 
-const Layout: FC<LayoutProps> = ({ children }) => {
+const Layout: FC<LayoutProps> = ({ children, header }) => {
   return (
     <GlobalProvider>
-      <Header />
+      <Header {...header} />
 
       <main>{children}</main>
     </GlobalProvider>

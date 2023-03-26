@@ -1,1 +1,3 @@
-export interface HeaderProps {}
+export interface HeaderProps {
+  tabIndex: number;
+}

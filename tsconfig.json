@@ -28,7 +28,10 @@
       "@types/*": ["src/assets/types/*"],
       "@utils/*": ["src/assets/utils/*"],
       "@media/*": ["src/media/*"],
+      "@fonts/*": ["src/media/fonts/*"],
       "@services/*": ["src/services/*"],
+      "@localization/*": ["src/assets/localization/*"],
+      "@locales/*": ["src/assets/localization/locales/*"]
     }
   },
   "include": ["src"],

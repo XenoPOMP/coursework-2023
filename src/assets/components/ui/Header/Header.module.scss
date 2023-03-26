@@ -22,14 +22,14 @@ header.appHeader {
 
     transition: background-color .15s ease;
 
+    &:hover, &:active {
+      svg rect {
+        fill: var(--head-icon-color);
+      }
+    }
+
     svg {
       width: 50%;
-
-      &:hover, &:active {
-        rect {
-          fill: var(--head-icon-color);
-        }
-      }
 
       rect {
         fill: var(--head-icon-color-inactive);

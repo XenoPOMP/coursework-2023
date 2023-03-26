@@ -6,6 +6,9 @@ const MainPage = () => {
   return (
     <Page
       meta={{ pageTitle: 'Main', pageDescription: '', keywords: '' }}
+      header={{
+        tabIndex: 0,
+      }}
     ></Page>
   );
 };

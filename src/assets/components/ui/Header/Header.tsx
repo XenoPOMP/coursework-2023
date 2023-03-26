@@ -3,10 +3,13 @@ import { FC } from 'react';
 import styles from './Header.module.scss';
 import { HeaderProps } from './Header.props';
 import Logotype from '@ui/Logotype/Logotype';
+import Navbar from '@ui/Navbar/Navbar';
 
-const Header: FC<HeaderProps> = ({}) => {
+const Header: FC<HeaderProps> = ({ tabIndex }) => {
   return (
     <header className={cn(styles.appHeader)}>
+      <Navbar tabIndex={tabIndex} />
+
       <Logotype variant={'monochrome'} />
 
       <div className={cn(styles.squareButton)}>
