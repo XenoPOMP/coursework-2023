@@ -15,6 +15,16 @@
   }
 
   &.monochrome {
+    &:hover, &:active {
+      svg path {
+        fill: var(--logo-main);
+      }
+
+      svg path.text {
+        fill: var(--logo-font-color);
+      }
+    }
+
     svg path {
       fill: var(--logo-font-color);
     }
