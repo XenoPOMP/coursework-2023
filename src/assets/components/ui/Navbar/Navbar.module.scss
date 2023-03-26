@@ -11,6 +11,7 @@ nav.headerNav {
   background-color: var(--head-button-back);
   border-radius: calc((var(--header-height) - globalPadding(2)) / 2);
   column-gap: 1em;
+  float: left;
 
   .item {
     @extend %flexCenter;

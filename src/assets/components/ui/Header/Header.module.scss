@@ -1,7 +1,7 @@
 @import "src/assets/styles/templates";
 
 header.appHeader {
-  @extend %flexCenter;
+  // @extend %flexCenter;
 
   justify-content: space-between;
   height: var(--header-height);
@@ -10,6 +10,24 @@ header.appHeader {
   top: 0;
   left: 0;
   padding: globalPadding(1);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  .container {
+    @extend %flexCenter;
+
+    &.left {
+      justify-content: start;
+    }
+
+    &.center {
+      justify-content: center;
+    }
+
+    &.right {
+      justify-content: end;
+    }
+  }
 
   .squareButton {
     @extend %flexCenter;
