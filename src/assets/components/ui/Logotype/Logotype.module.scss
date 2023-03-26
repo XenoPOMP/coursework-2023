@@ -8,8 +8,20 @@
 
   svg {
     height: 100%;
+  }
 
-    path {
+  &.monochrome {
+    svg path {
+      fill: var(--logo-font-color);
+    }
+  }
+
+  &.wRed {
+    svg path {
+      fill: var(--logo-main);
+    }
+
+    svg path.text {
       fill: var(--logo-font-color);
     }
   }

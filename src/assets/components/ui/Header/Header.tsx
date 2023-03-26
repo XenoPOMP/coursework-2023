@@ -7,7 +7,7 @@ import Logotype from '@ui/Logotype/Logotype';
 const Header: FC<HeaderProps> = ({}) => {
   return (
     <header className={cn(styles.appHeader)}>
-      <Logotype />
+      <Logotype variant={'monochrome'} />
     </header>
   );
 };

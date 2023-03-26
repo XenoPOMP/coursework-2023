@@ -1,1 +1,3 @@
-export interface LogotypeProps {}
+export interface LogotypeProps {
+  variant?: 'monochrome' | 'with-red';
+}
