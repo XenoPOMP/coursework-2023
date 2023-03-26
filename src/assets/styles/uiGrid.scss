@@ -1,0 +1,14 @@
+%uiGrid {
+  --cols: 12;
+  --rows: 1;
+  --gap: 20px;
+  --max-width: 1440px;
+
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  grid-column-gap: var(--gap);
+  grid-row-gap: var(--gap);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
