@@ -5,6 +5,7 @@ import useLocalization from '@hooks/useLocalization';
 import Patch from '@ui/Patch/Patch';
 import LandingCard from '@ui/LandingCard/LandingCard';
 import imageZero from '@media/images/landing/image0.png';
+import numericGenerator from '@utils/numericGenerator';
 
 const MainPage = () => {
   const loc = useLocalization();
@@ -24,14 +25,18 @@ const MainPage = () => {
           </div>
         </section>
 
-        <section className={cn(styles.cards)}>
+        <div className={cn(styles.patchPlaceholder)}>
           <Patch />
+        </div>
 
+        <section className={cn(styles.cards)}>
           <div className={cn(styles.content)}>
-            <LandingCard
-              img={imageZero}
-              locales={loc.mainPage.rightPart.cards[0]}
-            />
+            {numericGenerator(3).map(() => (
+              <LandingCard
+                img={imageZero}
+                locales={loc.mainPage.rightPart.cards[0]}
+              />
+            ))}
           </div>
         </section>
       </div>

@@ -9,10 +9,12 @@
   text-transform: lowercase;
   color: var(--patch);
   width: 1em;
-  height: 300vh;
+  height: 100vh;
   pointer-events: none;
   position: absolute;
-  transform: translateY(-100vh);
+  // transform: translateY(-100vh);
+  top: 0;
+  left: 0;
   // top: -100vh;
   // left: 0;
 
