@@ -20,6 +20,7 @@
 
     &.serviceList {
       font-size: 20px;
+      padding: 0 1em 1em 1em;
     }
 
     &.patch {
@@ -29,6 +30,8 @@
 
     &.body {
       font-size: 20px;
+      grid-column-start: 3;
+      padding: 0 2em 1em 2em;
     }
   }
 }

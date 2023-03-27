@@ -23,7 +23,7 @@ const ServicePage: FC<ServicePageProps> = ({}) => {
         <section className={cn(styles.patch)}>
           <Patch />
         </section>
-        <section className={cn(styles.serviceList)}></section>
+        <section className={cn(styles.body)}></section>
       </div>
     </Page>
   );
