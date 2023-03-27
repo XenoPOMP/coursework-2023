@@ -12,8 +12,8 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
   const serviceId = useServiceId();
   const loc = useLocalization();
 
-  const { isFavorite } = useSelector(
-    (state: IStore) => state.serviceList.services[serviceId],
+  const serviceStates = useSelector(
+    (state: IStore) => state.serviceList.services,
   );
 
   const getLocales = (): ServiceLocale | undefined => {
@@ -52,7 +52,7 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
             </div>
 
             <div className={cn(styles.button, styles.star)}>
-              {isFavorite ? (
+              {serviceStates[serviceId].isFavorite ? (
                 <svg
                   className={cn(styles.favorite)}
                   width='36'
