@@ -1,3 +1,9 @@
+export type LandingCardLocale = {
+  imageTitle: string,
+  title: string,
+  content?: string,
+};
+
 type Localization = {
   header: {
     nav: {
@@ -11,6 +17,10 @@ type Localization = {
     leftPart: {
       label: string,
       subLabel: string,
+    },
+
+    rightPart: {
+      cards: Array<LandingCardLocale>,
     },
   },
 };

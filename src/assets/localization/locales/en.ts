@@ -14,6 +14,16 @@ const englishLocalization: Localization = {
       label: 'Do you need that special something?',
       subLabel: 'Please, take a look at our offers!',
     },
+
+    rightPart: {
+      cards: [
+        {
+          imageTitle: 'Very important statement',
+          title: 'Our advanced software lets us...',
+          content: 'No text',
+        },
+      ],
+    },
   },
 };
 

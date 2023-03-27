@@ -16,6 +16,8 @@
   // top: -100vh;
   // left: 0;
 
+  transition: color .15s ease;
+
   .content {
     display: flex;
     flex-direction: row;

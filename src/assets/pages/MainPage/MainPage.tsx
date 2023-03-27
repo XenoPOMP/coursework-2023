@@ -3,6 +3,8 @@ import styles from './MainPage.module.scss';
 import cn from 'classnames';
 import useLocalization from '@hooks/useLocalization';
 import Patch from '@ui/Patch/Patch';
+import LandingCard from '@ui/LandingCard/LandingCard';
+import imageZero from '@media/images/landing/image0.png';
 
 const MainPage = () => {
   const loc = useLocalization();
@@ -25,7 +27,12 @@ const MainPage = () => {
         <section className={cn(styles.cards)}>
           <Patch />
 
-          <div className={cn(styles.content)}></div>
+          <div className={cn(styles.content)}>
+            <LandingCard
+              img={imageZero}
+              locales={loc.mainPage.rightPart.cards[0]}
+            />
+          </div>
         </section>
       </div>
     </Page>
