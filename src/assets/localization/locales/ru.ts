@@ -1,6 +1,22 @@
 import Localization from '@localization/Localization';
 
 const russianLocalization: Localization = {
+  meta: {
+    mainPage: {
+      pageTitle: 'Главная',
+      pageDescription: '',
+      keywords: '',
+    },
+
+    servicePage: {
+      initial: {
+        pageTitle: 'Услуги',
+        pageDescription: '',
+        keywords: '',
+      },
+    },
+  },
+
   header: {
     nav: {
       mainPage: 'Главная',

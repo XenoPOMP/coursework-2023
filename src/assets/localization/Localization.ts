@@ -1,3 +1,5 @@
+import { MetaInfo } from "@components/Page/Page.props";
+
 export type LandingCardLocale = {
   imageTitle: string,
   title: string,
@@ -5,6 +7,13 @@ export type LandingCardLocale = {
 };
 
 type Localization = {
+  meta: {
+    mainPage: MetaInfo,
+    servicePage: {
+      initial: MetaInfo
+    }
+  }
+
   header: {
     nav: {
       mainPage: string,

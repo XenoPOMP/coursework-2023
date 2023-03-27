@@ -12,7 +12,7 @@ const MainPage = () => {
 
   return (
     <Page
-      meta={{ pageTitle: 'Main', pageDescription: '', keywords: '' }}
+      meta={loc.meta.mainPage}
       header={{
         tabIndex: 0,
       }}

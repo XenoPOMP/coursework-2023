@@ -1,6 +1,22 @@
 import Localization from '@localization/Localization';
 
 const englishLocalization: Localization = {
+  meta: {
+    mainPage: {
+      pageTitle: 'Main page',
+      pageDescription: '',
+      keywords: '',
+    },
+
+    servicePage: {
+      initial: {
+        pageTitle: 'Services',
+        pageDescription: '',
+        keywords: '',
+      },
+    },
+  },
+
   header: {
     nav: {
       mainPage: 'Main',

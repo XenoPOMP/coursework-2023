@@ -21,8 +21,11 @@ nav.headerNav {
     font-size: 1em;
     color: var(--head-icon-color-inactive);
     cursor: pointer;
+    border-bottom: 5px solid transparent;
 
-    transition: color .15s ease;
+    transition:
+            color .15s ease,
+            border-bottom-color .15s ease;
 
     &:hover, &.active {
       color: var(--head-icon-color);
