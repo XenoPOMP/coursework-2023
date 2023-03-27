@@ -5,6 +5,7 @@ import { ServicePageProps } from './ServicePage.props';
 import Page from '@components/Page/Page';
 import useLocalization from '@hooks/useLocalization';
 import { useSearchParams } from 'react-router-dom';
+import Patch from '@ui/Patch/Patch';
 
 const ServicePage: FC<ServicePageProps> = ({}) => {
   const loc = useLocalization();
@@ -16,7 +17,15 @@ const ServicePage: FC<ServicePageProps> = ({}) => {
       header={{
         tabIndex: 1,
       }}
-    ></Page>
+    >
+      <div className={cn(styles.page)}>
+        <section className={cn(styles.serviceList)}></section>
+        <section className={cn(styles.patch)}>
+          <Patch />
+        </section>
+        <section className={cn(styles.serviceList)}></section>
+      </div>
+    </Page>
   );
 };
 
