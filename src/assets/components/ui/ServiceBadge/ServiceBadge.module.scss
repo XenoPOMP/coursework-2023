@@ -1,0 +1,48 @@
+@import "src/assets/styles/templates";
+
+.badge {
+  // 1em = 20px
+  font-size: 1em;
+  width: 100%;
+  color: var(--service-font);
+  padding: .25em .5em;
+  border-radius: .35em;
+  // background: var(--head-button-back);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  transition: background .15s ease;
+
+  &:hover, &.active {
+    background: var(--head-button-back);
+  }
+
+  &:first-of-type {
+    margin-top: 1.1em;
+  }
+
+  svg {
+    width: .75em;
+
+    &.icon {
+      path {
+        fill: var(--service-icon);
+      }
+    }
+
+    &.star {
+      width: 1.0525em;
+
+      path {
+        fill: var(--service-star);
+      }
+    }
+  }
+
+  .name {
+    margin: 0 .75em;
+    width: 100%;
+  }
+}

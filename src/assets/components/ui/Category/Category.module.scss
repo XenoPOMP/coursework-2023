@@ -9,8 +9,13 @@
   border-bottom: 1px solid var(--service-border);
 
   h2 {
+    @extend %notSelectable;
     color: var(--service-title);
     font-size: 1em;
     // margin-bottom: 1.1em;
+  }
+
+  .itemGroup {
+    font-size: 1em;
   }
 }
