@@ -44,6 +44,7 @@ const russianLocalization: Localization = {
 
   servicePage: {
     searchPlaceholder: 'Поиск',
+
     categories: [
       {
         title: 'Название категории',
@@ -78,6 +79,12 @@ const russianLocalization: Localization = {
         ],
       },
     ],
+
+    notSelectedLabel: 'Вы не выбрали услугу',
+
+    labels: {
+      orderButton: 'Заказать услугу',
+    },
   },
 };
 

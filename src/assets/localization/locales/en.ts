@@ -78,6 +78,12 @@ const englishLocalization: Localization = {
         ],
       },
     ],
+
+    notSelectedLabel: 'Вы не выбрали услугу',
+
+    labels: {
+      orderButton: 'Order service',
+    },
   },
 };
 

@@ -64,7 +64,11 @@ type Localization = {
     categories: Array<{
       title: string,
       services: ServiceLocale[]
-    }>
+    }>,
+    notSelectedLabel: string,
+    labels: {
+      orderButton: string
+    }
   }
 };
 

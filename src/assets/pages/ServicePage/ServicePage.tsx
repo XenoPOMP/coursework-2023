@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import IStore from '@redux/types/redux-types';
 import { changeServiceSearch } from '@redux/reducers/serviceListSlice';
 import Category from '@ui/Category/Category';
+import ServiceArticle from '@components/ServiceArticle/ServiceArticle';
 
 const ServicePage: FC<ServicePageProps> = ({}) => {
   const loc = useLocalization();
@@ -82,7 +83,9 @@ const ServicePage: FC<ServicePageProps> = ({}) => {
           <Patch />
         </section>
 
-        <section className={cn(styles.body)}></section>
+        <section className={cn(styles.body)}>
+          <ServiceArticle />
+        </section>
       </div>
     </Page>
   );

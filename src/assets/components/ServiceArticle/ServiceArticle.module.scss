@@ -1,0 +1,97 @@
+@import "src/assets/styles/templates";
+
+.noSelectedService {
+  @extend %flexCenter;
+  @extend %mainFont;
+
+  // 1em = 20px
+  width: 100%;
+  height: 100%;
+
+  h2 {
+    font-size: 2em;
+    color: var(--service-font);
+  }
+}
+
+article.service {
+  @extend %mainFont;
+
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 4.4em;
+
+  .scrollable {
+    @extend %scrollable;
+
+    h2 {
+      font-size: 2.5em;
+      color: var(--service-font);
+      margin-bottom: .4em;
+    }
+
+    .desc {
+      font-size: 1em;
+      color: var(--service-title);
+    }
+
+    .cards {
+      font-size: 1em;
+      padding-top: 2.25em;
+    }
+  }
+
+  .bottomControl {
+    padding-top: globalPadding(.5);
+    display: grid;
+    grid-template-columns: 1fr repeat(1, 68px);
+    grid-gap: globalPadding(.5);
+
+    .button {
+      @extend %flexCenter;
+
+      border-radius: globalPadding(.325);
+      background: var(--head-button-back);
+      cursor: pointer;
+
+      &.orderButton {
+        @extend %flexCenter;
+        @extend %semiBold;
+        @extend %notSelectable;
+
+        background: var(--service-foot-button-back);
+        font-size: 1.6em;
+        color: var(--service-foot-button-font);
+      }
+
+      &.star {
+        &:hover {
+          svg.notFavorite path {
+            fill: var(--head-icon-color);
+          }
+        }
+
+        svg {
+          width: 55%;
+
+          path {
+            transition: fill .15s ease;
+          }
+
+          &.favorite {
+            path {
+              fill: var(--service-star);
+            }
+          }
+
+          &.notFavorite {
+            path {
+              fill: var(--head-icon-color-inactive);
+            }
+          }
+        }
+      }
+    }
+  }
+}
