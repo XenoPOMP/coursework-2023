@@ -2,6 +2,7 @@ import Page from '@components/Page/Page';
 import styles from './MainPage.module.scss';
 import cn from 'classnames';
 import useLocalization from '@hooks/useLocalization';
+import Patch from '@ui/Patch/Patch';
 
 const MainPage = () => {
   const loc = useLocalization();
@@ -21,7 +22,9 @@ const MainPage = () => {
           </div>
         </section>
 
-        <section></section>
+        <section>
+          <Patch />
+        </section>
       </div>
     </Page>
   );

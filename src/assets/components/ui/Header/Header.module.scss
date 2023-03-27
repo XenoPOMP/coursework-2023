@@ -12,6 +12,7 @@ header.appHeader {
   padding: globalPadding(1);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  z-index: var(--layer-header);
 
   .container {
     @extend %flexCenter;

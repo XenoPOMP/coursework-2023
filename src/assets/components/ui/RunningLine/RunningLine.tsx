@@ -33,7 +33,12 @@ const RunningLine: FC<RunningLineProps> = (props) => {
       direction={direction}
       loop={loop}
       scrollamount={scrollSpeed}
-      scrolldelay={scrollDelay}
+      scrolldelay={
+        scrollDelay !== undefined && scrollDelay >= 60 ? scrollDelay : undefined
+      }
+      truespeed={
+        scrollDelay !== undefined && scrollDelay < 60 ? scrollDelay : undefined
+      }
       style={style}
       className={cn(
         className,

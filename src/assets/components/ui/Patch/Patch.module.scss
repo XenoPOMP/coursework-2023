@@ -1,0 +1,26 @@
+@import "src/assets/styles/templates";
+
+.patch {
+  @extend %mainFont;
+  @extend %flexCenter;
+  @extend %notSelectable;
+
+  font-size: 20px;
+  text-transform: lowercase;
+  color: var(--patch);
+  width: 1em;
+  height: 300vh;
+  pointer-events: none;
+  position: absolute;
+  transform: translateY(-100vh);
+  // top: -100vh;
+  // left: 0;
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    transform: rotate(-.25turn);
+    width: 100%;
+    column-gap: .5em;
+  }
+}
