@@ -22,8 +22,10 @@ const MainPage = () => {
           </div>
         </section>
 
-        <section>
+        <section className={cn(styles.cards)}>
           <Patch />
+
+          <div className={cn(styles.content)}></div>
         </section>
       </div>
     </Page>

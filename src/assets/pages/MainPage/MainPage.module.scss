@@ -32,5 +32,16 @@
         margin-top: 1.9em;
       }
     }
+
+    &.cards {
+      .content {
+        min-height: 100%;
+        padding:
+            var(--header-height)
+            globalPadding(1)
+            globalPadding(1)
+            calc(globalPadding(1) + 20px);
+      }
+    }
   }
 }
