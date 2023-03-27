@@ -8,6 +8,13 @@ const russianLocalization: Localization = {
       blog: 'Блог',
     },
   },
+
+  mainPage: {
+    leftPart: {
+      label: 'Вам нужно что-то особенное?',
+      subLabel: 'Пожалуйста, посмотрите на наши предложения!',
+    },
+  },
 };
 
 export default russianLocalization;

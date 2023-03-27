@@ -13,7 +13,23 @@
     height: 100%;
 
     &.somethingSpecial {
+      @extend %flexCenter;
+      @extend %mainFont;
 
+      font-size: 20px;
+      padding: globalPadding(1);
+      flex-direction: column;
+      align-items: start;
+
+      .label {
+        @extend %specialFont;
+        font-size: 5em;
+      }
+
+      .subLabel {
+        font-size: 1em;
+        margin-top: 1.9em;
+      }
     }
   }
 }

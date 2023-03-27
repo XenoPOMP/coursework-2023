@@ -8,6 +8,13 @@ const englishLocalization: Localization = {
       blog: 'Blog',
     },
   },
+
+  mainPage: {
+    leftPart: {
+      label: 'Do you need that special something?',
+      subLabel: 'Please, take a look at our offers!',
+    },
+  },
 };
 
 export default englishLocalization;

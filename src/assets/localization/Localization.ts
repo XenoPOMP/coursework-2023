@@ -6,6 +6,13 @@ type Localization = {
       blog: string,
     },
   },
+
+  mainPage: {
+    leftPart: {
+      label: string,
+      subLabel: string,
+    },
+  },
 };
 
 export default Localization;
