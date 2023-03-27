@@ -34,11 +34,19 @@ const ServiceBadge: FC<ServiceBadgeProps> = ({ locales }) => {
     }
   };
 
+  const getDisplayMode = (): string => {
+    if (useServiceId() === index) {
+      return '';
+    }
+
+    return name.match(search) || search === '' ? '' : 'none';
+  };
+
   return (
     <Link
       to={`/services?serviceId=${index}`}
       style={{
-        display: name.match(search) || search === '' ? '' : 'none',
+        display: getDisplayMode(),
       }}
       className={cn(
         styles.badge,
