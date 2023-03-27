@@ -16,8 +16,10 @@ const Patch: FC<PatchProps> = ({}) => {
       scrollDelay={0}
     >
       <div className={cn(styles.content)}>
-        {numericGenerator(70).map(() => (
-          <span className={cn(styles.word)}>smartace </span>
+        {numericGenerator(70).map((key) => (
+          <span className={cn(styles.word)} key={`patch-element-${key}`}>
+            smartace{' '}
+          </span>
         ))}
       </div>
     </RunningLine>
