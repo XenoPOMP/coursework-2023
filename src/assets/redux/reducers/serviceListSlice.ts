@@ -32,9 +32,14 @@ const serviceListSlice = createSlice({
     changeServiceSearch(state, action: ReduxAction<string>) {
       state.search = action.payload;
     },
+
+    toggleStar(state, action: ReduxAction<number>) {
+      state.services[action.payload].isFavorite =
+        !state.services[action.payload].isFavorite;
+    },
   },
 });
 
 export default serviceListSlice.reducer;
-export const { changeServiceSearch } = serviceListSlice.actions;
+export const { changeServiceSearch, toggleStar } = serviceListSlice.actions;
 export const initialServiceList = serviceListSlice.getInitialState();

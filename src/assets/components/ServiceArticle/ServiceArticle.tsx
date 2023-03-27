@@ -5,8 +5,9 @@ import { ServiceArticleProps } from './ServiceArticle.props';
 import useServiceId from '@hooks/useServiceId';
 import useLocalization from '@hooks/useLocalization';
 import { ServiceLocale } from '@localization/Localization';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import IStore from '@redux/types/redux-types';
+import { toggleStar } from '@redux/reducers/serviceListSlice';
 
 const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
   const serviceId = useServiceId();
@@ -15,6 +16,7 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
   const serviceStates = useSelector(
     (state: IStore) => state.serviceList.services,
   );
+  const dispatch = useDispatch();
 
   const getLocales = (): ServiceLocale | undefined => {
     let locales: ServiceLocale | undefined = undefined;
@@ -51,7 +53,12 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
               {loc.servicePage.labels.orderButton}
             </div>
 
-            <div className={cn(styles.button, styles.star)}>
+            <div
+              className={cn(styles.button, styles.star)}
+              onClick={() => {
+                dispatch(toggleStar(serviceId));
+              }}
+            >
               {serviceStates[serviceId].isFavorite ? (
                 <svg
                   className={cn(styles.favorite)}
