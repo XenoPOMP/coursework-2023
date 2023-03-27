@@ -1,12 +1,26 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { ReduxAction } from '@redux/types/redux-types';
+import { ServiceLocale } from '@localization/Localization';
+import useLocalization from '@hooks/useLocalization';
 
 export type ServiceList = {
   search: string,
+  services: Array<{
+    isFavorite: boolean,
+    icon: 'thunderbolt',
+    index: number,
+  }>,
 };
 
 const initialState: ServiceList = {
   search: '',
+  services: [
+    {
+      isFavorite: true,
+      icon: 'thunderbolt',
+      index: 0,
+    },
+  ],
 };
 
 const serviceListSlice = createSlice({

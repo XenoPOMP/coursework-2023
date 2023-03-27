@@ -1,0 +1,16 @@
+@import "src/assets/styles/templates";
+
+.category {
+  @extend %mainFont;
+
+  // 1em = 20px
+  font-size: 1em;
+  padding-bottom: 1.4em;
+  border-bottom: 1px solid var(--service-border);
+
+  h2 {
+    color: var(--service-title);
+    font-size: 1em;
+    // margin-bottom: 1.1em;
+  }
+}

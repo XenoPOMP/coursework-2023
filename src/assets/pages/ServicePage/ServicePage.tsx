@@ -9,6 +9,7 @@ import Patch from '@ui/Patch/Patch';
 import { useDispatch, useSelector } from 'react-redux';
 import IStore from '@redux/types/redux-types';
 import { changeServiceSearch } from '@redux/reducers/serviceListSlice';
+import Category from '@ui/Category/Category';
 
 const ServicePage: FC<ServicePageProps> = ({}) => {
   const loc = useLocalization();
@@ -71,6 +72,10 @@ const ServicePage: FC<ServicePageProps> = ({}) => {
               </div>
             </div>
           </div>
+
+          {loc.servicePage.categories.map((cat, index) => (
+            <Category index={index} key={`category-${index}`} />
+          ))}
         </section>
 
         <section className={cn(styles.patch)}>

@@ -6,6 +6,32 @@ export type LandingCardLocale = {
   content?: string,
 };
 
+export type ServiceReviewLocale = {
+  avatar?: string,
+  name: string,
+  rating: 1 | 2 | 3 | 4 | 5,
+  review: string
+};
+
+export type ServiceLocale = {
+  index: number,
+  name: string,
+  desc?: string,
+  stats: {
+    minPrice: {
+      inRubles: number,
+      inDollars: number
+    },
+
+    executionTime: string,
+
+    hardness: 1 | 2 | 3 | 4,
+
+    rating: number
+  },
+  reviews: ServiceReviewLocale[]
+};
+
 type Localization = {
   meta: {
     mainPage: MetaInfo,
@@ -34,7 +60,11 @@ type Localization = {
   },
 
   servicePage: {
-    searchPlaceholder: string
+    searchPlaceholder: string,
+    categories: Array<{
+      title: string,
+      services: ServiceLocale[]
+    }>
   }
 };
 
