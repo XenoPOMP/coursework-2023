@@ -2,10 +2,6 @@ import cn from 'classnames';
 import { FC } from 'react';
 import styles from './ServicePage.module.scss';
 import { ServicePageProps } from './ServicePage.props';
-import Patch from '@ui/Patch/Patch';
-import numericGenerator from '@utils/numericGenerator';
-import LandingCard from '@ui/LandingCard/LandingCard';
-import imageZero from '@media/images/landing/image0.png';
 import Page from '@components/Page/Page';
 import useLocalization from '@hooks/useLocalization';
 
