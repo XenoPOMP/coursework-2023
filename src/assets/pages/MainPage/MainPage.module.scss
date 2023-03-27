@@ -57,10 +57,10 @@
         min-height: 100%;
         width: 100%;
         padding:
-            var(--header-height)
-            globalPadding(1)
-            globalPadding(1)
-            globalPadding(1);
+            var(--header-height) // Top
+            globalPadding(1) // Right
+            globalPadding(1) // Bottom
+            globalPadding(1); // Left
       }
     }
   }
