@@ -41,6 +41,10 @@ const englishLocalization: Localization = {
       ],
     },
   },
+
+  servicePage: {
+    searchPlaceholder: 'Search',
+  },
 };
 
 export default englishLocalization;

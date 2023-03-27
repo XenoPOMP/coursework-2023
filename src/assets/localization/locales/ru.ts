@@ -41,6 +41,10 @@ const russianLocalization: Localization = {
       ],
     },
   },
+
+  servicePage: {
+    searchPlaceholder: 'Поиск',
+  },
 };
 
 export default russianLocalization;

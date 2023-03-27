@@ -32,6 +32,10 @@ type Localization = {
       cards: Array<LandingCardLocale>,
     },
   },
+
+  servicePage: {
+    searchPlaceholder: string
+  }
 };
 
 export default Localization;

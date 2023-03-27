@@ -21,6 +21,71 @@
     &.serviceList {
       font-size: 20px;
       padding: 0 1em 1em 1em;
+
+      .searchPlaceholder {
+        background: var(--background-primary);
+        padding-bottom: .95em;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 9000;
+
+        .inputLine {
+          @extend %flexCenter;
+
+          height: 100%;
+          font-size: 1em;
+          width: 100%;
+          border-radius: .35em;
+          background: var(--head-button-back);
+          justify-content: space-between;
+          padding-left: .5em;
+
+          svg {
+            @extend %notSelectable;
+            width: .75em;
+
+            path {
+              fill: var(--head-icon-color-inactive);
+            }
+          }
+
+          .closeButton {
+            @extend %flexCenter;
+
+            height: 2.1em;
+            aspect-ratio: 1;
+            cursor: pointer;
+
+            &:active {
+              svg path {
+                fill: var(--head-icon-color);
+              }
+            }
+          }
+
+          input {
+            @extend %mainFont;
+
+            font-size: 1em;
+            margin: .25em 0 .25em  .5em;
+            height: 1.6em;
+            width: 100%;
+            background: none;
+            outline: none;
+            border: none;
+            color: var(--head-icon-color);
+
+            &::placeholder,
+            &::-webkit-input-placeholder,
+            &::-moz-placeholder,
+            &::-ms-input-placeholder {
+              color: var(--head-icon-color-inactive);
+              font-family: inherit;
+            }
+          }
+        }
+      }
     }
 
     &.patch {
