@@ -9,7 +9,13 @@ const MainPage = () => {
       header={{
         tabIndex: 0,
       }}
-    ></Page>
+    >
+      <div className={cn(styles.page)}>
+        <section></section>
+
+        <section></section>
+      </div>
+    </Page>
   );
 };
 
