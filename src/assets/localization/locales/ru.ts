@@ -129,6 +129,11 @@ const russianLocalization: Localization = {
           title: 'Тема интерфейса',
           desc: 'Выберете тему из списка',
         },
+
+        themeVariants: {
+          light: 'Светлая',
+          dark: 'Темная',
+        },
       },
     },
 

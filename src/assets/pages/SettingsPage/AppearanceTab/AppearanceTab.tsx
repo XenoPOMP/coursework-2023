@@ -21,14 +21,14 @@ const AppearanceTab: FC<AppearanceTabProps> = ({ states }) => {
             isTriggered={states.theme.state === Themes.LIGHT}
             onClick={() => states.theme.setState(Themes.LIGHT)}
           >
-            Light
+            {loc.settingsPage.appearance.items.themeVariants.light}
           </SelectButton>
 
           <SelectButton
             isTriggered={states.theme.state === Themes.DARK}
             onClick={() => states.theme.setState(Themes.DARK)}
           >
-            Dark
+            {loc.settingsPage.appearance.items.themeVariants.dark}
           </SelectButton>
         </div>
       </SetItemBlock>

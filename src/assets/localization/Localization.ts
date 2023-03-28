@@ -97,6 +97,10 @@ type Localization = {
       title: SettingsTabTitleLocale;
       items: {
         theme: SettingsTabTitleLocale;
+        themeVariants: {
+          light: string;
+          dark: string;
+        };
       };
     };
 

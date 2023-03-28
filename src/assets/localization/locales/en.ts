@@ -128,6 +128,11 @@ const englishLocalization: Localization = {
           title: 'UI Theme',
           desc: 'Select theme from list',
         },
+
+        themeVariants: {
+          light: 'Light',
+          dark: 'Dark',
+        },
       },
     },
 
