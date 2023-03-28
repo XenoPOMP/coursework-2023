@@ -1,0 +1,26 @@
+@import "src/assets/styles/templates";
+
+.item {
+  @extend %mainFont;
+
+  // 1em = 20px
+  width: 100%;
+  padding: 2em 0;
+  border-top: 1px solid var(--sets-border);
+  display: grid;
+  grid-template-columns: 4.57fr 9.47fr;
+  grid-gap: 1em;
+
+  .title {
+    font-size: 1em; // 1em = 20px
+
+    h3 {
+      color: var(--sets-font-primary);
+    }
+
+    .desc {
+      color: var(--sets-font-secondary);
+      margin-top: .25em;
+    }
+  }
+}
