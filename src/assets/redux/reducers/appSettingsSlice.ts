@@ -6,11 +6,13 @@ export type Language = 'ru' | 'en';
 export type AppSettings = {
   appVersion: string,
   language: Language,
+  cookiePrefix: string,
 };
 
 const initialState: AppSettings = {
   appVersion: '0.01',
   language: 'ru',
+  cookiePrefix: 'smart-ace',
 };
 
 const appSettingsSlice = createSlice({

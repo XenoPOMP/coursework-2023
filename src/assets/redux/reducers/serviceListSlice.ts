@@ -29,6 +29,20 @@ const serviceListSlice = createSlice({
   name: 'serviceList',
   initialState,
   reducers: {
+    // prettier-ignore
+    loadServicesFromLocalStorage(
+      state,
+      action: ReduxAction<
+        Array<{
+          isFavorite: boolean,
+          icon: ServiceIcon,
+          index: number,
+        }>
+      >,
+    ) {
+      state.services = action.payload;
+    },
+
     changeServiceSearch(state, action: ReduxAction<string>) {
       state.search = action.payload;
     },
@@ -41,5 +55,6 @@ const serviceListSlice = createSlice({
 });
 
 export default serviceListSlice.reducer;
-export const { changeServiceSearch, toggleStar } = serviceListSlice.actions;
+export const { changeServiceSearch, toggleStar, loadServicesFromLocalStorage } =
+  serviceListSlice.actions;
 export const initialServiceList = serviceListSlice.getInitialState();

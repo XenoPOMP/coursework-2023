@@ -10,6 +10,7 @@ interface SettingController<T> {
 interface IUseAppSettings {
   appVersion: Omit<SettingController<string>, 'set'>;
   language: SettingController<Language>;
+  cookiePrefix: Omit<SettingController<string>, 'set'>;
 }
 
 const useAppSettings = (): IUseAppSettings => {
@@ -22,6 +23,9 @@ const useAppSettings = (): IUseAppSettings => {
     language: {
       get: () => useSelector((state: IStore) => state.appSettings.language),
       set: (newValue) => dispatch(changeLang(newValue)),
+    },
+    cookiePrefix: {
+      get: () => useSelector((state: IStore) => state.appSettings.cookiePrefix),
     },
   };
 };
