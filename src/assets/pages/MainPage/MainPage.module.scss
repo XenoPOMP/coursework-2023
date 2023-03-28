@@ -25,6 +25,7 @@
       padding: globalPadding(1);
       flex-direction: column;
       align-items: start;
+      color: var(--main-left-header);
 
       .label {
         @extend %specialFont;
