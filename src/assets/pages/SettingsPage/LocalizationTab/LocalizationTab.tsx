@@ -6,9 +6,11 @@ import useLocalization from '@hooks/useLocalization';
 import SetTitleBlock from '@ui/SetTitleBlock/SetTitleBlock';
 import SetItemBlock from '@ui/SetItemBlock/SetItemBlock';
 import SelectButton from '@ui/SelectButton/SelectButton';
+import useAppSettings from '@hooks/useAppSettings';
 
 const LocalizationTab: FC<LocalizationTabProps> = ({ states }) => {
   const loc = useLocalization();
+  const { language } = useAppSettings();
 
   return (
     <>
@@ -21,11 +23,21 @@ const LocalizationTab: FC<LocalizationTabProps> = ({ states }) => {
         <SelectButton
           isTriggered={states.language.state === 'ru'}
           onClick={() => {
-            // states.theme.setState('light');
-            // theme.set('light');
+            states.language.setState('ru');
+            language.set('ru');
           }}
         >
           {loc.settingsPage.localization.items.languageVariants.russian}
+        </SelectButton>
+
+        <SelectButton
+          isTriggered={states.language.state === 'en'}
+          onClick={() => {
+            states.language.setState('en');
+            language.set('en');
+          }}
+        >
+          {loc.settingsPage.localization.items.languageVariants.english}
         </SelectButton>
       </SetItemBlock>
     </>

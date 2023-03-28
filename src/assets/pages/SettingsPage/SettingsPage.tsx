@@ -16,11 +16,11 @@ enum SettingsTabs {
 
 const SettingsPage: FC<SettingsPageProps> = ({}) => {
   const loc = useLocalization();
-  const { theme } = useAppSettings();
+  const { theme, language } = useAppSettings();
 
   const [tab, setTab] = useState<SettingsTabs>(SettingsTabs.APPEARANCE);
   const [getTheme, setTheme] = useState<Theme>(theme.get());
-  const [getLang, setLang] = useState<Language>('ru');
+  const [getLang, setLang] = useState<Language>(language.get());
 
   return (
     <Page
