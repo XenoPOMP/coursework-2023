@@ -84,6 +84,18 @@ const russianLocalization: Localization = {
 
     labels: {
       orderButton: 'Заказать услугу',
+
+      cards: {
+        price: 'Цена',
+        executionTime: 'Время исполнения',
+        hardness: 'Сложность',
+        rating: 'Рейтинг',
+        example: 'Пример работы',
+      },
+
+      cardBodies: {
+        price: 'от XX руб.',
+      },
     },
   },
 };

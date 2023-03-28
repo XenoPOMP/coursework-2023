@@ -79,10 +79,22 @@ const englishLocalization: Localization = {
       },
     ],
 
-    notSelectedLabel: 'Вы не выбрали услугу',
+    notSelectedLabel: 'Select a service',
 
     labels: {
       orderButton: 'Order service',
+
+      cards: {
+        price: 'Price',
+        executionTime: 'Execution time',
+        hardness: 'Difficulty',
+        rating: 'Rating',
+        example: 'Example',
+      },
+
+      cardBodies: {
+        price: 'XXUSD+',
+      },
     },
   },
 };

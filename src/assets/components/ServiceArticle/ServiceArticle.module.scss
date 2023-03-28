@@ -17,6 +17,7 @@
 article.service {
   @extend %mainFont;
 
+  // 1em = 20px
   width: 100%;
   min-height: 100%;
   display: grid;
@@ -24,6 +25,7 @@ article.service {
 
   .scrollable {
     @extend %scrollable;
+    // 1em = 20px
 
     h2 {
       font-size: 2.5em;
@@ -39,6 +41,73 @@ article.service {
     .cards {
       font-size: 1em;
       padding-top: 2.25em;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: globalPadding(.5);
+
+      .card {
+        font-size: 1em;
+        padding: .5em;
+        background: var(--head-button-back);
+        border-radius: 1em;
+        display: grid;
+        grid-row-gap: .5em;
+        grid-template-rows: 12.6fr 2fr;
+        aspect-ratio: 308 / 176;
+
+        .body {
+          @extend %flexCenter;
+          @extend %notSelectable;
+
+          font-size: 1.25em;
+          color: var(--service-font);
+
+          svg.difficulty {
+            path {
+              shape-rendering: geometricPrecision;
+            }
+
+            path.outline {
+              stroke: var(--service-font);
+            }
+
+            path.balk {
+              fill: var(--service-font);
+            }
+
+            path.underSpeed {
+              fill: var(--head-icon-color);
+            }
+
+            path.speed {
+              &.first {
+                fill: var(--service-speed-two);
+              }
+
+              &.second {
+                fill: var(--service-speed-three);
+              }
+
+              &.third {
+                fill: var(--service-speed-four);
+              }
+
+              &.max {
+                fill: var(--service-speed-max);
+              }
+            }
+          }
+        }
+
+        h3.label {
+          @extend %flexCenter;
+          @extend %notSelectable;
+
+          color: var(--service-font);
+          font-size: 1em;
+          font-weight: normal;
+        }
+      }
     }
   }
 

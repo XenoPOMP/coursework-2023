@@ -67,7 +67,17 @@ type Localization = {
     }>,
     notSelectedLabel: string,
     labels: {
-      orderButton: string
+      orderButton: string,
+      cards: {
+        price: string,
+        executionTime: string,
+        hardness: string,
+        rating: string,
+        example: string
+      },
+      cardBodies: {
+        price: string
+      }
     }
   }
 };
