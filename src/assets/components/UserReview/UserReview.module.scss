@@ -1,0 +1,54 @@
+@import "src/assets/styles/templates";
+
+.review {
+  // 1em = 20px
+  display: grid;
+  grid-template-columns: 3.8em 1fr 6.9em;
+  grid-column-gap: globalPadding(.5);
+  border-radius: 1em;
+  background: var(--head-button-back);
+  padding: .5em;
+  grid-column: span 4;
+
+  .container {
+    @extend %mainFont;
+
+    &.avatar, &.rating {
+      @extend %flexCenter;
+      align-items: start;
+    }
+
+    &.avatar {
+      .avatarImage {
+        @extend %flexCenter;
+
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: var(--head-icon-color);
+      }
+    }
+
+    &.content {
+      font-size: 1em;
+      color: var(--service-font);
+
+      h3 {
+        @extend %semiBold;
+        font-size: 1.25em;
+      }
+
+      .text {
+        margin: 1.5em 0;
+        font-size: 1em;
+      }
+    }
+
+    &.rating {
+      .block {
+        @extend %flexCenter;
+        min-height: 3.8em;
+      }
+    }
+  }
+}

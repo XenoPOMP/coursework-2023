@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import IStore from '@redux/types/redux-types';
 import { toggleStar } from '@redux/reducers/serviceListSlice';
 import { motion } from 'framer-motion';
+import UserReview from '@components/UserReview/UserReview';
 
 const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
   const serviceId = useServiceId();
@@ -286,6 +287,10 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
                   {loc.servicePage.labels.cards.rating}
                 </h3>
               </div>
+
+              {getLocales()?.reviews.map((review) => (
+                <UserReview locales={review} />
+              ))}
             </div>
           </div>
 
