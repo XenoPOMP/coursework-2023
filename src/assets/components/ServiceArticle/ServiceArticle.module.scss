@@ -62,6 +62,13 @@ article.service {
           font-size: 1.25em;
           color: var(--service-font);
 
+          svg {
+            path, rect,
+            polygon {
+              shape-rendering: geometricPrecision;
+            }
+          }
+
           svg.difficulty {
             path {
               shape-rendering: geometricPrecision;
@@ -99,6 +106,8 @@ article.service {
           }
 
           svg.star {
+            width: 66%;
+
             g.gray path {
               fill: var(--head-icon-color-inactive);
             }
