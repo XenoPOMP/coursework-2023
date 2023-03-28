@@ -136,6 +136,20 @@ article.service {
     display: grid;
     grid-template-columns: 1fr repeat(1, 68px);
     grid-gap: globalPadding(.5);
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    background: var(--background-primary);
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: globalPadding(.5);
+      background: var(--background-primary);
+      top: 100%;
+      left: 0;
+    }
 
     .button {
       @extend %flexCenter;
