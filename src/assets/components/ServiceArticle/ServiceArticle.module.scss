@@ -97,6 +97,16 @@ article.service {
               }
             }
           }
+
+          svg.star {
+            path.gray {
+              fill: var(----head-icon-color-inactive);
+            }
+
+            path.gold {
+              fill: var(--service-star);
+            }
+          }
         }
 
         h3.label {
