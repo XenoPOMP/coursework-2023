@@ -32,46 +32,6 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
     return locales;
   };
 
-  const getStarClips = (): {
-    first: string,
-    second: string,
-    third: string,
-    max: string,
-  } => {
-    const template =
-      'clip-path: polygon(0 0, {VALUE}% 0, {VALUE}% 100%, 0% 100%)';
-
-    const getRatingPercent = (maximum: number): number => {
-      const rating =
-        getLocales()?.stats.rating !== undefined
-          ? getLocales()?.stats.rating
-          : 0;
-
-      const output = rating / maximum;
-
-      // @ts-ignore
-      return rating < maximum // @ts-ignore
-        ? (maximum / rating) * 100
-        : 100;
-    };
-
-    const firstPercents = getRatingPercent(1);
-    const secondPercents = getRatingPercent(2);
-    const thirdPercents = getRatingPercent(3);
-    const fourthPercents = getRatingPercent(4);
-
-    return {
-      first: template.replace(/{VALUE}/gi, `${firstPercents}`),
-      second: template.replace(/{VALUE}/gi, `${secondPercents}`),
-      third: template.replace(/{VALUE}/gi, `${thirdPercents}`),
-      max: template.replace(/{VALUE}/gi, `${fourthPercents}`),
-    };
-  };
-
-  useEffect(() => {
-    console.log(getStarClips());
-  }, []);
-
   return (
     <>
       {serviceId === -1 ? (
