@@ -31,7 +31,11 @@ const Logotype: FC<LogotypeProps> = (props) => {
   };
 
   return (
-    <Link to={'/'} className={cn(styles.logo, getInlineClasses())}>
+    <Link
+      to={'/'}
+      preventScrollReset={false}
+      className={cn(styles.logo, getInlineClasses())}
+    >
       <svg viewBox='0 0 224 66' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <path
           className={cn(styles.text)}
