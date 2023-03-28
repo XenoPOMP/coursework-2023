@@ -47,9 +47,13 @@
     &.rating {
       .block {
         @extend %flexCenter;
-        
+
         width: 100%;
         min-height: 3.8em;
+
+        svg {
+          width: 18%;
+        }
       }
     }
   }
