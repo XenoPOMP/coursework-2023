@@ -136,6 +136,25 @@ const englishLocalization: Localization = {
       },
     },
 
+    localization: {
+      title: {
+        title: 'Localization',
+        desc: 'Configure language settings',
+      },
+
+      items: {
+        languageTitle: {
+          title: 'Language',
+          desc: 'Select your language from list',
+        },
+
+        languageVariants: {
+          russian: 'Русский',
+          english: 'English',
+        },
+      },
+    },
+
     saveChanges: {
       save: 'Save changes',
       reject: 'Cancel',

@@ -3,7 +3,11 @@ import { FC } from 'react';
 import styles from './SetItemBlock.module.scss';
 import { SetItemBlockProps } from './SetItemBlock.props';
 
-const SetItemBlock: FC<SetItemBlockProps> = ({ children, locales }) => {
+const SetItemBlock: FC<SetItemBlockProps> = ({
+  children,
+  locales,
+  flexWrap,
+}) => {
   const { title, desc } = locales;
 
   return (
@@ -14,7 +18,13 @@ const SetItemBlock: FC<SetItemBlockProps> = ({ children, locales }) => {
         <div className={cn(styles.desc)}>{desc}</div>
       </div>
 
-      <div>{children}</div>
+      <div className={cn(styles.child)}>
+        {flexWrap ? (
+          <div className={cn(styles.flexWrap)}>{children}</div>
+        ) : (
+          children
+        )}
+      </div>
     </div>
   );
 };

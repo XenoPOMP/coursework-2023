@@ -5,8 +5,9 @@ import { SettingsPageProps } from './SettingsPage.props';
 import Page from '@components/Page/Page';
 import useLocalization from '@hooks/useLocalization';
 import AppearanceTab from '@pages/SettingsPage/AppearanceTab/AppearanceTab';
-import { Theme } from '@redux/reducers/appSettingsSlice';
+import { Language, Theme } from '@redux/reducers/appSettingsSlice';
 import useAppSettings from '@hooks/useAppSettings';
+import LocalizationTab from '@pages/SettingsPage/LocalizationTab/LocalizationTab';
 
 enum SettingsTabs {
   APPEARANCE,
@@ -19,6 +20,7 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
 
   const [tab, setTab] = useState<SettingsTabs>(SettingsTabs.APPEARANCE);
   const [getTheme, setTheme] = useState<Theme>(theme.get());
+  const [getLang, setLang] = useState<Language>('ru');
 
   return (
     <Page
@@ -80,6 +82,17 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
                   theme: {
                     state: getTheme,
                     setState: setTheme,
+                  },
+                }}
+              />
+            )}
+
+            {tab === SettingsTabs.LOCALIZATION && (
+              <LocalizationTab
+                states={{
+                  language: {
+                    state: getLang,
+                    setState: setLang,
                   },
                 }}
               />

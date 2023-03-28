@@ -137,6 +137,25 @@ const russianLocalization: Localization = {
       },
     },
 
+    localization: {
+      title: {
+        title: 'Локализация',
+        desc: 'Настройте языковые настройки приложения',
+      },
+
+      items: {
+        languageTitle: {
+          title: 'Язык',
+          desc: 'Выберете ваш язык из списка',
+        },
+
+        languageVariants: {
+          russian: 'Русский',
+          english: 'English',
+        },
+      },
+    },
+
     saveChanges: {
       save: 'Сохранить изменения',
       reject: 'Отменить',

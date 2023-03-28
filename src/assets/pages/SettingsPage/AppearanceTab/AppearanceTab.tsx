@@ -16,28 +16,26 @@ const AppearanceTab: FC<AppearanceTabProps> = ({ states }) => {
     <>
       <SetTitleBlock locales={loc.settingsPage.appearance.title} />
 
-      <SetItemBlock locales={loc.settingsPage.appearance.items.theme}>
-        <div className={cn(styles.tab)}>
-          <SelectButton
-            isTriggered={states.theme.state === 'light'}
-            onClick={() => {
-              states.theme.setState('light');
-              theme.set('light');
-            }}
-          >
-            {loc.settingsPage.appearance.items.themeVariants.light}
-          </SelectButton>
+      <SetItemBlock locales={loc.settingsPage.appearance.items.theme} flexWrap>
+        <SelectButton
+          isTriggered={states.theme.state === 'light'}
+          onClick={() => {
+            states.theme.setState('light');
+            theme.set('light');
+          }}
+        >
+          {loc.settingsPage.appearance.items.themeVariants.light}
+        </SelectButton>
 
-          <SelectButton
-            isTriggered={states.theme.state === 'dark'}
-            onClick={() => {
-              states.theme.setState('dark');
-              theme.set('dark');
-            }}
-          >
-            {loc.settingsPage.appearance.items.themeVariants.dark}
-          </SelectButton>
-        </div>
+        <SelectButton
+          isTriggered={states.theme.state === 'dark'}
+          onClick={() => {
+            states.theme.setState('dark');
+            theme.set('dark');
+          }}
+        >
+          {loc.settingsPage.appearance.items.themeVariants.dark}
+        </SelectButton>
       </SetItemBlock>
     </>
   );

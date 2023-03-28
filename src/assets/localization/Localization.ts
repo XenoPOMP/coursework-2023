@@ -104,6 +104,17 @@ type Localization = {
       };
     };
 
+    localization: {
+      title: SettingsTabTitleLocale;
+      items: {
+        languageTitle: SettingsTabTitleLocale;
+        languageVariants: {
+          russian: string;
+          english: string;
+        };
+      };
+    };
+
     saveChanges: {
       save: string;
       reject: string;
