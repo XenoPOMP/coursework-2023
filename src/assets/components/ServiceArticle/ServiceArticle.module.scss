@@ -132,9 +132,14 @@ article.service {
   }
 
   .bottomControl {
+    $buttonHeight: calc(4.4em - globalPadding(.5));
+
     padding-top: globalPadding(.5);
     display: grid;
-    grid-template-columns: 1fr repeat(1, 68px);
+    grid-template-columns:
+            repeat(1, $buttonHeight)
+            1fr
+            repeat(1, $buttonHeight);
     grid-gap: globalPadding(.5);
     position: sticky;
     bottom: 0;
@@ -192,6 +197,25 @@ article.service {
             path {
               fill: var(--head-icon-color-inactive);
             }
+          }
+        }
+      }
+
+      &.regular {
+        &:hover {
+          svg {
+            path {
+              fill: var(--head-icon-color);
+            }
+          }
+        }
+
+        svg {
+          width: 43%;
+
+          path {
+            fill: var(--head-icon-color-inactive);
+            transition: fill .15s ease;
           }
         }
       }
