@@ -1,4 +1,61 @@
 .themes {
+  &.light {
+    --logo-main: #E20000;
+    --logo-font-color: #303741;
+
+    --background-primary: #F3F3F3;
+    --background-secondary: #F0ECEC;
+    --background-third: #EAE5E5;
+    --head-button-back: #E7E6E6;
+    --head-icon-color: #505050;
+    --head-notify-back: #FF0000;
+    --head-icon-color-inactive: #939393;
+    --patch: #C4C4C4;
+    --main-left-header: #000000;
+    --main-card-content-font: #7B7B7B;
+    --main-card-header: #FFFFFF;
+    --main-card-back: #FFFFFF;
+    --main-link-button: #000000;
+
+    --service-title: #7D7D7D;
+    --service-font: #000000;
+    --service-foot-button-back: #654FEA;
+    --service-speed-two: #3CE02E;
+    --service-speed-three: #FFB800;
+    --service-speed-four: #FF8A00;
+    --service-speed-max: #FF0000;
+    --service-foot-button-font: #FFFFFF;
+    --service-icon: #558BC2;
+    --service-star: #E4CF0A;
+    --service-border: rgba(184, 184, 184, 0.35);
+
+    --ov-backdrop: rgba(0, 0, 0, 0.8);
+    --ov-section: #161616;
+    --ov-font-inactive: #C4C4C4;
+    --ov-font-active: #FFFFFF;
+
+    --blog-font-primary: #000000;
+    --blog-font-secondary: #5F5D5D;
+    --blog-back-primary: #EDEAEA;
+
+    --ord-font-primary: #000000;
+    --ord-font-error: #FF0000;
+    --ord-button-shadow: 0 0 9px rgba(0, 0, 0, 0.25);
+
+    --inp-back: #FFFFFF;
+
+    --popup-back: #000000;
+    --popup-font: #FFFFFF;
+
+    --sets-font-primary: #000000;
+    --sets-font-secondary: #96979B;
+    --sets-border: rgba(150, 151, 155, 0.22);
+    --sets-confirm-back: #155EEE;
+    --sets-reject-back: #FFFFFF;
+    --sets-confirm-font: #FFFFFF;
+    --sets-reject-font: #63676B;
+  }
+
   &.dark {
     --logo-main: #E20000;
     --logo-font-color: #303741;
