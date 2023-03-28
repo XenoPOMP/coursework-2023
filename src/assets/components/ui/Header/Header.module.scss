@@ -27,6 +27,7 @@ header.appHeader {
 
     &.right {
       justify-content: end;
+      column-gap: globalPadding(.5);
     }
   }
 
@@ -42,7 +43,8 @@ header.appHeader {
     transition: background-color .15s ease;
 
     &:hover, &:active {
-      svg rect {
+      svg rect,
+      svg path {
         fill: var(--head-icon-color);
       }
     }
@@ -50,7 +52,7 @@ header.appHeader {
     svg {
       width: 50%;
 
-      rect {
+      rect, path {
         fill: var(--head-icon-color-inactive);
         transition: fill .15s ease;
       }
