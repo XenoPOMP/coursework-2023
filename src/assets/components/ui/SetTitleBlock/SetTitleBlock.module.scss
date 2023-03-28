@@ -1,0 +1,20 @@
+@import "src/assets/styles/templates";
+
+.block {
+  // 1em = 20px
+  @extend %mainFont;
+  @extend %notSelectable;
+
+  h2 {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: var(--sets-font-primary);
+  }
+
+  .desc {
+    font-size: 1em;
+    color: var(--sets-font-secondary);
+    margin-top: .5em;
+    margin-bottom: 1em;
+  }
+}
