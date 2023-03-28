@@ -58,7 +58,9 @@
     font-size: 1em; // 1em = 20px
 
     .content {
-      min-height: 100%;
+      $minHeight: calc(calc(100% - 2.15em) - globalPadding(2));
+
+      min-height: $minHeight;
     }
 
     .saveChanges {
