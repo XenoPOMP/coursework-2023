@@ -42,6 +42,7 @@
   }
 
   .name {
+    @extend %notSelectable;
     margin: 0 .75em;
     width: 100%;
   }
