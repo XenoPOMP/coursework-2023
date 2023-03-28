@@ -32,6 +32,11 @@ export type ServiceLocale = {
   reviews: ServiceReviewLocale[];
 };
 
+export type SettingsTabTitleLocale = {
+  title: string;
+  desc: string;
+};
+
 type Localization = {
   meta: {
     mainPage: MetaInfo;
@@ -86,6 +91,13 @@ type Localization = {
     sidebar: {
       appearance: string;
       localization: string;
+    };
+
+    appearance: {
+      title: SettingsTabTitleLocale;
+      items: {
+        theme: SettingsTabTitleLocale;
+      };
     };
 
     saveChanges: {

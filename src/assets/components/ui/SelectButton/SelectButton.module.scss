@@ -1,0 +1,17 @@
+@import "src/assets/styles/templates";
+
+.button {
+  @extend %notSelectable;
+
+  // 1em = 20px
+  padding: .25em .5em;
+  border-radius: .35em;
+  background: var(--sets-reject-back);
+  cursor: pointer;
+  border: 2px solid var(--sets-border);
+  transition: border-color .15s ease;
+
+  &.active {
+    border-color: var(--sets-confirm-back);
+  }
+}

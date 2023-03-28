@@ -4,16 +4,23 @@ import styles from './SettingsPage.module.scss';
 import { SettingsPageProps } from './SettingsPage.props';
 import Page from '@components/Page/Page';
 import useLocalization from '@hooks/useLocalization';
+import AppearanceTab from '@pages/SettingsPage/AppearanceTab/AppearanceTab';
 
 enum SettingsTabs {
   APPEARANCE,
   LOCALIZATION,
 }
 
+export enum Themes {
+  LIGHT,
+  DARK,
+}
+
 const SettingsPage: FC<SettingsPageProps> = ({}) => {
   const loc = useLocalization();
 
   const [tab, setTab] = useState<SettingsTabs>(SettingsTabs.APPEARANCE);
+  const [getTheme, setTheme] = useState<Themes>(Themes.LIGHT);
 
   return (
     <Page
@@ -68,7 +75,18 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
         </div>
 
         <div className={cn(styles.body)}>
-          <div className={cn(styles.content)}></div>
+          <div className={cn(styles.content)}>
+            {tab === SettingsTabs.APPEARANCE && (
+              <AppearanceTab
+                states={{
+                  theme: {
+                    state: getTheme,
+                    setState: setTheme,
+                  },
+                }}
+              />
+            )}
+          </div>
 
           <div className={cn(styles.saveChanges)}>
             <div className={cn(styles.button, styles.reject)}>

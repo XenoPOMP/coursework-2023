@@ -117,6 +117,20 @@ const englishLocalization: Localization = {
       localization: 'Localization',
     },
 
+    appearance: {
+      title: {
+        title: 'Appearance',
+        desc: 'Change how app looks',
+      },
+
+      items: {
+        theme: {
+          title: 'UI Theme',
+          desc: 'Select theme from list',
+        },
+      },
+    },
+
     saveChanges: {
       save: 'Save changes',
       reject: 'Cancel',

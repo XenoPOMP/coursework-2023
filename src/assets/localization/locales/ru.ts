@@ -118,6 +118,20 @@ const russianLocalization: Localization = {
       localization: 'Локализация',
     },
 
+    appearance: {
+      title: {
+        title: 'Внешний вид',
+        desc: 'Измените то, как будет выглядеть приложение',
+      },
+
+      items: {
+        theme: {
+          title: 'Тема интерфейса',
+          desc: 'Выберете тему из списка',
+        },
+      },
+    },
+
     saveChanges: {
       save: 'Сохранить изменения',
       reject: 'Отменить',
