@@ -246,8 +246,10 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
                     </g>
 
                     <mask
+                      style={{
+                        maskType: 'alpha',
+                      }}
                       id='mask0_80_668'
-                      type={'alpha'}
                       maskUnits='userSpaceOnUse'
                       x='0'
                       y='0'
