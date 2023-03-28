@@ -1,6 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import IStore from '@redux/types/redux-types';
-import { changeLang, Language } from '@redux/reducers/appSettingsSlice';
+import {
+  changeLang,
+  changeTheme,
+  Language,
+  Theme,
+} from '@redux/reducers/appSettingsSlice';
 
 interface SettingController<T> {
   get: () => T;
@@ -11,6 +16,7 @@ interface IUseAppSettings {
   appVersion: Omit<SettingController<string>, 'set'>;
   language: SettingController<Language>;
   cookiePrefix: Omit<SettingController<string>, 'set'>;
+  theme: SettingController<Theme>;
 }
 
 const useAppSettings = (): IUseAppSettings => {
@@ -26,6 +32,10 @@ const useAppSettings = (): IUseAppSettings => {
     },
     cookiePrefix: {
       get: () => useSelector((state: IStore) => state.appSettings.cookiePrefix),
+    },
+    theme: {
+      get: () => useSelector((state: IStore) => state.appSettings.theme),
+      set: (newValue) => dispatch(changeTheme(newValue)),
     },
   };
 };
