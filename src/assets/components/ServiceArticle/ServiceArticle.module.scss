@@ -99,11 +99,11 @@ article.service {
           }
 
           svg.star {
-            path.gray {
-              fill: var(----head-icon-color-inactive);
+            g.gray path {
+              fill: var(--head-icon-color-inactive);
             }
 
-            path.gold {
+            g.gold path {
               fill: var(--service-star);
             }
           }
