@@ -1,3 +1,4 @@
 export interface HeaderProps {
-  tabIndex: number;
+  tabIndex?: number;
+  renderNav?: boolean;
 }

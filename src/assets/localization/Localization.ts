@@ -37,7 +37,8 @@ type Localization = {
     mainPage: MetaInfo,
     servicePage: {
       initial: MetaInfo
-    }
+    },
+    settingsPage: MetaInfo
   }
 
   header: {
@@ -78,6 +79,13 @@ type Localization = {
       cardBodies: {
         price: string
       }
+    }
+  },
+
+  settingsPage: {
+    sidebar: {
+      appearance: string,
+      localization: string
     }
   }
 };

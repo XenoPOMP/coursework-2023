@@ -15,6 +15,12 @@ const russianLocalization: Localization = {
         keywords: '',
       },
     },
+
+    settingsPage: {
+      pageTitle: 'Настройки',
+      pageDescription: '',
+      keywords: '',
+    },
   },
 
   header: {
@@ -103,6 +109,13 @@ const russianLocalization: Localization = {
       cardBodies: {
         price: 'от XX руб.',
       },
+    },
+  },
+
+  settingsPage: {
+    sidebar: {
+      appearance: 'Внешний вид',
+      localization: 'Локализация',
     },
   },
 };

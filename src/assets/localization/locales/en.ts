@@ -15,6 +15,12 @@ const englishLocalization: Localization = {
         keywords: '',
       },
     },
+
+    settingsPage: {
+      pageTitle: 'Settings',
+      pageDescription: '',
+      keywords: '',
+    },
   },
 
   header: {
@@ -102,6 +108,13 @@ const englishLocalization: Localization = {
       cardBodies: {
         price: 'XXUSD+',
       },
+    },
+  },
+
+  settingsPage: {
+    sidebar: {
+      appearance: 'Appearance',
+      localization: 'Localization',
     },
   },
 };
