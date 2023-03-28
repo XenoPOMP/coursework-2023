@@ -117,6 +117,11 @@ const russianLocalization: Localization = {
       appearance: 'Внешний вид',
       localization: 'Локализация',
     },
+
+    saveChanges: {
+      save: 'Сохранить изменения',
+      reject: 'Отменить',
+    },
   },
 };
 

@@ -1,93 +1,98 @@
-import { MetaInfo } from "@components/Page/Page.props";
+import { MetaInfo } from '@components/Page/Page.props';
 
 export type LandingCardLocale = {
-  imageTitle: string,
-  title: string,
-  content?: string,
+  imageTitle: string;
+  title: string;
+  content?: string;
 };
 
 export type ServiceReviewLocale = {
-  avatar?: string,
-  name: string,
-  rating: 1 | 2 | 3 | 4 | 5,
-  review: string
+  avatar?: string;
+  name: string;
+  rating: 1 | 2 | 3 | 4 | 5;
+  review: string;
 };
 
 export type ServiceLocale = {
-  index: number,
-  name: string,
-  desc?: string,
+  index: number;
+  name: string;
+  desc?: string;
   stats: {
     minPrice: {
-      inRubles: number,
-      inDollars: number
-    },
+      inRubles: number;
+      inDollars: number;
+    };
 
-    executionTime: string,
+    executionTime: string;
 
-    hardness: 1 | 2 | 3 | 4,
+    hardness: 1 | 2 | 3 | 4;
 
-    rating: number
-  },
-  reviews: ServiceReviewLocale[]
+    rating: number;
+  };
+  reviews: ServiceReviewLocale[];
 };
 
 type Localization = {
   meta: {
-    mainPage: MetaInfo,
+    mainPage: MetaInfo;
     servicePage: {
-      initial: MetaInfo
-    },
-    settingsPage: MetaInfo
-  }
+      initial: MetaInfo;
+    };
+    settingsPage: MetaInfo;
+  };
 
   header: {
     nav: {
-      mainPage: string,
-      services: string,
-      blog: string,
-    },
-  },
+      mainPage: string;
+      services: string;
+      blog: string;
+    };
+  };
 
   mainPage: {
     leftPart: {
-      label: string,
-      subLabel: string,
-    },
+      label: string;
+      subLabel: string;
+    };
 
     rightPart: {
-      cards: Array<LandingCardLocale>,
-    },
-  },
+      cards: Array<LandingCardLocale>;
+    };
+  };
 
   servicePage: {
-    searchPlaceholder: string,
+    searchPlaceholder: string;
     categories: Array<{
-      title: string,
-      services: ServiceLocale[]
-    }>,
-    notSelectedLabel: string,
+      title: string;
+      services: ServiceLocale[];
+    }>;
+    notSelectedLabel: string;
     labels: {
-      orderButton: string,
+      orderButton: string;
       cards: {
-        price: string,
-        executionTime: string,
-        hardness: string,
-        rating: string,
-        example: string
-      },
+        price: string;
+        executionTime: string;
+        hardness: string;
+        rating: string;
+        example: string;
+      };
       cardBodies: {
-        price: string
-      }
-    }
-  },
+        price: string;
+      };
+    };
+  };
 
   settingsPage: {
     sidebar: {
-      appearance: string,
-      localization: string
-    }
-  }
+      appearance: string;
+      localization: string;
+    };
+
+    saveChanges: {
+      save: string;
+      reject: string;
+    };
+  };
 };
 
 export default Localization;

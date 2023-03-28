@@ -55,6 +55,46 @@
   }
 
   .body {
+    .content {
+      min-height: 100%;
+    }
 
+    .saveChanges {
+      @extend %flexCenter;
+      @extend %mainFont;
+
+      font-size: 1em; // 1em = 20px
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: globalPadding(1) 0;
+      // background: var(--background-primary);
+      justify-content: end;
+      column-gap: globalPadding(.25);
+
+      .button {
+        @extend %notSelectable;
+
+        padding: .25em;
+        border-radius: .35em;
+        cursor: pointer;
+
+        .text {
+          @extend %flexCenter;
+          min-height: 1.9em;
+        }
+
+        &.save {
+          background: var(--sets-confirm-back);
+          color: var(--sets-confirm-font);
+        }
+
+        &.reject {
+          background: var(--sets-reject-back);
+          color: var(--sets-reject-font);
+        }
+      }
+    }
   }
 }

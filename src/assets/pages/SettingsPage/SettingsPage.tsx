@@ -67,7 +67,23 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
           </div>
         </div>
 
-        <div className={cn(styles.body)}></div>
+        <div className={cn(styles.body)}>
+          <div className={cn(styles.content)}></div>
+
+          <div className={cn(styles.saveChanges)}>
+            <div className={cn(styles.button, styles.reject)}>
+              <div className={cn(styles.text)}>
+                {loc.settingsPage.saveChanges.reject}
+              </div>
+            </div>
+
+            <div className={cn(styles.button, styles.save)}>
+              <div className={cn(styles.text)}>
+                {loc.settingsPage.saveChanges.save}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </Page>
   );

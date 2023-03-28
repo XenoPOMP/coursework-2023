@@ -116,6 +116,11 @@ const englishLocalization: Localization = {
       appearance: 'Appearance',
       localization: 'Localization',
     },
+
+    saveChanges: {
+      save: 'Save changes',
+      reject: 'Cancel',
+    },
   },
 };
 
