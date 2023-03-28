@@ -10,6 +10,7 @@
   cursor: pointer;
   border: 2px solid var(--sets-border);
   transition: border-color .15s ease;
+  color: var(--sets-reject-font);
 
   &.active {
     border-color: var(--sets-confirm-back);

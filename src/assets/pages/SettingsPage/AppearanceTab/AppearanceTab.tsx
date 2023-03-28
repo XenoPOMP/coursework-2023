@@ -6,7 +6,6 @@ import useLocalization from '@hooks/useLocalization';
 import SetTitleBlock from '@ui/SetTitleBlock/SetTitleBlock';
 import SetItemBlock from '@ui/SetItemBlock/SetItemBlock';
 import SelectButton from '@ui/SelectButton/SelectButton';
-import { Themes } from '@pages/SettingsPage/SettingsPage';
 import useAppSettings from '@hooks/useAppSettings';
 
 const AppearanceTab: FC<AppearanceTabProps> = ({ states }) => {
@@ -20,9 +19,9 @@ const AppearanceTab: FC<AppearanceTabProps> = ({ states }) => {
       <SetItemBlock locales={loc.settingsPage.appearance.items.theme}>
         <div className={cn(styles.tab)}>
           <SelectButton
-            isTriggered={states.theme.state === Themes.LIGHT}
+            isTriggered={states.theme.state === 'light'}
             onClick={() => {
-              states.theme.setState(Themes.LIGHT);
+              states.theme.setState('light');
               theme.set('light');
             }}
           >
@@ -30,9 +29,9 @@ const AppearanceTab: FC<AppearanceTabProps> = ({ states }) => {
           </SelectButton>
 
           <SelectButton
-            isTriggered={states.theme.state === Themes.DARK}
+            isTriggered={states.theme.state === 'dark'}
             onClick={() => {
-              states.theme.setState(Themes.DARK);
+              states.theme.setState('dark');
               theme.set('dark');
             }}
           >

@@ -5,22 +5,20 @@ import { SettingsPageProps } from './SettingsPage.props';
 import Page from '@components/Page/Page';
 import useLocalization from '@hooks/useLocalization';
 import AppearanceTab from '@pages/SettingsPage/AppearanceTab/AppearanceTab';
+import { Theme } from '@redux/reducers/appSettingsSlice';
+import useAppSettings from '@hooks/useAppSettings';
 
 enum SettingsTabs {
   APPEARANCE,
   LOCALIZATION,
 }
 
-export enum Themes {
-  LIGHT,
-  DARK,
-}
-
 const SettingsPage: FC<SettingsPageProps> = ({}) => {
   const loc = useLocalization();
+  const { theme } = useAppSettings();
 
   const [tab, setTab] = useState<SettingsTabs>(SettingsTabs.APPEARANCE);
-  const [getTheme, setTheme] = useState<Themes>(Themes.LIGHT);
+  const [getTheme, setTheme] = useState<Theme>(theme.get());
 
   return (
     <Page

@@ -1,5 +1,5 @@
 import { Dispatch } from 'react';
-import { Themes } from '@pages/SettingsPage/SettingsPage';
+import { Theme } from '@redux/reducers/appSettingsSlice';
 
 type UseStateHook<T> = {
   state: T;
@@ -8,6 +8,6 @@ type UseStateHook<T> = {
 
 export interface AppearanceTabProps {
   states: {
-    theme: UseStateHook<Themes>;
+    theme: UseStateHook<Theme>;
   };
 }
