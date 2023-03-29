@@ -1,23 +1,32 @@
 import cn from 'classnames';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import styles from './SettingsPage.module.scss';
 import { SettingsPageProps } from './SettingsPage.props';
 import Page from '@components/Page/Page';
 import useLocalization from '@hooks/useLocalization';
 import AppearanceTab from '@pages/SettingsPage/AppearanceTab/AppearanceTab';
-import useAppSettings from '@hooks/useAppSettings';
 import LocalizationTab from '@pages/SettingsPage/LocalizationTab/LocalizationTab';
+import { useDispatch, useSelector } from 'react-redux';
+import IStore from '@redux/types/redux-types';
+import { changeLastSettingsPage } from '@redux/reducers/lastPageSlice';
 
-enum SettingsTabs {
+export enum SettingsTabs {
   APPEARANCE,
   LOCALIZATION,
 }
 
 const SettingsPage: FC<SettingsPageProps> = ({}) => {
   const loc = useLocalization();
-  const { theme, language } = useAppSettings();
+  const dispatch = useDispatch();
 
-  const [tab, setTab] = useState<SettingsTabs>(SettingsTabs.APPEARANCE);
+  const [tab, setTab] = useState<SettingsTabs>(
+    useSelector((state: IStore) => state.lastPage.settings),
+  );
+
+  // Set last page to local state`s page
+  useEffect(() => {
+    dispatch(changeLastSettingsPage(tab));
+  }, [tab]);
 
   return (
     <Page
