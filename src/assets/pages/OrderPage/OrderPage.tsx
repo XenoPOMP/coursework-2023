@@ -24,7 +24,11 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
         renderNav: false,
         renderRightButtons: false,
       }}
-    ></Page>
+    >
+      <div className={cn(styles.page)}>
+        <div className={cn(styles.placeholder)}></div>
+      </div>
+    </Page>
   );
 };
 

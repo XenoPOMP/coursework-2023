@@ -1,0 +1,17 @@
+@import "src/assets/styles/templates";
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: var(--header-height) 1fr;
+
+  .placeholder {
+    grid-row-start: 2;
+    padding:
+            0
+            globalPadding(1)
+            globalPadding(1)
+            globalPadding(1);
+  }
+}
