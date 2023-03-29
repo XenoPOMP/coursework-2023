@@ -168,6 +168,50 @@ const russianLocalization: Localization = {
       reject: 'Отменить',
     },
   },
+
+  orderPage: {
+    stages: {
+      name: {
+        label: 'Как к вам обращаться?',
+        input: {
+          title: '',
+          placeholder: 'Введите ваше имя',
+          popup: '',
+        },
+      },
+
+      contacts: {
+        label: 'Как с вами связаться?',
+        inputs: {
+          email: {
+            title: 'Электронная почта',
+            placeholder: 'Введите адрес электронной почты',
+            popup: '',
+          },
+
+          telegram: {
+            title: 'Телеграм',
+            placeholder: 'Введите ваш тег в Телеграме',
+            popup: '',
+          },
+
+          vk: {
+            title: 'ВК',
+            placeholder: 'Введите ссылку на ВК',
+            popup: '',
+          },
+        },
+      },
+
+      final: [
+        'Все готово!',
+        'Совсем скоро наш менеджер свяжиться с вами.',
+        'Номер вашего заказа: XX',
+      ],
+    },
+
+    error: 'Есть ошибки',
+  },
 };
 
 export default russianLocalization;

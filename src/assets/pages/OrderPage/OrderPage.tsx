@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { FC, useEffect, useState } from 'react';
+import { Dispatch, FC, useEffect, useState } from 'react';
 import styles from './OrderPage.module.scss';
 import { OrderPageProps } from './OrderPage.props';
 import Page from '@components/Page/Page';
@@ -8,12 +8,13 @@ import { useSearchParams } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import { ServiceLocale } from '@localization/Localization';
 import { motion } from 'framer-motion';
+import { OrderInputLocale } from '@type/OrderInputLocale';
 
 const OrderPage: FC<OrderPageProps> = ({}) => {
   const loc = useLocalization();
   // @ts-ignore
   const serviceId = parseInt(useSearchParams()[0].get('service'));
-  const orderId = uuid();
+  let orderId = useState<string>(uuid())[0];
 
   const getLocales = (): ServiceLocale | undefined => {
     let locales: ServiceLocale | undefined = undefined;
@@ -36,23 +37,66 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
   }
 
   const [stage, setStage] = useState<Stages>(Stages.NAME);
+  // Inputs
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [telegram, setTelegram] = useState<string>('');
+  const [vk, setVk] = useState<string>('');
+  // Errors
+  const [isNameError, setIsNameError] = useState<boolean>(false);
+  const [isEmailError, setIsEmailError] = useState<boolean>(false);
+  const [isTgError, setIsTgError] = useState<boolean>(false);
+  const [isVkError, setIsVkError] = useState<boolean>(false);
+
+  const resetErrors = () => {
+    setIsNameError(false);
+    setIsEmailError(false);
+    setIsTgError(false);
+    setIsVkError(false);
+  };
 
   const checkCorrect = (): boolean => {
-    switch (stage) {
-      case Stages.NAME: {
-        break;
-      }
+    resetErrors();
 
-      case Stages.CONTACTS: {
-        break;
-      }
+    let nameError = false;
+    let emailError = false;
+    let tgError = false;
+    let vkError = false;
 
-      case Stages.FINAL: {
-        break;
+    if (stage === Stages.NAME) {
+      if (name === '') {
+        setIsNameError(true);
+
+        nameError = true;
       }
     }
 
-    return true;
+    if (stage === Stages.CONTACTS) {
+      // Email doesn`t match pattern
+      if (email !== '' && !/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/i.test(email)) {
+        setIsEmailError(true);
+        emailError = true;
+      }
+
+      // Telegram doesn`t match pattern
+      if (telegram !== '' && !/^@.+$/i.test(telegram)) {
+        setIsTgError(true);
+        tgError = true;
+      }
+
+      // Check if user didn`t provided any contact
+      if (email === '' && telegram === '' && vk === '') {
+        setIsEmailError(true);
+        setIsTgError(true);
+        setIsVkError(true);
+
+        emailError = true;
+        tgError = true;
+        vkError = true;
+      }
+    }
+
+    return !nameError && !emailError && !tgError && !vkError;
   };
 
   return (
@@ -69,7 +113,92 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
           <div className={cn(styles.form)}>
             <h2>{getLocales()?.name}</h2>
 
-            <section></section>
+            {stage === Stages.NAME && (
+              <section>
+                <h3>{loc.orderPage.stages.name.label}</h3>
+
+                <div className={cn(styles.orderInput)}>
+                  <input
+                    className={cn(
+                      styles.fullWidth,
+                      isNameError ? styles.withError : '',
+                    )}
+                    value={name}
+                    placeholder={loc.orderPage.stages.name.input.placeholder}
+                    onChange={(event) => setName(event.target.value)}
+                  />
+                </div>
+
+                {(isEmailError || isTgError || isVkError || isNameError) && (
+                  <div className={cn(styles.error)}>{loc.orderPage.error}</div>
+                )}
+              </section>
+            )}
+
+            {stage === Stages.CONTACTS && (
+              <section>
+                <h3>{loc.orderPage.stages.contacts.label}</h3>
+
+                <div className={cn(styles.orderInput)}>
+                  <div className={cn(styles.title)}>
+                    {loc.orderPage.stages.contacts.inputs.email.title}
+                  </div>
+
+                  <input
+                    className={cn(isEmailError ? styles.withError : '')}
+                    value={email}
+                    placeholder={
+                      loc.orderPage.stages.contacts.inputs.email.placeholder
+                    }
+                    onChange={(event) => setEmail(event.target.value)}
+                  />
+                </div>
+
+                <div className={cn(styles.orderInput)}>
+                  <div className={cn(styles.title)}>
+                    {loc.orderPage.stages.contacts.inputs.telegram.title}
+                  </div>
+
+                  <input
+                    className={cn(isTgError ? styles.withError : '')}
+                    value={telegram}
+                    placeholder={
+                      loc.orderPage.stages.contacts.inputs.telegram.placeholder
+                    }
+                    onChange={(event) => setTelegram(event.target.value)}
+                  />
+                </div>
+
+                <div className={cn(styles.orderInput)}>
+                  <div className={cn(styles.title)}>
+                    {loc.orderPage.stages.contacts.inputs.vk.title}
+                  </div>
+
+                  <input
+                    className={cn(isVkError ? styles.withError : '')}
+                    value={vk}
+                    placeholder={
+                      loc.orderPage.stages.contacts.inputs.vk.placeholder
+                    }
+                    onChange={(event) => setVk(event.target.value)}
+                  />
+                </div>
+
+                {(isEmailError || isTgError || isVkError || isNameError) && (
+                  <div className={cn(styles.error)}>{loc.orderPage.error}</div>
+                )}
+              </section>
+            )}
+
+            {stage === Stages.FINAL && (
+              <section>
+                <h4>{loc.orderPage.stages.final[0]}</h4>
+                <h4>{loc.orderPage.stages.final[1]}</h4>
+                <h4>
+                  {loc.orderPage.stages.final[2].replace(/XX/gi, orderId)}
+                </h4>
+              </section>
+            )}
 
             <div className={cn(styles.bottomControl)}>
               <div
@@ -77,7 +206,10 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
                   styles.arrowButton,
                   stage === Stages.NAME && styles.blocked,
                 )}
-                onClick={() => setStage((prev) => prev - 1)}
+                onClick={() => {
+                  setStage((prev) => prev - 1);
+                  resetErrors();
+                }}
               >
                 <svg
                   viewBox='0 0 30 24'

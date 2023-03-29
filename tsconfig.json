@@ -25,7 +25,7 @@
       "@providers/*": ["src/assets/providers/*"],
       "@ui/*": ["src/assets/components/ui/*"],
       "@hooks/*": ["src/assets/hooks/*"],
-      "@types/*": ["src/assets/types/*"],
+      "@type/*": ["src/assets/types/*"],
       "@utils/*": ["src/assets/utils/*"],
       "@media/*": ["src/media/*"],
       "@fonts/*": ["src/media/fonts/*"],

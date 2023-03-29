@@ -40,14 +40,67 @@
       section {
         @extend %scrollable;
         @extend %mainFont;
+        @extend %flexCenter;
 
         background: var(--background-third);
         border-radius: inherit;
         padding: inherit;
+        flex-direction: column;
 
         h3 {
+          margin-bottom: 1.1em;
+        }
+
+        h3, h4 {
+          @extend %notSelectable;
+
           font-size: 1.25em;
           color: var(--ord-font-primary);
+          font-weight: bold;
+        }
+
+        .orderInput {
+          width: 100%;
+          display: grid;
+          grid-gap: globalPadding(.5);
+          // grid-template-columns: 2.88fr 3.06fr 2.88fr;
+          grid-template-columns: 2.88fr 5.94fr;
+          height: 2.1em;
+
+          &:not(:last-of-type) {
+            margin-bottom: globalPadding(.5);
+          }
+
+          .title {
+            @extend %flexCenter;
+            @extend %notSelectable;
+            @extend %semiBold;
+
+            justify-content: end;
+            color: var(--ord-font-primary);
+          }
+
+          input {
+            background: var(--inp-back);
+            font-size: 1em;
+            border-radius: .35em;
+            border: none;
+            outline: none;
+            padding: 0 .5em;
+
+            &.fullWidth {
+              grid-column: span 2;
+            }
+
+            &.withError {
+              border: 2px solid var(--ord-font-error);
+            }
+          }
+        }
+
+        .error {
+          font-size: 1.25em;
+          color: var(--ord-font-error);
         }
       }
 

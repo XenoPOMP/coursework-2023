@@ -167,6 +167,50 @@ const englishLocalization: Localization = {
       reject: 'Cancel',
     },
   },
+
+  orderPage: {
+    stages: {
+      name: {
+        label: 'What`s your name?',
+        input: {
+          title: '',
+          placeholder: 'Enter your name',
+          popup: '',
+        },
+      },
+
+      contacts: {
+        label: 'How can we contact with you?',
+        inputs: {
+          email: {
+            title: 'Email',
+            placeholder: 'Enter email',
+            popup: '',
+          },
+
+          telegram: {
+            title: 'Telegram',
+            placeholder: 'Enter your Telegram tag',
+            popup: '',
+          },
+
+          vk: {
+            title: 'VK',
+            placeholder: 'Enter your personal account link',
+            popup: '',
+          },
+        },
+      },
+
+      final: [
+        'All`s ready!',
+        'Our manager will soon contact with you.',
+        'Your order ID: XX',
+      ],
+    },
+
+    error: 'Есть ошибки',
+  },
 };
 
 export default englishLocalization;
