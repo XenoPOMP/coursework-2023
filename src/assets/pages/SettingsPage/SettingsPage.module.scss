@@ -38,6 +38,10 @@
       padding: .25em;
       border-radius: .35em;
       color: var(--sets-font-primary);
+      transition:
+              background .15s ease,
+              color .15s ease,
+              border-color .15s ease;
 
       &:not(.version) {
         cursor: pointer;
@@ -73,6 +77,7 @@
           top: 100%;
           left: 0;
           background: var(--background-primary);
+          transition: inherit;
         }
       }
     }
