@@ -19,8 +19,6 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
   const { theme, language } = useAppSettings();
 
   const [tab, setTab] = useState<SettingsTabs>(SettingsTabs.APPEARANCE);
-  const [getTheme, setTheme] = useState<Theme>(theme.get());
-  const [getLang, setLang] = useState<Language>(language.get());
 
   return (
     <Page
@@ -76,27 +74,9 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
 
         <div className={cn(styles.body)}>
           <div className={cn(styles.content)}>
-            {tab === SettingsTabs.APPEARANCE && (
-              <AppearanceTab
-                states={{
-                  theme: {
-                    state: getTheme,
-                    setState: setTheme,
-                  },
-                }}
-              />
-            )}
+            {tab === SettingsTabs.APPEARANCE && <AppearanceTab />}
 
-            {tab === SettingsTabs.LOCALIZATION && (
-              <LocalizationTab
-                states={{
-                  language: {
-                    state: getLang,
-                    setState: setLang,
-                  },
-                }}
-              />
-            )}
+            {tab === SettingsTabs.LOCALIZATION && <LocalizationTab />}
           </div>
 
           <div className={cn(styles.saveChanges)}>

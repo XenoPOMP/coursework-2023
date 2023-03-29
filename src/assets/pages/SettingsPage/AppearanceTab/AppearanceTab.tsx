@@ -8,7 +8,7 @@ import SetItemBlock from '@ui/SetItemBlock/SetItemBlock';
 import SelectButton from '@ui/SelectButton/SelectButton';
 import useAppSettings from '@hooks/useAppSettings';
 
-const AppearanceTab: FC<AppearanceTabProps> = ({ states }) => {
+const AppearanceTab: FC<AppearanceTabProps> = () => {
   const loc = useLocalization();
   const { theme } = useAppSettings();
 
@@ -18,9 +18,8 @@ const AppearanceTab: FC<AppearanceTabProps> = ({ states }) => {
 
       <SetItemBlock locales={loc.settingsPage.appearance.items.theme} flexWrap>
         <SelectButton
-          isTriggered={states.theme.state === 'light'}
+          isTriggered={theme.get() === 'light'}
           onClick={() => {
-            states.theme.setState('light');
             theme.set('light');
           }}
         >
@@ -28,9 +27,8 @@ const AppearanceTab: FC<AppearanceTabProps> = ({ states }) => {
         </SelectButton>
 
         <SelectButton
-          isTriggered={states.theme.state === 'dark'}
+          isTriggered={theme.get() === 'dark'}
           onClick={() => {
-            states.theme.setState('dark');
             theme.set('dark');
           }}
         >

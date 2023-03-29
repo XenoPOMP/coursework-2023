@@ -8,7 +8,7 @@ import SetItemBlock from '@ui/SetItemBlock/SetItemBlock';
 import SelectButton from '@ui/SelectButton/SelectButton';
 import useAppSettings from '@hooks/useAppSettings';
 
-const LocalizationTab: FC<LocalizationTabProps> = ({ states }) => {
+const LocalizationTab: FC<LocalizationTabProps> = () => {
   const loc = useLocalization();
   const { language } = useAppSettings();
 
@@ -21,9 +21,8 @@ const LocalizationTab: FC<LocalizationTabProps> = ({ states }) => {
         flexWrap
       >
         <SelectButton
-          isTriggered={states.language.state === 'ru'}
+          isTriggered={language.get() === 'ru'}
           onClick={() => {
-            states.language.setState('ru');
             language.set('ru');
           }}
         >
@@ -31,9 +30,8 @@ const LocalizationTab: FC<LocalizationTabProps> = ({ states }) => {
         </SelectButton>
 
         <SelectButton
-          isTriggered={states.language.state === 'en'}
+          isTriggered={language.get() === 'en'}
           onClick={() => {
-            states.language.setState('en');
             language.set('en');
           }}
         >

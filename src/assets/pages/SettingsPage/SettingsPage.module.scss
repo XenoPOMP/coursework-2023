@@ -60,13 +60,14 @@
     .content {
       $minHeight: calc(calc(100% - 2.15em) - globalPadding(2));
 
-      min-height: $minHeight;
+      // min-height: $minHeight;
     }
 
     .saveChanges {
       @extend %flexCenter;
       @extend %mainFont;
 
+      display: none;
       font-size: 1em; // 1em = 20px
       position: sticky;
       bottom: 0;
