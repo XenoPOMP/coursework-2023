@@ -44,6 +44,7 @@ type Localization = {
       initial: MetaInfo;
     };
     settingsPage: MetaInfo;
+    orderPage: MetaInfo;
   };
 
   header: {

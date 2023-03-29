@@ -322,9 +322,12 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
               </svg>
             </Link>
 
-            <div className={cn(styles.button, styles.orderButton)}>
+            <Link
+              to={`/order?service=${serviceId}`}
+              className={cn(styles.button, styles.orderButton)}
+            >
               {loc.servicePage.labels.orderButton}
-            </div>
+            </Link>
 
             <div
               className={cn(styles.button, styles.star)}

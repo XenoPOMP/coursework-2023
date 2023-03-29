@@ -21,6 +21,12 @@ const russianLocalization: Localization = {
       pageDescription: '',
       keywords: '',
     },
+
+    orderPage: {
+      pageTitle: 'Заказ',
+      pageDescription: '',
+      keywords: '',
+    },
   },
 
   header: {

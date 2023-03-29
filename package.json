@@ -31,12 +31,14 @@
     "sass": "^1.56.2",
     "sass-loader": "^13.2.0",
     "that-sparks": "^0.1.8",
-    "universal-cookie": "^4.0.4"
+    "universal-cookie": "^4.0.4",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@testing-library/react": "^13.4.0",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
+    "@types/uuid": "^9.0.1",
     "@vitejs/plugin-react": "^3.0.0",
     "@vitest/coverage-c8": "^0.28.4",
     "cross-env": "^7.0.3",

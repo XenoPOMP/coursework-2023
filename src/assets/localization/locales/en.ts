@@ -21,6 +21,12 @@ const englishLocalization: Localization = {
       pageDescription: '',
       keywords: '',
     },
+
+    orderPage: {
+      pageTitle: 'Order',
+      pageDescription: '',
+      keywords: '',
+    },
   },
 
   header: {
