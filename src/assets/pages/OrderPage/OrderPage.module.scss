@@ -1,0 +1,161 @@
+@import "src/assets/styles/templates";
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: var(--header-height) 1fr;
+  font-size: 20px;
+
+  .placeholder {
+    grid-row-start: 2;
+    padding:
+            0
+            globalPadding(1)
+            globalPadding(1)
+            globalPadding(1);
+
+    .form {
+      width: 100%;
+      height: 100%;
+      border-radius: globalPadding(.5);
+      background: var(--background-secondary);
+      max-width: 947px;
+      margin: 0 auto;
+      padding: globalPadding(.5);
+      display: grid;
+      grid-gap: globalPadding(.5);
+      grid-template-rows: 1.9em 1fr 3.8em;
+
+      h2 {
+        @extend %flexCenter;
+        @extend %mainFont;
+        @extend %notSelectable;
+
+        font-size: 1.5em;
+        color: var(--ord-font-primary);
+        font-weight: bold;
+      }
+
+      section {
+        @extend %scrollable;
+        @extend %mainFont;
+        @extend %flexCenter;
+
+        background: var(--background-third);
+        border-radius: inherit;
+        padding: inherit;
+        flex-direction: column;
+
+        h3 {
+          margin-bottom: 1.1em;
+        }
+
+        h3, h4 {
+          @extend %notSelectable;
+
+          font-size: 1.25em;
+          color: var(--ord-font-primary);
+          font-weight: bold;
+        }
+
+        .orderInput {
+          width: 100%;
+          display: grid;
+          grid-gap: globalPadding(.5);
+          // grid-template-columns: 2.88fr 3.06fr 2.88fr;
+          grid-template-columns: 2.88fr 5.94fr;
+          height: 2.1em;
+
+          &:not(:last-of-type) {
+            margin-bottom: globalPadding(.5);
+          }
+
+          .title {
+            @extend %flexCenter;
+            @extend %notSelectable;
+            @extend %semiBold;
+
+            justify-content: end;
+            color: var(--ord-font-primary);
+          }
+
+          input {
+            background: var(--inp-back);
+            font-size: 1em;
+            border-radius: .35em;
+            border: none;
+            outline: none;
+            padding: 0 .5em;
+
+            &.fullWidth {
+              grid-column: span 2;
+            }
+
+            &.withError {
+              border: 2px solid var(--ord-font-error);
+            }
+          }
+        }
+
+        .error {
+          font-size: 1.25em;
+          color: var(--ord-font-error);
+        }
+      }
+
+      .bottomControl {
+        display: grid;
+        grid-gap: globalPadding(.5);
+        grid-template-columns: repeat(1, 3.8em) 1fr repeat(1, 3.8em);
+
+        .okButton {
+          @extend %notSelectable;
+          @extend %flexCenter;
+          @extend %mainFont;
+
+          border-radius: globalPadding(.5);
+          cursor: pointer;
+          font-weight: bold;
+          background: var(--service-foot-button-back);
+          color: var(--service-foot-button-font);
+        }
+
+        .arrowButton {
+          @extend %notSelectable;
+          @extend %flexCenter;
+
+          border-radius: globalPadding(.5);
+          background: var(--head-button-back);
+          cursor: pointer;
+          transition:
+                  box-shadow .15s ease,
+                  opacity .15s ease;
+
+          &.blocked {
+            opacity: 0;
+            pointer-events: none;
+          }
+
+          &:hover {
+            box-shadow: var(--ord-button-shadow);
+          }
+
+          &:first-of-type {
+            svg {
+              transform: rotate(.5turn);
+            }
+          }
+
+          svg {
+            width: 36.8%;
+
+            path {
+              fill: var(--head-icon-color-inactive);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@
 
 .item {
   @extend %mainFont;
+  @extend %notSelectable;
 
   // 1em = 20px
   width: 100%;

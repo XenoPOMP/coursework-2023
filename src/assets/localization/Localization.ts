@@ -1,4 +1,5 @@
 import { MetaInfo } from '@components/Page/Page.props';
+import { OrderInputLocale } from '@type/OrderInputLocale';
 
 export type LandingCardLocale = {
   imageTitle: string;
@@ -44,6 +45,7 @@ type Localization = {
       initial: MetaInfo;
     };
     settingsPage: MetaInfo;
+    orderPage: MetaInfo;
   };
 
   header: {
@@ -120,6 +122,28 @@ type Localization = {
       save: string;
       reject: string;
     };
+  };
+
+  orderPage: {
+    stages: {
+      name: {
+        label: string;
+        input: OrderInputLocale;
+      };
+
+      contacts: {
+        label: string;
+        inputs: {
+          email: OrderInputLocale;
+          telegram: OrderInputLocale;
+          vk: OrderInputLocale;
+        };
+      };
+
+      final: string[];
+    };
+
+    error: string;
   };
 };
 
