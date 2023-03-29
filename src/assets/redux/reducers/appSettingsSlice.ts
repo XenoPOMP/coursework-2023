@@ -13,7 +13,7 @@ export type AppSettings = {
 };
 
 const initialState: AppSettings = {
-  appVersion: 'beta 0.1',
+  appVersion: 'beta 0.2',
   language: 'ru',
   cookiePrefix: 'smart-ace',
   theme: 'light',
