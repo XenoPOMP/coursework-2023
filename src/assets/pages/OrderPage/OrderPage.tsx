@@ -36,6 +36,24 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
 
   const [stage, setStage] = useState<Stages>(Stages.NAME);
 
+  const checkCorrect = (): boolean => {
+    switch (stage) {
+      case Stages.NAME: {
+        break;
+      }
+
+      case Stages.CONTACTS: {
+        break;
+      }
+
+      case Stages.FINAL: {
+        break;
+      }
+    }
+
+    return true;
+  };
+
   return (
     <Page
       meta={loc.meta.orderPage}
@@ -58,7 +76,11 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
                   styles.arrowButton,
                   stage === Stages.NAME && styles.blocked,
                 )}
-                onClick={() => setStage((prev) => prev - 1)}
+                onClick={() => {
+                  if (checkCorrect()) {
+                    setStage((prev) => prev - 1);
+                  }
+                }}
               >
                 <svg
                   viewBox='0 0 30 24'
@@ -76,7 +98,11 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
                   styles.arrowButton,
                   stage === Stages.FINAL && styles.blocked,
                 )}
-                onClick={() => setStage((prev) => prev + 1)}
+                onClick={() => {
+                  if (checkCorrect()) {
+                    setStage((prev) => prev + 1);
+                  }
+                }}
               >
                 <svg
                   viewBox='0 0 30 24'
