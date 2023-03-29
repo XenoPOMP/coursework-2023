@@ -5,7 +5,6 @@ import { SettingsPageProps } from './SettingsPage.props';
 import Page from '@components/Page/Page';
 import useLocalization from '@hooks/useLocalization';
 import AppearanceTab from '@pages/SettingsPage/AppearanceTab/AppearanceTab';
-import { Language, Theme } from '@redux/reducers/appSettingsSlice';
 import useAppSettings from '@hooks/useAppSettings';
 import LocalizationTab from '@pages/SettingsPage/LocalizationTab/LocalizationTab';
 
