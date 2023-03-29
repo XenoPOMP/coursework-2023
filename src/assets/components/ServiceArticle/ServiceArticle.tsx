@@ -12,6 +12,7 @@ import { motion } from 'framer-motion';
 import UserReview from '@components/UserReview/UserReview';
 import { Link } from 'react-router-dom';
 import useAppSettings from '@hooks/useAppSettings';
+import { changeLastServicePage } from '@redux/reducers/lastPageSlice';
 
 const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
   const serviceId = useServiceId();
@@ -304,10 +305,13 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
           </div>
 
           <div className={cn(styles.bottomControl)}>
-            <Link // @ts-ignore
-              to={-1}
+            <Link
+              to={'/services'}
               preventScrollReset={false}
               className={cn(styles.button, styles.regular)}
+              onClick={() => {
+                dispatch(changeLastServicePage(null));
+              }}
             >
               <svg
                 viewBox='0 0 31 24'
