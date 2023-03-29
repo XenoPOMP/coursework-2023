@@ -69,7 +69,7 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
           <div className={cn(styles.form)}>
             <h2>{getLocales()?.name}</h2>
 
-            <div></div>
+            <section></section>
 
             <div className={cn(styles.bottomControl)}>
               <div
@@ -77,11 +77,7 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
                   styles.arrowButton,
                   stage === Stages.NAME && styles.blocked,
                 )}
-                onClick={() => {
-                  if (checkCorrect()) {
-                    setStage((prev) => prev - 1);
-                  }
-                }}
+                onClick={() => setStage((prev) => prev - 1)}
               >
                 <svg
                   viewBox='0 0 30 24'
@@ -103,6 +99,9 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
                 }}
                 transition={{
                   duration: 0.15,
+                }}
+                whileTap={{
+                  filter: 'brightness(0.85)',
                 }}
                 className={cn(styles.okButton)}
               >

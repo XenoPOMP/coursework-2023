@@ -25,7 +25,7 @@
       padding: globalPadding(.5);
       display: grid;
       grid-gap: globalPadding(.5);
-      grid-template-rows: 3.8em 1fr 3.8em;
+      grid-template-rows: 1.9em 1fr 3.8em;
 
       h2 {
         @extend %flexCenter;
@@ -35,6 +35,20 @@
         font-size: 1.5em;
         color: var(--ord-font-primary);
         font-weight: bold;
+      }
+
+      section {
+        @extend %scrollable;
+        @extend %mainFont;
+
+        background: var(--background-third);
+        border-radius: inherit;
+        padding: inherit;
+
+        h3 {
+          font-size: 1.25em;
+          color: var(--ord-font-primary);
+        }
       }
 
       .bottomControl {
