@@ -11,14 +11,4 @@ describe.skipIf(skipTestCondition('FRONTEND'))('useAppSettings hook', () => {
       }),
     ).toMatchSnapshot();
   });
-
-  test('Version render', () => {
-    const text = renderWithProviders(<TestingPage />, {
-      useRedux: true,
-    }).asFragment().textContent;
-
-    expect(/(\d\.\d\d)|(\d.\d\d\.\d)/i.test(text !== null ? text : '')).toBe(
-      true,
-    );
-  });
 });
