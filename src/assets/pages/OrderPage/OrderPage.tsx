@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { Dispatch, FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import styles from './OrderPage.module.scss';
 import { OrderPageProps } from './OrderPage.props';
 import Page from '@components/Page/Page';
@@ -8,7 +8,6 @@ import { useSearchParams } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import { ServiceLocale } from '@localization/Localization';
 import { motion } from 'framer-motion';
-import { OrderInputLocale } from '@type/OrderInputLocale';
 
 const OrderPage: FC<OrderPageProps> = ({}) => {
   const loc = useLocalization();
