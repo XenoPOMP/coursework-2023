@@ -11,10 +11,14 @@ import { toggleStar } from '@redux/reducers/serviceListSlice';
 import { motion } from 'framer-motion';
 import UserReview from '@components/UserReview/UserReview';
 import { Link } from 'react-router-dom';
+import useAppSettings from '@hooks/useAppSettings';
 
 const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
   const serviceId = useServiceId();
   const loc = useLocalization();
+  const appSettings = useAppSettings();
+
+  const language = appSettings.language.get();
 
   const serviceStates = useSelector(
     (state: IStore) => state.serviceList.services,
@@ -53,7 +57,11 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
                 <div className={cn(styles.body)}>
                   {loc.servicePage.labels.cardBodies.price.replace(
                     /XX/i,
-                    `${getLocales()?.stats.minPrice.inRubles}`,
+                    `${
+                      language === 'ru'
+                        ? getLocales()?.stats.minPrice.inRubles
+                        : getLocales()?.stats.minPrice.inDollars
+                    }`,
                   )}
                 </div>
 
