@@ -4,13 +4,15 @@ import styles from './OrderPage.module.scss';
 import { OrderPageProps } from './OrderPage.props';
 import Page from '@components/Page/Page';
 import useLocalization from '@hooks/useLocalization';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import { ServiceLocale } from '@localization/Localization';
 import { motion } from 'framer-motion';
 
 const OrderPage: FC<OrderPageProps> = ({}) => {
   const loc = useLocalization();
+  const navigate = useNavigate();
+
   // @ts-ignore
   const serviceId = parseInt(useSearchParams()[0].get('service'));
   let orderId = useState<string>(uuid())[0];
@@ -204,6 +206,7 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
                 className={cn(
                   styles.arrowButton,
                   stage === Stages.NAME && styles.blocked,
+                  stage === Stages.FINAL && styles.blocked,
                 )}
                 onClick={() => {
                   setStage((prev) => prev - 1);
@@ -235,6 +238,11 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
                   filter: 'brightness(0.85)',
                 }}
                 className={cn(styles.okButton)}
+                onClick={() => {
+                  navigate('/', {
+                    preventScrollReset: false,
+                  });
+                }}
               >
                 OK
               </motion.div>
