@@ -9,6 +9,7 @@ import LocalizationTab from '@pages/SettingsPage/LocalizationTab/LocalizationTab
 import { useDispatch, useSelector } from 'react-redux';
 import IStore from '@redux/types/redux-types';
 import { changeLastSettingsPage } from '@redux/reducers/lastPageSlice';
+import useAppSettings from '@hooks/useAppSettings';
 
 export enum SettingsTabs {
   APPEARANCE,
@@ -18,6 +19,7 @@ export enum SettingsTabs {
 const SettingsPage: FC<SettingsPageProps> = ({}) => {
   const loc = useLocalization();
   const dispatch = useDispatch();
+  const { appVersion } = useAppSettings();
 
   const [tab, setTab] = useState<SettingsTabs>(
     useSelector((state: IStore) => state.lastPage.settings),
@@ -77,6 +79,13 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
             </svg>
 
             {loc.settingsPage.sidebar.localization}
+          </div>
+
+          <div className={cn(styles.item, styles.version)}>
+            {loc.settingsPage.sidebar.appVersion.replace(
+              /XX/gi,
+              appVersion.get(),
+            )}
           </div>
         </div>
 

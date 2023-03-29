@@ -38,10 +38,14 @@
       padding: .25em;
       border-radius: .35em;
       color: var(--sets-font-primary);
-      cursor: pointer;
 
-      &:hover, &.active {
-        background: var(--head-button-back);
+      &:not(.version) {
+        cursor: pointer;
+
+        &:hover,
+        &.active {
+          background: var(--head-button-back);
+        }
       }
 
       svg {
@@ -50,6 +54,14 @@
         path {
           fill: var(--sets-font-primary);
         }
+      }
+
+      &.version {
+        border-top: 1px solid var(--head-button-back);
+        font-size: .85em;
+        position: sticky;
+        bottom: 0;
+        left: 0;
       }
     }
   }

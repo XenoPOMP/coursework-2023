@@ -91,6 +91,7 @@ type Localization = {
     sidebar: {
       appearance: string;
       localization: string;
+      appVersion: string;
     };
 
     appearance: {

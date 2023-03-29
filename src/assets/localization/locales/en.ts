@@ -115,6 +115,7 @@ const englishLocalization: Localization = {
     sidebar: {
       appearance: 'Appearance',
       localization: 'Localization',
+      appVersion: 'App version: XX',
     },
 
     appearance: {
