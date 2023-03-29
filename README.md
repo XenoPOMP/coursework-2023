@@ -1,4 +1,4 @@
-<h1 align='center'>React Vite template</h1>
+<h1 align='center'>Course Work 2023</h1>
 
 <p align="center">
 <a href="https://nodejs.org/en"><img src="https://img.shields.io/static/v1?label=&message=Node.js&color=%23339933&style=for-the-badge&logo=Node.js&logoColor=white" alt="Node.js"></a>
