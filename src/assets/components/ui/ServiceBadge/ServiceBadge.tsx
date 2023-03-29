@@ -2,12 +2,13 @@ import cn from 'classnames';
 import { FC } from 'react';
 import styles from './ServiceBadge.module.scss';
 import { ServiceBadgeProps } from './ServiceBadge.props';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import IStore from '@redux/types/redux-types';
 import { ServiceList } from '@redux/reducers/serviceListSlice';
 import { motion } from 'framer-motion';
 import { Link, useSearchParams } from 'react-router-dom';
 import useServiceId from '@hooks/useServiceId';
+import { changeLastServicePage } from '@redux/reducers/lastPageSlice';
 
 const ServiceBadge: FC<ServiceBadgeProps> = ({ locales }) => {
   const { index, name } = locales;
@@ -15,6 +16,7 @@ const ServiceBadge: FC<ServiceBadgeProps> = ({ locales }) => {
   const { search, services }: ServiceList = useSelector(
     (state: IStore) => state.serviceList,
   );
+  const dispatch = useDispatch();
 
   const getIcon = (): JSX.Element => {
     switch (services[index].icon) {
@@ -52,6 +54,9 @@ const ServiceBadge: FC<ServiceBadgeProps> = ({ locales }) => {
         styles.badge,
         useServiceId() === index ? styles.active : '',
       )}
+      onClick={() => {
+        dispatch(changeLastServicePage(index));
+      }}
     >
       {getIcon()}
 

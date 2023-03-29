@@ -5,6 +5,9 @@ import { HeaderProps } from './Header.props';
 import Logotype from '@ui/Logotype/Logotype';
 import Navbar from '@ui/Navbar/Navbar';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { LastPageList } from '@redux/reducers/lastPageSlice';
+import IStore from '@redux/types/redux-types';
 
 const Header: FC<HeaderProps> = (props) => {
   const { tabIndex, renderNav }: HeaderProps = {

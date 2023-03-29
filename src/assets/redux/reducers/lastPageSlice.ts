@@ -4,10 +4,12 @@ import { SettingsTabs } from '@pages/SettingsPage/SettingsPage';
 
 export type LastPageList = {
   settings: number;
+  service: number | null;
 };
 
 const initialState: LastPageList = {
   settings: 0,
+  service: null,
 };
 
 const lastPageSlice = createSlice({
@@ -17,8 +19,13 @@ const lastPageSlice = createSlice({
     changeLastSettingsPage(state, action: ReduxAction<SettingsTabs>) {
       state.settings = action.payload;
     },
+
+    changeLastServicePage(state, action: ReduxAction<number | null>) {
+      state.service = action.payload;
+    },
   },
 });
 
 export default lastPageSlice.reducer;
-export const { changeLastSettingsPage } = lastPageSlice.actions;
+export const { changeLastSettingsPage, changeLastServicePage } =
+  lastPageSlice.actions;
