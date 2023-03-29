@@ -7,6 +7,7 @@ import useLocalization from '@hooks/useLocalization';
 import { useSearchParams } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import { ServiceLocale } from '@localization/Localization';
+import { motion } from 'framer-motion';
 
 const OrderPage: FC<OrderPageProps> = ({}) => {
   const loc = useLocalization();
@@ -91,7 +92,22 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
                 </svg>
               </div>
 
-              <div></div>
+              <motion.div
+                initial={{
+                  opacity: stage === Stages.FINAL ? 1 : 0,
+                  pointerEvents: stage === Stages.FINAL ? 'all' : 'none',
+                }}
+                animate={{
+                  opacity: stage === Stages.FINAL ? 1 : 0,
+                  pointerEvents: stage === Stages.FINAL ? 'all' : 'none',
+                }}
+                transition={{
+                  duration: 0.15,
+                }}
+                className={cn(styles.okButton)}
+              >
+                OK
+              </motion.div>
 
               <div
                 className={cn(

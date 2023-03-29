@@ -42,6 +42,18 @@
         grid-gap: globalPadding(.5);
         grid-template-columns: repeat(1, 3.8em) 1fr repeat(1, 3.8em);
 
+        .okButton {
+          @extend %notSelectable;
+          @extend %flexCenter;
+          @extend %mainFont;
+
+          border-radius: globalPadding(.5);
+          cursor: pointer;
+          font-weight: bold;
+          background: var(--service-foot-button-back);
+          color: var(--service-foot-button-font);
+        }
+
         .arrowButton {
           @extend %notSelectable;
           @extend %flexCenter;
