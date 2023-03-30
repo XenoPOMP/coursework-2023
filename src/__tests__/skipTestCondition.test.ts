@@ -1,20 +1,35 @@
 import { describe, expect, test } from 'vitest';
 import skipTestCondition from '@utils/skipTestCondition';
+import useEnv from '@hooks/useEnv';
 
 describe('Skip test condition', () => {
-  test.skipIf(skipTestCondition('FRONTEND'))('Condition is frontend', () => {
-    const isSkip = skipTestCondition('FRONTEND');
+  const skipFrontend = skipTestCondition('FRONTEND');
+  const skipBackend = skipTestCondition('BACKEND');
+  const skipFullstack = skipTestCondition('FULLSTACK');
 
-    expect(isSkip).toBe(false);
+  const { TESTING_MODE } = useEnv();
+
+  test.skipIf(skipTestCondition('FRONTEND'))('Condition is frontend', () => {
+    if (TESTING_MODE !== 'FULLSTACK') {
+      expect(skipFrontend).toBe(TESTING_MODE !== 'FRONTEND');
+      expect(skipBackend).toBe(TESTING_MODE !== 'BACKEND');
+      expect(skipFullstack).toBe(true);
+    } else {
+      expect(skipFrontend).toBe(false);
+      expect(skipBackend).toBe(false);
+      expect(skipFullstack).toBe(false);
+    }
   });
 
   test.skipIf(skipTestCondition('BACKEND'))('Condition is backend', () => {
-    const isSkip = skipTestCondition('BACKEND');
-
-    expect(isSkip).toBe(true);
-  });
-
-  test('Condition is', () => {
-    expect();
+    if (TESTING_MODE !== 'FULLSTACK') {
+      expect(skipFrontend).toBe(TESTING_MODE !== 'FRONTEND');
+      expect(skipBackend).toBe(TESTING_MODE !== 'BACKEND');
+      expect(skipFullstack).toBe(true);
+    } else {
+      expect(skipFrontend).toBe(false);
+      expect(skipBackend).toBe(false);
+      expect(skipFullstack).toBe(false);
+    }
   });
 });
