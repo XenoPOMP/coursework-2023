@@ -41,6 +41,7 @@
     "@types/uuid": "^9.0.1",
     "@vitejs/plugin-react": "^3.0.0",
     "@vitest/coverage-c8": "^0.28.4",
+    "cli-colors": "^0.0.2",
     "cross-env": "^7.0.3",
     "jsdom": "^21.1.0",
     "prettier": "^2.8.1",
