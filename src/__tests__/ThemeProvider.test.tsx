@@ -4,6 +4,9 @@ import cn from 'classnames';
 import styles from '@providers/ThemeProvider/ThemeProvider.module.scss';
 import skipTestCondition from '@utils/skipTestCondition';
 import renderWithProviders from '@utils/renderWithProviders';
+import { screen } from '@testing-library/react';
+
+const clc = require('cli-colors');
 
 describe.skipIf(skipTestCondition('FRONTEND'))('Theme Provider', () => {
   test('Classname', () => {
@@ -11,10 +14,19 @@ describe.skipIf(skipTestCondition('FRONTEND'))('Theme Provider', () => {
       useRedux: true,
     });
 
-    const selector = document.querySelector(
-      `div ${cn(styles.themes, styles.dark)}`,
+    const themeClassesDefined =
+      document.body.classList.contains(styles.themes) &&
+      (document.body.classList.contains(styles.dark) ||
+        document.body.classList.contains(styles.light));
+
+    console.log(
+      `${clc.green(`[DEBUG]`)} Body class list contains themes: ${
+        themeClassesDefined
+          ? clc.green(`${themeClassesDefined}`)
+          : clc.red(`${themeClassesDefined}`)
+      }`,
     );
 
-    expect(selector).toBeDefined();
+    expect(themeClassesDefined).toBe(true);
   });
 });
