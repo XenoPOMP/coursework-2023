@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import IStore from '@redux/types/redux-types';
 import { ServiceList } from '@redux/reducers/serviceListSlice';
 import { motion } from 'framer-motion';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import useServiceId from '@hooks/useServiceId';
 import { changeLastServicePage } from '@redux/reducers/lastPageSlice';
 
@@ -36,12 +36,46 @@ const ServiceBadge: FC<ServiceBadgeProps> = ({ locales }) => {
     }
   };
 
+  const nameIsMatch = (): boolean => {
+    const pattern: RegExp = new RegExp(`${search}`, 'gi');
+
+    return pattern.test(name);
+  };
+
   const getDisplayMode = (): string => {
     if (useServiceId() === index) {
       return '';
     }
 
-    return name.match(search) || search === '' ? '' : 'none';
+    return nameIsMatch() || search === '' ? '' : 'none';
+  };
+
+  const Content = (): JSX.Element => {
+    if (useServiceId() === index || search === '') {
+      return <>{name}</>;
+    }
+
+    if (nameIsMatch()) {
+      const pattern: RegExp = new RegExp(`(${search})|(\w+)`, 'gi');
+      const correctPattern: RegExp = new RegExp(`${search}`, 'gi');
+      let output = name.split(pattern);
+
+      return (
+        <>
+          {output.map((item) => {
+            return (
+              <span
+                className={cn(correctPattern.test(item) && styles.highlight)}
+              >
+                {item}
+              </span>
+            );
+          })}
+        </>
+      );
+    }
+
+    return <>{name}</>;
   };
 
   return (
@@ -60,7 +94,9 @@ const ServiceBadge: FC<ServiceBadgeProps> = ({ locales }) => {
     >
       {getIcon()}
 
-      <div className={cn(styles.name)}>{name}</div>
+      <div className={cn(styles.name)}>
+        <Content />
+      </div>
 
       <motion.svg
         initial={{
