@@ -48,12 +48,11 @@
         flex-direction: column;
 
         h3 {
+          @extend %notSelectable;
           margin-bottom: 1.1em;
         }
 
         h3, h4 {
-          @extend %notSelectable;
-
           font-size: 1.25em;
           color: var(--ord-font-primary);
           font-weight: bold;
