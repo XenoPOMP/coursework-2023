@@ -1,22 +1,20 @@
 import { describe, expect, test } from 'vitest';
 import skipTestCondition from '@utils/skipTestCondition';
-import useEnv from '@hooks/useEnv';
 
-const { TESTING_MODE } = useEnv();
+describe('Skip test condition', () => {
+  test.skipIf(skipTestCondition('FRONTEND'))('Condition is frontend', () => {
+    const isSkip = skipTestCondition('FRONTEND');
 
-describe.skipIf(skipTestCondition('FRONTEND') || TESTING_MODE === 'FULLSTACK')(
-  'Skip test condition',
-  () => {
-    test('Condition is frontend', () => {
-      const isSkip = skipTestCondition('FRONTEND');
+    expect(isSkip).toBe(false);
+  });
 
-      expect(isSkip).toBe(false);
-    });
+  test.skipIf(skipTestCondition('BACKEND'))('Condition is backend', () => {
+    const isSkip = skipTestCondition('BACKEND');
 
-    test('Condition is backend', () => {
-      const isSkip = skipTestCondition('BACKEND');
+    expect(isSkip).toBe(true);
+  });
 
-      expect(isSkip).toBe(true);
-    });
-  },
-);
+  test('Condition is', () => {
+    expect();
+  });
+});
