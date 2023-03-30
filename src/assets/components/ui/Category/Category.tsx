@@ -14,8 +14,8 @@ const Category: FC<CategoryProps> = ({ index }) => {
       <h2>{categoryLocales.title}</h2>
 
       <div className={cn(styles.itemGroup)}>
-        {categoryLocales.services.map((service) => (
-          <ServiceBadge locales={service} />
+        {categoryLocales.services.map((service, index) => (
+          <ServiceBadge locales={service} key={`service-badge-${index}`} />
         ))}
       </div>
     </div>

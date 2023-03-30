@@ -31,10 +31,11 @@ const MainPage = () => {
 
         <section className={cn(styles.cards)}>
           <div className={cn(styles.content)}>
-            {numericGenerator(3).map(() => (
+            {numericGenerator(3).map((key) => (
               <LandingCard
                 img={imageZero}
                 locales={loc.mainPage.rightPart.cards[0]}
+                key={`landing-card-${key}`}
               />
             ))}
           </div>
