@@ -1,5 +1,8 @@
 import React from 'react';
 import Page from '@components/Page/Page';
+import cn from 'classnames';
+import styles from './NotFound.module.scss';
+
 const NotFound = () => {
   return (
     <Page
