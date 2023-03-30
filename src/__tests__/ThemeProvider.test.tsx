@@ -11,10 +11,14 @@ describe.skipIf(skipTestCondition('FRONTEND'))('Theme Provider', () => {
       useRedux: true,
     });
 
-    const selector = document.querySelector(
-      `div ${cn(styles.themes, styles.dark)}`,
-    );
+    const bodyClasses = document.body.classList.contains(styles.themes);
+    const themeClassesDefined =
+      document.body.classList.contains(styles.dark) ||
+      document.body.classList.contains(styles.light);
 
-    expect(selector).toBeDefined();
+    console.log(document.body);
+
+    expect(bodyClasses).toBe(true);
+    expect(themeClassesDefined).toBe(true);
   });
 });
