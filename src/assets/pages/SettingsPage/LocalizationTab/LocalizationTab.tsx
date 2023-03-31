@@ -24,6 +24,7 @@ const LocalizationTab: FC<LocalizationTabProps> = () => {
           isTriggered={language.get() === 'ru'}
           onClick={() => {
             language.set('ru');
+            currency.set('rub');
           }}
         >
           {loc.settingsPage.localization.items.languageVariants.russian}
@@ -33,6 +34,7 @@ const LocalizationTab: FC<LocalizationTabProps> = () => {
           isTriggered={language.get() === 'en'}
           onClick={() => {
             language.set('en');
+            currency.set('usd');
           }}
         >
           {loc.settingsPage.localization.items.languageVariants.english}
