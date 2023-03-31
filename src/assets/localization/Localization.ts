@@ -20,8 +20,8 @@ export type ServiceLocale = {
   desc?: string;
   stats: {
     minPrice: {
-      inRubles: number;
-      inDollars: number;
+      inRubles: string;
+      inDollars: string;
     };
 
     executionTime: string;

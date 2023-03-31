@@ -67,8 +67,8 @@ const englishLocalization: Localization = {
 
             stats: {
               minPrice: {
-                inRubles: 10000,
-                inDollars: 250,
+                inRubles: '10000 RUB',
+                inDollars: '250 USD',
               },
 
               executionTime: '2-6 weeks',
@@ -112,7 +112,7 @@ const englishLocalization: Localization = {
       },
 
       cardBodies: {
-        price: 'XXUSD+',
+        price: 'XX+',
       },
     },
   },

@@ -19,7 +19,7 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
   const loc = useLocalization();
   const appSettings = useAppSettings();
 
-  const language = appSettings.language.get();
+  const currency = appSettings.currency.get();
 
   const serviceStates = useSelector(
     (state: IStore) => state.serviceList.services,
@@ -59,9 +59,13 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
                   {loc.servicePage.labels.cardBodies.price.replace(
                     /XX/i,
                     `${
-                      language === 'ru'
+                      currency === 'rub'
                         ? getLocales()?.stats.minPrice.inRubles
-                        : getLocales()?.stats.minPrice.inDollars
+                        : ''
+                    }${
+                      currency === 'usd'
+                        ? getLocales()?.stats.minPrice.inDollars
+                        : ''
                     }`,
                   )}
                 </div>

@@ -68,8 +68,8 @@ const russianLocalization: Localization = {
 
             stats: {
               minPrice: {
-                inRubles: 10000,
-                inDollars: 250,
+                inRubles: '10000 руб.',
+                inDollars: '250 долларов',
               },
 
               executionTime: 'от 2 до 6 недель',
@@ -113,7 +113,7 @@ const russianLocalization: Localization = {
       },
 
       cardBodies: {
-        price: 'от XX руб.',
+        price: 'от XX',
       },
     },
   },
