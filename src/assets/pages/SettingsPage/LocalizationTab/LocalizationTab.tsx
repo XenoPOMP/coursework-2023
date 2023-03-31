@@ -10,7 +10,7 @@ import useAppSettings from '@hooks/useAppSettings';
 
 const LocalizationTab: FC<LocalizationTabProps> = () => {
   const loc = useLocalization();
-  const { language } = useAppSettings();
+  const { language, currency } = useAppSettings();
 
   return (
     <>
@@ -44,18 +44,18 @@ const LocalizationTab: FC<LocalizationTabProps> = () => {
         flexWrap
       >
         <SelectButton
-          isTriggered={false}
+          isTriggered={currency.get() === 'rub'}
           onClick={() => {
-            // language.set('en');
+            currency.set('rub');
           }}
         >
           {loc.settingsPage.localization.items.currencyVariants.rub}
         </SelectButton>
 
         <SelectButton
-          isTriggered={false}
+          isTriggered={currency.get() === 'usd'}
           onClick={() => {
-            // language.set('en');
+            currency.set('usd');
           }}
         >
           {loc.settingsPage.localization.items.currencyVariants.usd}

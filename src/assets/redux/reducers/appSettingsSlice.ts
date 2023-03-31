@@ -2,14 +2,15 @@ import { createSlice } from '@reduxjs/toolkit';
 import { ReduxAction } from '@redux/types/redux-types';
 
 export type Language = 'ru' | 'en';
-
 export type Theme = 'light' | 'dark';
+export type Currency = 'rub' | 'usd';
 
 export type AppSettings = {
   appVersion: string;
   language: Language;
   cookiePrefix: string;
   theme: Theme;
+  currency: Currency;
 };
 
 const initialState: AppSettings = {
@@ -17,6 +18,7 @@ const initialState: AppSettings = {
   language: 'ru',
   cookiePrefix: 'smart-ace',
   theme: 'light',
+  currency: 'rub',
 };
 
 const appSettingsSlice = createSlice({
@@ -30,9 +32,14 @@ const appSettingsSlice = createSlice({
     changeTheme(state, action: ReduxAction<Theme>) {
       state.theme = action.payload;
     },
+
+    changeCurrency(state, action: ReduxAction<Currency>) {
+      state.currency = action.payload;
+    },
   },
 });
 
 export default appSettingsSlice.reducer;
-export const { changeLang, changeTheme } = appSettingsSlice.actions;
+export const { changeLang, changeTheme, changeCurrency } =
+  appSettingsSlice.actions;
 export const initialAppSettings = appSettingsSlice.getInitialState();
