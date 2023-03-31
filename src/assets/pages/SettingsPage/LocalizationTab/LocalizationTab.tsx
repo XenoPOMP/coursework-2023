@@ -38,6 +38,29 @@ const LocalizationTab: FC<LocalizationTabProps> = () => {
           {loc.settingsPage.localization.items.languageVariants.english}
         </SelectButton>
       </SetItemBlock>
+
+      <SetItemBlock
+        locales={loc.settingsPage.localization.items.currency}
+        flexWrap
+      >
+        <SelectButton
+          isTriggered={false}
+          onClick={() => {
+            // language.set('en');
+          }}
+        >
+          {loc.settingsPage.localization.items.currencyVariants.rub}
+        </SelectButton>
+
+        <SelectButton
+          isTriggered={false}
+          onClick={() => {
+            // language.set('en');
+          }}
+        >
+          {loc.settingsPage.localization.items.currencyVariants.usd}
+        </SelectButton>
+      </SetItemBlock>
     </>
   );
 };

@@ -159,6 +159,16 @@ const englishLocalization: Localization = {
           russian: 'Русский',
           english: 'English',
         },
+
+        currency: {
+          title: 'Currency',
+          desc: 'Choose your currency',
+        },
+
+        currencyVariants: {
+          rub: 'Rubles',
+          usd: 'US Dollars',
+        },
       },
     },
 

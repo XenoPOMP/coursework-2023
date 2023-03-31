@@ -115,6 +115,11 @@ type Localization = {
           russian: string;
           english: string;
         };
+        currency: SettingsTabTitleLocale;
+        currencyVariants: {
+          rub: string;
+          usd: string;
+        };
       };
     };
 
