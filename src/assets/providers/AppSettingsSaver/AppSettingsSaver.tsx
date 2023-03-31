@@ -19,7 +19,7 @@ const AppSettingsSaver: FC<ProviderProps> = ({ children }) => {
   // Local storage
   const appSettings = useSelector((state: IStore) => state.appSettings);
   const [getCookieSettings, setCookieSettings] = useLocalStorage<AppSettings>(
-    `${cookiePrefix}-app-settings`,
+    `${cookiePrefix.get()}-app-settings`,
     initialAppSettings,
   );
 
