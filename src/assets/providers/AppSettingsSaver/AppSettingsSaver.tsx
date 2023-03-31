@@ -13,7 +13,7 @@ import useAppSettings from '@hooks/useAppSettings';
 import { useLocalStorage } from '@hooks/useLocalStorage';
 
 const AppSettingsSaver: FC<ProviderProps> = ({ children }) => {
-  const { theme, language, cookiePrefix } = useAppSettings();
+  const { theme, language, cookiePrefix, currency } = useAppSettings();
   const dispatch = useDispatch();
 
   // Local storage
@@ -27,12 +27,13 @@ const AppSettingsSaver: FC<ProviderProps> = ({ children }) => {
   useEffect(() => {
     theme.set(getCookieSettings.theme);
     language.set(getCookieSettings.language);
+    currency.set(getCookieSettings.currency);
   }, []);
 
   // Save app settings to cookie
   useEffect(() => {
     setCookieSettings(appSettings);
-  }, [theme.get(), language.get()]);
+  }, [theme.get(), language.get(), currency.get()]);
 
   return <>{children}</>;
 };
