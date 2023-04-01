@@ -13,8 +13,8 @@
   justify-content: space-between;
   cursor: pointer;
 
-  &:not(:last-of-type) {
-    margin-bottom: globalPadding(.25);
+  &:not(:first-of-type) {
+    margin-top: globalPadding(.25);
   }
 
   transition: background .15s ease;
