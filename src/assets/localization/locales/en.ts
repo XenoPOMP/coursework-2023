@@ -94,6 +94,27 @@ const englishLocalization: Localization = {
               },
             ],
           },
+
+          {
+            index: 1,
+            name: 'Internet shop',
+            desc: 'Service description',
+
+            stats: {
+              minPrice: {
+                inRubles: '25000 RUB',
+                inDollars: '500 USD',
+              },
+
+              executionTime: '5-12 weeks',
+
+              hardness: 3,
+
+              rating: 4.75,
+            },
+
+            reviews: [],
+          },
         ],
       },
     ],

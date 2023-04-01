@@ -6,12 +6,12 @@ import useLocalization from '@hooks/useLocalization';
 export type ServiceIcon = 'thunderbolt';
 
 export type ServiceList = {
-  search: string,
+  search: string;
   services: Array<{
-    isFavorite: boolean,
-    icon: ServiceIcon,
-    index: number,
-  }>,
+    isFavorite: boolean;
+    icon: ServiceIcon;
+    index: number;
+  }>;
 };
 
 const initialState: ServiceList = {
@@ -21,6 +21,12 @@ const initialState: ServiceList = {
       isFavorite: false,
       icon: 'thunderbolt',
       index: 0,
+    },
+
+    {
+      isFavorite: false,
+      icon: 'thunderbolt',
+      index: 1,
     },
   ],
 };

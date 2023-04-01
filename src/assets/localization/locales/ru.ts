@@ -95,6 +95,27 @@ const russianLocalization: Localization = {
               },
             ],
           },
+
+          {
+            index: 1,
+            name: 'Интернет-магазин',
+            desc: 'Описание услуги',
+
+            stats: {
+              minPrice: {
+                inRubles: '25000 руб.',
+                inDollars: '500 долларов',
+              },
+
+              executionTime: 'от 5 до 12 недель',
+
+              hardness: 3,
+
+              rating: 4.75,
+            },
+
+            reviews: [],
+          },
         ],
       },
     ],
