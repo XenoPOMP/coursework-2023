@@ -13,6 +13,7 @@
   justify-content: space-between;
   cursor: pointer;
 
+  // Space between badges
   &:not(:first-of-type) {
     margin-top: globalPadding(.25);
   }
@@ -23,6 +24,7 @@
     background: var(--head-button-back);
   }
 
+  // Space before badges
   &:first-of-type {
     margin-top: 1.1em;
   }
