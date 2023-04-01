@@ -86,6 +86,9 @@ type Localization = {
       cardBodies: {
         price: string;
       };
+      errors: {
+        noReviews: string;
+      };
     };
   };
 

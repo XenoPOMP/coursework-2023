@@ -135,6 +135,10 @@ const englishLocalization: Localization = {
       cardBodies: {
         price: 'XX+',
       },
+
+      errors: {
+        noReviews: 'This service has no reviews yet',
+      },
     },
   },
 

@@ -136,6 +136,10 @@ const russianLocalization: Localization = {
       cardBodies: {
         price: 'от XX',
       },
+
+      errors: {
+        noReviews: 'У этой услуги пока что нет отзывов',
+      },
     },
   },
 

@@ -305,6 +305,12 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
               {getLocales()?.reviews.map((review) => (
                 <UserReview locales={review} />
               ))}
+
+              {getLocales()?.reviews.length === 0 && (
+                <div className={cn(styles.noReviews)}>
+                  {loc.servicePage.labels.errors.noReviews}
+                </div>
+              )}
             </div>
           </div>
 
