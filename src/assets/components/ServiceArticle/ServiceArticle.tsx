@@ -339,7 +339,7 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
                 dispatch(toggleStar(serviceId));
               }}
             >
-              {serviceStates[serviceId].isFavorite ? (
+              {serviceStates[serviceId]?.isFavorite ? (
                 <svg
                   className={cn(styles.favorite)}
                   width='36'

@@ -19,7 +19,7 @@ const ServiceBadge: FC<ServiceBadgeProps> = ({ locales }) => {
   const dispatch = useDispatch();
 
   const getIcon = (): JSX.Element => {
-    switch (services[index].icon) {
+    switch (services[index]?.icon) {
       case 'thunderbolt':
         return (
           <svg
@@ -43,7 +43,7 @@ const ServiceBadge: FC<ServiceBadgeProps> = ({ locales }) => {
   };
 
   const getDisplayMode = (): string => {
-    if (useServiceId() === index || services[index].isFavorite) {
+    if (useServiceId() === index || services[index]?.isFavorite) {
       return '';
     }
 
@@ -100,10 +100,10 @@ const ServiceBadge: FC<ServiceBadgeProps> = ({ locales }) => {
 
       <motion.svg
         initial={{
-          opacity: services[index].isFavorite ? 1 : 0,
+          opacity: services[index]?.isFavorite ? 1 : 0,
         }}
         animate={{
-          opacity: services[index].isFavorite ? 1 : 0,
+          opacity: services[index]?.isFavorite ? 1 : 0,
         }}
         transition={{
           duration: 0.15,
