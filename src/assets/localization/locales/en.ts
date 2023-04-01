@@ -110,7 +110,7 @@ const englishLocalization: Localization = {
 
               hardness: 3,
 
-              rating: 4.75,
+              rating: 'N/A',
             },
 
             reviews: [],

@@ -28,7 +28,7 @@ export type ServiceLocale = {
 
     hardness: 1 | 2 | 3 | 4;
 
-    rating: number;
+    rating: number | 'N/A';
   };
   reviews: ServiceReviewLocale[];
 };
