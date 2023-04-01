@@ -43,7 +43,7 @@ const ServiceBadge: FC<ServiceBadgeProps> = ({ locales }) => {
   };
 
   const getDisplayMode = (): string => {
-    if (useServiceId() === index) {
+    if (useServiceId() === index || services[index].isFavorite) {
       return '';
     }
 
