@@ -268,7 +268,7 @@ const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
                       maskUnits='userSpaceOnUse'
                       x='0'
                       y='0'
-                      width='171'
+                      width='190'
                       height='36'
                     >
                       <motion.rect
