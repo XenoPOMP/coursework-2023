@@ -35,6 +35,7 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
       meta={loc.meta.settingsPage}
       header={{
         renderNav: false,
+        renderBackButton: true,
       }}
     >
       <div className={cn(styles.page)}>

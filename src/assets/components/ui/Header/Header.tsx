@@ -1,23 +1,56 @@
 import cn from 'classnames';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import styles from './Header.module.scss';
 import { HeaderProps } from './Header.props';
 import Logotype from '@ui/Logotype/Logotype';
 import Navbar from '@ui/Navbar/Navbar';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header: FC<HeaderProps> = (props) => {
-  const { tabIndex, renderNav, renderRightButtons }: HeaderProps = {
+  const {
+    tabIndex,
+    renderNav,
+    renderRightButtons,
+    renderBackButton,
+  }: HeaderProps = {
     tabIndex: 0,
     renderNav: true,
+    renderBackButton: false,
     renderRightButtons: true,
     ...props,
   };
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (renderNav && renderBackButton) {
+      throw new Error('Can`t render navbar and back button at the same time');
+    }
+  }, []);
 
   return (
     <header className={cn(styles.appHeader)}>
       <div className={cn(styles.container, styles.left)}>
         {renderNav && <Navbar tabIndex={tabIndex} />}
+
+        {renderBackButton && (
+          <div
+            className={cn(styles.squareButton)}
+            onClick={() => {
+              navigate(-1);
+            }}
+          >
+            <svg
+              width='31'
+              height='24'
+              viewBox='0 0 31 24'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path d='M0.939341 10.9393C0.353554 11.5251 0.353554 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97918 12.6066 1.3934C12.0208 0.80761 11.0711 0.80761 10.4853 1.3934L0.939341 10.9393ZM31 10.5L2 10.5L2 13.5L31 13.5L31 10.5Z' />
+            </svg>
+          </div>
+        )}
       </div>
 
       <div className={cn(styles.container, styles.center)}>
