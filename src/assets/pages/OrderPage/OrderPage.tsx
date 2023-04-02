@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import styles from './OrderPage.module.scss';
 import { OrderPageProps } from './OrderPage.props';
 import Page from '@components/Page/Page';
@@ -55,6 +55,11 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
     setIsTgError(false);
     setIsVkError(false);
   };
+
+  // Reset errors when user is typing
+  useEffect(() => {
+    resetErrors();
+  }, [name, email, telegram, vk]);
 
   const checkCorrect = (): boolean => {
     resetErrors();

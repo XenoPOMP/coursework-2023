@@ -7,6 +7,14 @@
   grid-template-rows: var(--header-height) 1fr;
   font-size: 20px;
 
+  @media (max-width: 591px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 381px) {
+    font-size: 14px;
+  }
+
   .placeholder {
     grid-row-start: 2;
     padding:
@@ -58,6 +66,14 @@
           font-weight: bold;
         }
 
+        h4 {
+          text-align: center;
+
+          &:not(:last-of-type) {
+            margin-bottom: .5em;
+          }
+        }
+
         .orderInput {
           width: 100%;
           display: grid;
@@ -93,6 +109,23 @@
 
             &.withError {
               border: 2px solid var(--ord-font-error);
+
+              animation: errorShakingAnimation .1s ease;
+              animation-iteration-count: 1;
+
+              @keyframes errorShakingAnimation {
+                0% {
+                  transform: translateX(-5px);
+                }
+
+                25%, 100% {
+                  transform: translateX(0);
+                }
+
+                50% {
+                  transform: translateX(5px);
+                }
+              }
             }
           }
         }
