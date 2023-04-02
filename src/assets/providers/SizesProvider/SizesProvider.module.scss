@@ -6,4 +6,9 @@
     --global-padding: 35px;
     --header-height: 142px;
   }
+
+  @media (max-width: 512px) {
+    --global-padding: 30px;
+    --header-height: 137px;
+  }
 }

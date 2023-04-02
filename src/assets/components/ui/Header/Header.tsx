@@ -5,6 +5,7 @@ import { HeaderProps } from './Header.props';
 import Logotype from '@ui/Logotype/Logotype';
 import Navbar from '@ui/Navbar/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
+import useAppSettings from '@hooks/useAppSettings';
 
 const Header: FC<HeaderProps> = (props) => {
   const {
@@ -60,7 +61,10 @@ const Header: FC<HeaderProps> = (props) => {
       <div className={cn(styles.container, styles.right)}>
         {renderRightButtons && (
           <>
-            <Link to={'/settings'} className={cn(styles.squareButton)}>
+            <Link
+              to={'/settings'}
+              className={cn(styles.squareButton, styles.settings)}
+            >
               <svg
                 width='31'
                 height='30'

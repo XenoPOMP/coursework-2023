@@ -13,6 +13,10 @@ nav.headerNav {
   column-gap: 1em;
   float: left;
 
+  @media (max-width: 1000px) {
+    display: none;
+  }
+
   .item {
     @extend %flexCenter;
     @extend %notSelectable;
