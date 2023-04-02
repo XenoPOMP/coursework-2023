@@ -7,10 +7,6 @@
     --header-height: 120px;
   }
 
-  @media (max-width: 828px) {
-    --header-height: 80px;
-  }
-
   @media (max-width: 712px) {
     --global-padding: 30px;
   }
@@ -21,5 +17,6 @@
 
   @media (max-width: 512px) {
     --global-padding: 20px;
+    --header-height: 100px;
   }
 }
