@@ -4,21 +4,19 @@
 
   @media (max-width: 844px) {
     --global-padding: 35px;
-    --header-height: 142px;
+    --header-height: 120px;
   }
 
   @media (max-width: 712px) {
     --global-padding: 30px;
-    --header-height: 137px;
   }
 
   @media (max-width: 604px) {
     --global-padding: 25px;
-    --header-height: 132px;
+    --header-height: 100px;
   }
 
   @media (max-width: 512px) {
     --global-padding: 20px;
-    --header-height: 127px;
   }
 }
