@@ -3,12 +3,28 @@
 .page {
   --sidebar-width: 416px;
 
+  @media (max-width: 1300px) {
+    --sidebar-width: 300px;
+  }
+
+  @media (max-width: 800px) {
+    --sidebar-width: 200px;
+  }
+
+  @media (max-width: 692px) {
+    --sidebar-width: 175px;
+  }
+
   width: 100vw;
   height: 100vh;
   padding: var(--header-height) globalPadding(1) 0 globalPadding(1);
   display: grid;
   grid-template-columns: var(--sidebar-width) 1fr;
   font-size: 20px;
+
+  @media (max-width: 920px) {
+    font-size: 18px;
+  }
 
   .sidebar,
   .body {
@@ -26,6 +42,10 @@
     flex-direction: column;
     row-gap: globalPadding(.5);
     padding-bottom: globalPadding(1);
+
+    @media (max-width: 692px) {
+      font-size: .8em;
+    }
 
     .item {
       @extend %notSelectable;
@@ -85,6 +105,14 @@
 
   .body {
     font-size: 1em; // 1em = 20px
+
+    @media (max-width: 708px) {
+      font-size: .8em;
+    }
+
+    @media (max-width: 468px) {
+      font-size: .6em;
+    }
 
     .content {
       $minHeight: calc(calc(100% - 2.15em) - globalPadding(2));
