@@ -3,6 +3,7 @@
 .page {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   display: grid;
   grid-template-rows: var(--header-height) 1fr;
   font-size: 20px;
