@@ -11,6 +11,12 @@
     --sidebar-width: 200px;
   }
 
+  @media (max-width: 561px) {
+    $sidebarWidth: calc(2.2em + globalPadding(.5));
+
+    grid-template-columns: $sidebarWidth 1fr;
+  }
+
   @media (max-width: 692px) {
     --sidebar-width: 175px;
   }
@@ -24,7 +30,7 @@
   font-size: 20px;
 
   @media (max-width: 920px) {
-    font-size: 18px;
+    font-size: 19px;
   }
 
   .sidebar,
@@ -46,6 +52,10 @@
 
     @media (max-width: 692px) {
       font-size: .8em;
+    }
+
+    @media (max-width: 561px) {
+      padding-right: 0;
     }
 
     .item {
@@ -81,6 +91,18 @@
         }
       }
 
+      @media (max-width: 561px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1;
+        width: 2.4em;
+
+        span {
+          display: none;
+        }
+      }
+
       &.version {
         border-top: 1px solid var(--head-button-back);
         font-size: .85em;
@@ -89,6 +111,10 @@
         left: 0;
         border-radius: 0;
         background: var(--background-primary);
+
+        @media (max-width: 561px) {
+          display: none;
+        }
 
         &:after {
           position: absolute;
@@ -109,10 +135,6 @@
 
     @media (max-width: 708px) {
       font-size: .8em;
-    }
-
-    @media (max-width: 468px) {
-      font-size: .6em;
     }
 
     .content {
