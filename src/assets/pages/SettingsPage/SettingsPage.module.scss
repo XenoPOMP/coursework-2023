@@ -17,6 +17,7 @@
 
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   padding: var(--header-height) globalPadding(1) 0 globalPadding(1);
   display: grid;
   grid-template-columns: var(--sidebar-width) 1fr;
