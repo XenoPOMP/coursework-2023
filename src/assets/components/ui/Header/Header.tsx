@@ -6,6 +6,8 @@ import Logotype from '@ui/Logotype/Logotype';
 import Navbar from '@ui/Navbar/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
 import useAppSettings from '@hooks/useAppSettings';
+import useBoolean from '@hooks/useBoolean';
+import MenuOverlay from '@components/MenuOverlay/MenuOverlay';
 
 const Header: FC<HeaderProps> = (props) => {
   const {
@@ -22,6 +24,7 @@ const Header: FC<HeaderProps> = (props) => {
   };
 
   const navigate = useNavigate();
+  const [menuOpened, toggleMenu] = useBoolean(false);
 
   useEffect(() => {
     if (renderNav && renderBackButton) {
@@ -31,6 +34,8 @@ const Header: FC<HeaderProps> = (props) => {
 
   return (
     <header className={cn(styles.appHeader)}>
+      <MenuOverlay isOpened={menuOpened} />
+
       <div className={cn(styles.container, styles.left)}>
         {renderNav && <Navbar tabIndex={tabIndex} />}
 
@@ -76,7 +81,10 @@ const Header: FC<HeaderProps> = (props) => {
               </svg>
             </Link>
 
-            <div className={cn(styles.squareButton)}>
+            <div
+              className={cn(styles.squareButton, styles.menu)}
+              onClick={toggleMenu}
+            >
               <svg
                 width='31'
                 height='15'

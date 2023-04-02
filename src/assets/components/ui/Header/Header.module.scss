@@ -57,6 +57,10 @@ header.appHeader {
       }
     }
 
+    &.menu {
+      z-index: var(--layer-above-overlay);
+    }
+
     &:hover, &:active {
       svg rect,
       svg path {
