@@ -6,8 +6,16 @@
   display: grid;
   grid-template-columns: 6.6fr 20px 3.3fr;
 
-  @media (max-width: 1048px) {
+  @media (max-width: 1168px) {
     grid-template-columns: 1fr 20px 1fr;
+  }
+
+  @media (max-width: 676px) {
+    grid-template-columns: .75fr 20px 1fr;
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: 0 20px 1fr;
   }
 
   .patchPlaceholder {
@@ -38,6 +46,10 @@
         @media (max-width: 1016px) {
           font-size: 3em;
         }
+
+        @media (max-width: 676px) {
+          font-size: 2.5em;
+        }
       }
 
       .subLabel {
@@ -52,6 +64,15 @@
       @media (max-width: 1048px) {
         font-size: 16px;
       }
+
+      @media (max-width: 676px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 576px) {
+        opacity: 0;
+        pointer-events: none;
+      }
     }
 
     &.cards {
@@ -62,6 +83,14 @@
       align-items: start;
       justify-content: start;
       column-gap: 2em;
+
+      @media (max-width: 1382px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 740px) {
+        font-size: 16px;
+      }
 
       .content {
         @extend %flexCenter;
