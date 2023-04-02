@@ -53,6 +53,7 @@ type Localization = {
       mainPage: string;
       services: string;
       blog: string;
+      settings: string;
     };
   };
 

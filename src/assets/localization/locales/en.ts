@@ -34,6 +34,7 @@ const englishLocalization: Localization = {
       mainPage: 'Main',
       services: 'Services',
       blog: 'Blog',
+      settings: 'Settings',
     },
   },
 

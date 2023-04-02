@@ -34,6 +34,7 @@ const russianLocalization: Localization = {
       mainPage: 'Главная',
       services: 'Услуги',
       blog: 'Блог',
+      settings: 'Настройки',
     },
   },
 

@@ -34,7 +34,7 @@ const Header: FC<HeaderProps> = (props) => {
 
   return (
     <header className={cn(styles.appHeader)}>
-      <MenuOverlay isOpened={menuOpened} />
+      <MenuOverlay isOpened={menuOpened} onLinkClick={toggleMenu} />
 
       <div className={cn(styles.container, styles.left)}>
         {renderNav && <Navbar tabIndex={tabIndex} />}

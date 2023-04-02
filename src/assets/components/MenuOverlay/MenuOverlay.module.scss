@@ -1,4 +1,9 @@
+@import "src/assets/styles/templates";
+
 .overlay {
+  @extend %mainFont;
+
+  font-size: 32px;
   width: 100vw;
   height: 100vh;
   background: var(--ov-backdrop);
@@ -6,4 +11,41 @@
   top: 0;
   left: 0;
   z-index: var(--layer-overlay);
+  padding: var(--header-height) globalPadding(1) globalPadding(1) globalPadding(1);
+
+  .blocks {
+    @extend %flexCenter;
+    @extend %scrollable;
+    @extend %notSelectable;
+
+    row-gap: .8em;
+    width: 100%;
+    height: 100%;
+    justify-content: start;
+    align-items: end;
+    font-size: 1em;
+    color: var(--ov-font-inactive);
+    flex-direction: column;
+
+    .block {
+      @extend %flexCenter;
+
+      padding: .625em;
+      max-width: 481px;
+      justify-content: start;
+      align-items: end;
+      row-gap: .625em;
+      flex-direction: column;
+      width: 100%;
+
+      a {
+        color: var(--ov-font-inactive);
+        transition: .15s ease color;
+
+        &:hover {
+          color: var(--ov-font-active);
+        }
+      }
+    }
+  }
 }
