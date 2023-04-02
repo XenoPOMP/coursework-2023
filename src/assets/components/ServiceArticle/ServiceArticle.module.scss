@@ -151,6 +151,14 @@ article.service {
         padding-top: globalPadding(.5);
         font-size: 1em;
         color: var(--service-title);
+
+        @media (max-width: 1504px) {
+          grid-column: span 2;
+        }
+
+        @media (max-width: 852px) {
+          grid-column: span 1;
+        }
       }
     }
   }
