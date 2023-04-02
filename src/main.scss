@@ -5,3 +5,26 @@ body {
   transition: background .15s ease;
   overflow: hidden;
 }
+
+:root {
+  --header-height: 147px;
+  --global-padding: 40px;
+
+  @media (max-width: 844px) {
+    --global-padding: 35px;
+    --header-height: 120px;
+  }
+
+  @media (max-width: 712px) {
+    --global-padding: 30px;
+  }
+
+  @media (max-width: 604px) {
+    --global-padding: 25px;
+  }
+
+  @media (max-width: 512px) {
+    --global-padding: 20px;
+    --header-height: 100px;
+  }
+}

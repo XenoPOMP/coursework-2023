@@ -5,9 +5,7 @@ import { SizesProviderProps } from './SizesProvider.props';
 import { ProviderProps } from '@providers/Provider.props';
 
 const SizesProvider: FC<ProviderProps> = ({ children }) => {
-  document.body.classList.add(styles.sizes);
-
-  return <>{children}</>;
+  return <div className={cn(styles.sizes)}>{children}</div>;
 };
 
 export default SizesProvider;
