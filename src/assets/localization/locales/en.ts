@@ -245,7 +245,7 @@ const englishLocalization: Localization = {
       ],
     },
 
-    error: 'Есть ошибки',
+    error: 'There are errors',
   },
 };
 
