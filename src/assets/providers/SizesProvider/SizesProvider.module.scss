@@ -1,4 +1,14 @@
 .sizes {
   --header-height: 147px;
   --global-padding: 40px;
+
+  @media (max-width: 844px) {
+    --global-padding: 35px;
+    --header-height: 142px;
+  }
+
+  @media (max-width: 512px) {
+    --global-padding: 30px;
+    --header-height: 137px;
+  }
 }

@@ -19,10 +19,19 @@ header.appHeader {
 
     &.left {
       justify-content: start;
+
+      @media (max-width: 696px) {
+        display: none;
+      }
     }
 
     &.center {
       justify-content: center;
+
+      @media (max-width: 696px) {
+        grid-column: span 2;
+        justify-content: start;
+      }
     }
 
     &.right {
@@ -41,6 +50,12 @@ header.appHeader {
     border-radius: 50%;
 
     transition: background-color .15s ease;
+
+    &.settings {
+      @media (max-width: 552px) {
+        display: none;
+      }
+    }
 
     &:hover, &:active {
       svg rect,

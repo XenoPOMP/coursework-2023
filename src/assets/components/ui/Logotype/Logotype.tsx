@@ -3,6 +3,7 @@ import { FC } from 'react';
 import styles from './Logotype.module.scss';
 import { LogotypeProps } from './Logotype.props';
 import { Link } from 'react-router-dom';
+import useAppSettings from '@hooks/useAppSettings';
 
 const Logotype: FC<LogotypeProps> = (props) => {
   const defaultProps: LogotypeProps = {
