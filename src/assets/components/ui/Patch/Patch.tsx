@@ -30,21 +30,20 @@ const Patch: FC<PatchProps> = ({}) => {
       </BrowserView>
 
       <MobileView>
-        <div className={cn(styles.patch)}>
-          <motion.div
-            initial={{
-              y: '100%',
-              rotate: '-.25turn',
-            }}
-            className={cn(styles.content)}
-          >
+        <motion.div
+          initial={{
+            y: '50%',
+          }}
+          className={cn(styles.patch)}
+        >
+          <div className={cn(styles.content)}>
             {numericGenerator(70).map((key) => (
               <span className={cn(styles.word)} key={`patch-element-${key}`}>
                 smartace{' '}
               </span>
             ))}
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </MobileView>
     </>
   );
