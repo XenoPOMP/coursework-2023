@@ -20,7 +20,7 @@
     --header-height: 100px;
   }
 
-  @media handheld and (max-width: 512px) {
+  @media handheld and (max-width: 512px) and (-webkit-device-pixel-ratio: 326) {
     --global-padding: 20px;
     --header-height: 80px;
   }
