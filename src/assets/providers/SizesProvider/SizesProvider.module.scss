@@ -19,4 +19,8 @@
     --global-padding: 20px;
     --header-height: 100px;
   }
+
+  @media (min-width: 414px) {
+    --header-height: 100px;
+  }
 }
