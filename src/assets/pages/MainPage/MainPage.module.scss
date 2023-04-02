@@ -6,6 +6,10 @@
   display: grid;
   grid-template-columns: 6.6fr 20px 3.3fr;
 
+  @media (max-width: 1048px) {
+    grid-template-columns: 1fr 20px 1fr;
+  }
+
   .patchPlaceholder {
     position: relative;
   }
@@ -30,11 +34,23 @@
       .label {
         @extend %specialFont;
         font-size: 5em;
+
+        @media (max-width: 1016px) {
+          font-size: 3em;
+        }
       }
 
       .subLabel {
         font-size: 1em;
         margin-top: 1.9em;
+      }
+
+      @media (max-width: 1388px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 1048px) {
+        font-size: 16px;
       }
     }
 
