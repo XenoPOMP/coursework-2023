@@ -34,6 +34,7 @@ const Patch: FC<PatchProps> = ({}) => {
           <motion.div
             initial={{
               y: '50%',
+              rotate: '-.25turn',
             }}
             className={cn(styles.content)}
           >
