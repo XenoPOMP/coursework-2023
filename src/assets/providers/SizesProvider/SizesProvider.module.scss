@@ -1,4 +1,4 @@
-.sizes {
+.sizes, :root {
   --header-height: 147px;
   --global-padding: 40px;
 
@@ -18,10 +18,5 @@
   @media (max-width: 512px) {
     --global-padding: 20px;
     --header-height: 100px;
-  }
-
-  @media handheld and (max-width: 512px) and (-webkit-device-pixel-ratio: 326) {
-    --global-padding: 20px;
-    --header-height: 80px;
   }
 }
