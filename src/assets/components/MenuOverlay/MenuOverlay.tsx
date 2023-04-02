@@ -75,6 +75,7 @@ const MenuOverlay: FC<MenuOverlayProps> = ({ isOpened, onLinkClick }) => {
                 onLinkClick();
               }
             }}
+            className={cn(styles.toSettings)}
           >
             {loc.header.nav.settings}
           </Link>

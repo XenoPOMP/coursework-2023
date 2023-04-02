@@ -42,6 +42,14 @@
         color: var(--ov-font-inactive);
         transition: .15s ease color;
 
+        &.toSettings {
+          display: none;
+
+          @media (max-width: 552px) {
+            display: initial;
+          }
+        }
+
         &:hover {
           color: var(--ov-font-active);
         }
