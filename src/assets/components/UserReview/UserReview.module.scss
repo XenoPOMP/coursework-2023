@@ -10,6 +10,70 @@
   padding: .5em;
   grid-column: span 4;
 
+  @media (max-width: 1504px) {
+    grid-column: span 2;
+  }
+
+  @media (max-width: 1264px) {
+    grid-template-columns: 1fr 3.8em;
+    grid-template-rows: 3.8em 1fr;
+    padding: 1em;
+
+    .container {
+      &.avatar {
+        grid-column-start: 2;
+      }
+
+      &.content {
+        // grid-row: span 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+
+      &.rating {
+        grid-column-start: 2;
+        align-items: start;
+
+        .block {
+          min-height: unset;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 852px) {
+    grid-column: span 1;
+  }
+
+  @media (max-width: 852px) {
+    grid-template-columns: 3.8em 6.9em 1fr;
+    grid-gap: 1em;
+
+    .container {
+      &.avatar {
+        grid-column-start: 1;
+      }
+
+      &.content {
+        // grid-row: span 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column: span 3;
+      }
+
+      &.rating {
+        grid-column-start: 2;
+        grid-column: span 2;
+        justify-content: end;
+        align-items: end;
+
+        .block {
+          min-height: unset;
+        }
+      }
+    }
+  }
+
   .container {
     @extend %mainFont;
 

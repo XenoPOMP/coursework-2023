@@ -16,12 +16,17 @@
 
 article.service {
   @extend %mainFont;
+  --bottom-control-height: 4.4em;
 
   // 1em = 20px
   width: 100%;
   min-height: 100%;
   display: grid;
-  grid-template-rows: 1fr 4.4em;
+  grid-template-rows: 1fr var(--bottom-control-height);
+
+  @media (max-width: 776px) {
+    --bottom-control-height: 4em;
+  }
 
   .scrollable {
     @extend %scrollable;
@@ -45,6 +50,14 @@ article.service {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: globalPadding(.5);
+
+      @media (max-width: 1504px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 852px) {
+        grid-template-columns: 1fr;
+      }
 
       .card {
         font-size: 1em;
@@ -143,7 +156,7 @@ article.service {
   }
 
   .bottomControl {
-    $buttonHeight: calc(4.4em - globalPadding(.5));
+    $buttonHeight: calc(var(--bottom-control-height) - globalPadding(.5));
 
     padding-top: globalPadding(.5);
     display: grid;
@@ -182,6 +195,10 @@ article.service {
         background: var(--service-foot-button-back);
         font-size: 1.6em;
         color: var(--service-foot-button-font);
+
+        @media (max-width: 868px) {
+          font-size: 1em;
+        }
       }
 
       &.star {

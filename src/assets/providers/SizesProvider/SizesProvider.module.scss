@@ -7,8 +7,18 @@
     --header-height: 142px;
   }
 
-  @media (max-width: 512px) {
+  @media (max-width: 712px) {
     --global-padding: 30px;
     --header-height: 137px;
+  }
+
+  @media (max-width: 604px) {
+    --global-padding: 25px;
+    --header-height: 132px;
+  }
+
+  @media (max-width: 512px) {
+    --global-padding: 20px;
+    --header-height: 127px;
   }
 }

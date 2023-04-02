@@ -9,6 +9,18 @@
   grid-template-columns: 3fr 20px 7fr;
   grid-template-rows: var(--header-height) 1fr;
 
+  @media (max-width: 852px) {
+    grid-template-columns: 5fr 20px 7fr;
+  }
+
+  @media (max-width: 616px) {
+    grid-template-columns: 4fr 20px 7fr;
+  }
+
+  @media (max-width: 536px) {
+    grid-template-columns: 3.5fr 20px 7fr;
+  }
+
   section {
     width: 100%;
     height: 100%;
@@ -20,7 +32,7 @@
 
     &.serviceList {
       font-size: 20px;
-      padding: 0 1em 1em 1em;
+      padding: 0 globalPadding(.5) globalPadding(.5) globalPadding(.5);
 
       .searchPlaceholder {
         background: var(--background-primary);
@@ -86,6 +98,16 @@
           }
         }
       }
+
+      @media (max-width: 992px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 536px) {
+        font-size: 14px;
+      }
+
+
     }
 
     &.patch {
@@ -96,7 +118,23 @@
     &.body {
       font-size: 20px;
       grid-column-start: 3;
-      padding: 0 2em 1em 2em;
+      padding: 0 globalPadding(1) globalPadding(.5) globalPadding(1);
+
+      @media (max-width: 852px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 796px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 656px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 532px) {
+        font-size: 12px;
+      }
     }
   }
 }
