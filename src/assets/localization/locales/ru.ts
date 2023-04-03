@@ -252,7 +252,7 @@ const russianLocalization: Localization = {
   notFoundPage: {
     oopsLabel: 'Упс!\n' + 'Страница не найдена',
     subOopsLabel:
-      'Эта страниа не существует или была удалена!\n' +
+      'Эта страница не существует или была удалена!\n' +
       'Предлагаем вам вернуться на главную страницу.',
     backToHomeButton: 'Вернуться домой',
   },
