@@ -163,6 +163,14 @@ article.service {
         @media (max-width: 852px) {
           grid-column: span 1;
         }
+
+        @media (max-width: 851px) {
+          grid-column: span 2;
+        }
+
+        @media (max-width: 624px) {
+          grid-column: span 1;
+        }
       }
     }
   }
