@@ -47,7 +47,7 @@ const MediaWidthView: FC<MediaWidthViewProps> = ({
       rightPart = `(max-width: ${maxWidth}px)`;
     }
 
-    return `${leftPart}${connection}${rightPart}`;
+    return `screen and ${leftPart}${connection}${rightPart}`;
   };
 
   return <Media query={getQuery()} render={() => <>{children}</>} />;
