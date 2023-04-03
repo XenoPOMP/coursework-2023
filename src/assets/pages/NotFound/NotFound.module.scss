@@ -76,6 +76,10 @@
       height: 31%;
     }
 
+    @media (max-width: 1270px) and (max-height: 978px) {
+      height: 20%;
+    }
+
     @media (max-width: 667px) {
       position: absolute;
       top: 0;

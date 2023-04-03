@@ -61,8 +61,8 @@
         font-size: 18px;
       }
 
-      @media (max-width: 1048px) {
-        font-size: 16px;
+      @media (max-width: 1208px) and (max-height: 650px) {
+        font-size: 14px;
       }
 
       @media (max-width: 676px) {
