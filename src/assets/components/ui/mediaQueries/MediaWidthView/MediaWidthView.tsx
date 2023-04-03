@@ -11,12 +11,22 @@ const MediaWidthView: FC<MediaWidthViewProps> = ({
   minWidth,
 }) => {
   useEffect(() => {
+    // Min width > Max width
     if (
       minWidth !== undefined &&
       maxWidth !== undefined &&
       minWidth > maxWidth
     ) {
       throw new ArgumentError(`Min width can\`t be bigger than max width`);
+    }
+
+    // Check if min width is negative
+    if (minWidth !== undefined && minWidth < 0) {
+      throw new ArgumentError(`Min width can\`t be negative`);
+    }
+    // Check if max width is negative
+    if (maxWidth !== undefined && maxWidth < 0) {
+      throw new ArgumentError(`Max width can\`t be negative`);
     }
   }, []);
 
