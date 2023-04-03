@@ -247,6 +247,14 @@ const englishLocalization: Localization = {
 
     error: 'There are errors',
   },
+
+  notFoundPage: {
+    oopsLabel: 'Ooops!\n' + 'Page not found',
+    subOopsLabel:
+      'This page doesn`t exist or was removed!\n' +
+      'We suggest you to go back to home.',
+    backToHomeButton: 'Back to home',
+  },
 };
 
 export default englishLocalization;

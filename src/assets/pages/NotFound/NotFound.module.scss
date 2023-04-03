@@ -1,5 +1,95 @@
 @import "src/assets/styles/templates";
 
 .page {
+  @extend %mainFont;
+  @extend %flexCenter;
+
+  font-size: 29px;
+  width: 100vw;
+  height: 100vh;
   color: var(--service-font);
+  padding: globalPadding(1);
+  justify-content: space-between;
+  column-gap: globalPadding(2);
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 1270px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    column-gap: 0;
+    row-gap: globalPadding(1);
+  }
+
+  @media (max-width: 1037px) {
+    font-size: 25px;
+  }
+
+  @media (max-width: 997px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 455px) {
+    font-size: 18px;
+  }
+
+  h2 {
+    @extend %notSelectable;
+    @extend %medium;
+
+    // max-width: 50%;
+
+    &.number {
+      font-size: 2.41em;
+    }
+
+    &.oops {
+      // Font size: 55px
+      font-size: 1.9em;
+      margin: .36em 0;
+    }
+
+    &.subOops {
+      font-size: 1em;
+      color: var(--service-title);
+    }
+  }
+
+  .button {
+    @extend %medium;
+    @extend %notSelectable;
+
+    font-size: 1em;
+    padding: .96em 1.76em;
+    background: var(--service-foot-button-back);
+    color: var(--service-foot-button-font);
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 2em;
+    margin-top: 1.72em;
+  }
+
+  svg {
+    height: 54%;
+
+    @media (max-width: 1270px) {
+      height: 31%;
+    }
+
+    @media (max-width: 667px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5000;
+      opacity: .25;
+    }
+
+    @media (max-width: 494px) {
+      left: -10%;
+    }
+
+    path {
+      fill: var(--service-font);
+    }
+  }
 }

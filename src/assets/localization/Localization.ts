@@ -154,6 +154,12 @@ type Localization = {
 
     error: string;
   };
+
+  notFoundPage: {
+    oopsLabel: string;
+    subOopsLabel: string;
+    backToHomeButton: string;
+  };
 };
 
 export default Localization;
