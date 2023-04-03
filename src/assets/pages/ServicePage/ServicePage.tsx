@@ -27,7 +27,7 @@ const ServicePage: FC<ServicePageProps> = ({}) => {
 
   const mobileAnimationTransition: Transition = {
     duration: 0.35,
-    ease: 'easeOut',
+    ease: serviceId !== -1 ? 'easeOut' : 'easeIn',
   };
 
   return (
