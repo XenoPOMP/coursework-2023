@@ -156,6 +156,9 @@ const ServicePage: FC<ServicePageProps> = ({}) => {
           </section>
 
           <motion.section
+            initial={{
+              x: serviceId !== -1 ? 0 : '100%',
+            }}
             animate={{
               x: serviceId !== -1 ? 0 : '100%',
             }}
