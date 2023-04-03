@@ -111,6 +111,7 @@ const OrderPage: FC<OrderPageProps> = ({}) => {
       header={{
         tabIndex: 0,
         renderNav: false,
+        renderBackButton: true,
         renderRightButtons: false,
       }}
     >
