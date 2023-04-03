@@ -13,6 +13,7 @@ import UserReview from '@components/UserReview/UserReview';
 import { Link } from 'react-router-dom';
 import useAppSettings from '@hooks/useAppSettings';
 import { changeLastServicePage } from '@redux/reducers/lastPageSlice';
+import MediaWidthView from '@ui/mediaQueries/MediaWidthView/MediaWidthView';
 
 const ServiceArticle: FC<ServiceArticleProps> = ({}) => {
   const serviceId = useServiceId();
