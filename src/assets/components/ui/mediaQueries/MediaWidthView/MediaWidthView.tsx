@@ -11,8 +11,13 @@ const MediaWidthView: FC<MediaWidthViewProps> = ({
 }) => {
   useEffect(() => {
     // Check for max width and min width
-    const maxWidthExec = /\d+(.\d+)?/.exec(`${maxWidth}`);
-    const minWidthExec = /\d+(.\d+)?/.exec(`${minWidth}`);
+    const maxWidthExec = /\d+(.\d*)?/.exec(`${maxWidth}`);
+    const minWidthExec = /\d+(.\d*)?/.exec(`${minWidth}`);
+
+    console.log({
+      maxWidthExec,
+      minWidthExec,
+    });
   }, []);
 
   return <>{children}</>;
