@@ -36,6 +36,7 @@
         grid-column-end: 2;
         z-index: 8000;
         background: var(--background-primary);
+        padding: 0 globalPadding(1) globalPadding(1) globalPadding(1);
       }
 
       &.body {
