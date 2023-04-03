@@ -11,7 +11,7 @@ const NotFound = () => {
         tabIndex: -1,
       }}
     >
-      Error 404: page not found
+      <div className={cn(styles.page)}>Error 404: page not found</div>
     </Page>
   );
 };
