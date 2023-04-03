@@ -2,6 +2,7 @@ import React from 'react';
 import Page from '@components/Page/Page';
 import cn from 'classnames';
 import styles from './NotFound.module.scss';
+import MediaWidthView from '@ui/mediaQueries/MediaWidthView/MediaWidthView';
 
 const NotFound = () => {
   return (
@@ -11,7 +12,14 @@ const NotFound = () => {
         tabIndex: -1,
       }}
     >
-      Error 404: page not found
+      <div className={cn(styles.page)}>
+        Error 404: page not found
+        <MediaWidthView maxWidth={'1000.1px'}>
+          <div
+            style={{ width: '100px', aspectRatio: 1, background: 'red' }}
+          ></div>
+        </MediaWidthView>
+      </div>
     </Page>
   );
 };
