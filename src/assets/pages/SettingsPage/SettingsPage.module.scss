@@ -137,6 +137,10 @@
       font-size: .8em;
     }
 
+    @media (max-width: 561px) {
+      font-size: 1em;
+    }
+
     .content {
       $minHeight: calc(calc(100% - 2.15em) - globalPadding(2));
 

@@ -11,9 +11,13 @@
   display: grid;
   grid-template-columns: 4.57fr 9.47fr;
   grid-gap: 1em;
-  
-  @media (max-width: 556px) {
-    grid-gap: 2em;
+
+  @media (max-width: 561px) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    row-gap: 1em;
   }
 
   .title {
