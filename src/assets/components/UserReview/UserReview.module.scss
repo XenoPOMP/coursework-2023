@@ -45,6 +45,14 @@
     grid-column: span 1;
   }
 
+  @media (max-width: 851px) {
+    grid-column: span 2;
+  }
+
+  @media (max-width: 624px) {
+    grid-column: span 1;
+  }
+
   @media (max-width: 852px) {
     grid-template-columns: 3.8em 6.9em 1fr;
     grid-gap: 1em;
@@ -62,8 +70,8 @@
       }
 
       &.rating {
-        grid-column-start: 2;
-        grid-column: span 2;
+        grid-column-start: 3;
+        grid-column: span 1;
         justify-content: end;
         align-items: end;
 
