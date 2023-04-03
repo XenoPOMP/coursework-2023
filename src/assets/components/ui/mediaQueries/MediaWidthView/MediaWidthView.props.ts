@@ -1,6 +1,6 @@
 import { QueryViewProps } from '@ui/mediaQueries/QueryView.props';
 
 export interface MediaWidthViewProps extends QueryViewProps {
-  maxWidth?: string;
-  minWidth?: string;
+  maxWidth?: number;
+  minWidth?: number;
 }
