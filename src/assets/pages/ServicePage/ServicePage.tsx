@@ -13,7 +13,7 @@ import Category from '@ui/Category/Category';
 import ServiceArticle from '@components/ServiceArticle/ServiceArticle';
 import MediaWidthView from '@ui/mediaQueries/MediaWidthView/MediaWidthView';
 import useServiceId from '@hooks/useServiceId';
-import { motion } from 'framer-motion';
+import { motion, Transition } from 'framer-motion';
 
 const ServicePage: FC<ServicePageProps> = ({}) => {
   const loc = useLocalization();
@@ -24,6 +24,11 @@ const ServicePage: FC<ServicePageProps> = ({}) => {
     (state: IStore) => state.serviceList.search,
   );
   const dispatch = useDispatch();
+
+  const mobileAnimationTransition: Transition = {
+    duration: 0.35,
+    ease: 'easeOut',
+  };
 
   return (
     <Page
@@ -154,10 +159,7 @@ const ServicePage: FC<ServicePageProps> = ({}) => {
             animate={{
               x: serviceId !== -1 ? 0 : '100%',
             }}
-            transition={{
-              duration: 0.35,
-              ease: 'easeOut',
-            }}
+            transition={mobileAnimationTransition}
             className={cn(styles.body)}
           >
             <ServiceArticle />
