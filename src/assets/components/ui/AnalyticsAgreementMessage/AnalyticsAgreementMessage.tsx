@@ -56,8 +56,8 @@ const AnalyticsAgreementMessage: FC<AnalyticsAgreementMessageProps> = ({}) => {
       className={cn(styles.message)}
     >
       <div className={cn(styles.text)}>
-        {loc.agreementMessage.text.map((paragraph) => (
-          <p>{paragraph}</p>
+        {loc.agreementMessage.text.map((paragraph, index) => (
+          <p key={`agreement-paragraph-${index}`}>{paragraph}</p>
         ))}
       </div>
 
