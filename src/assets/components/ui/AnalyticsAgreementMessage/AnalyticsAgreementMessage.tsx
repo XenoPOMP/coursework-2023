@@ -29,7 +29,7 @@ const AnalyticsAgreementMessage: FC<AnalyticsAgreementMessageProps> = ({}) => {
 
   const [getCookieAgreement, setCookieAgreement] =
     useLocalStorage<AnalyticsAgreement>(
-      `${cookiePrefix.get()}-ag-ever-changed`,
+      `${cookiePrefix.get()}-analytics-agreement`,
       analyticsInitial.agreement,
     );
 
