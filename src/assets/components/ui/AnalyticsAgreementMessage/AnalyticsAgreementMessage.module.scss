@@ -17,11 +17,41 @@
   max-height: $maxHeight;
 
   .text {
+    @extend %notSelectable;
     color: var(--sets-reject-font);
 
     p {
       &:not(:first-of-type) {
         margin-top: .5em;
+      }
+    }
+  }
+
+  .buttons {
+    @extend %flexCenter;
+    @extend %notSelectable;
+
+    justify-content: end;
+    margin-top: 1.3em;
+    column-gap: .5em;
+
+    .button {
+      @extend %flexCenter;
+
+      // min-height: 2.4em;
+      font-size: 1em;
+      padding: .6em .85em;
+      cursor: pointer;
+      border-radius: .35em;
+
+      &.disallow {
+        background: var(--sets-reject-back);
+        color: var(--sets-reject-font);
+      }
+
+      &.allow {
+        background: var(--sets-confirm-back);
+        color: var(--sets-confirm-font);
       }
     }
   }
