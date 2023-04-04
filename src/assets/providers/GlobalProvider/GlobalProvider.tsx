@@ -6,21 +6,24 @@ import LayersProvider from '@providers/LayersProvider/LayersProvider';
 import ServiceListSaver from '@providers/ServiceListSaver/ServiceListSaver';
 import AppSettingsSaver from '@providers/AppSettingsSaver/AppSettingsSaver';
 import LocaleChecker from '@providers/LocaleChecker/LocaleChecker';
+import AnalyticsSavers from '@providers/AnalyticsSavers/AnalyticsSavers';
 
 const GlobalProvider: FC<ProviderProps> = ({ children }) => {
   return (
     <>
-      <LocaleChecker>
-        <AppSettingsSaver>
-          <ServiceListSaver>
-            <LayersProvider>
-              <SizesProvider>
-                <ThemeProvider>{children}</ThemeProvider>
-              </SizesProvider>
-            </LayersProvider>
-          </ServiceListSaver>
-        </AppSettingsSaver>
-      </LocaleChecker>
+      <AnalyticsSavers>
+        <LocaleChecker>
+          <AppSettingsSaver>
+            <ServiceListSaver>
+              <LayersProvider>
+                <SizesProvider>
+                  <ThemeProvider>{children}</ThemeProvider>
+                </SizesProvider>
+              </LayersProvider>
+            </ServiceListSaver>
+          </AppSettingsSaver>
+        </LocaleChecker>
+      </AnalyticsSavers>
     </>
   );
 };
