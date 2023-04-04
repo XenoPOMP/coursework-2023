@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { ProviderProps } from '@providers/Provider.props';
-import SessionTimeProvider from '@providers/SessionTimeProvider/SessionTimeProvider';
+import { socket, WebsocketProvider } from '@contexts/WebSocketContext';
 
 const AnalyticsSavers: FC<ProviderProps> = ({ children }) => {
-  return <SessionTimeProvider>{children}</SessionTimeProvider>;
+  return <WebsocketProvider value={socket}>{children}</WebsocketProvider>;
 };
 
 export default AnalyticsSavers;
