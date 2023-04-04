@@ -160,6 +160,12 @@ type Localization = {
     subOopsLabel: string;
     backToHomeButton: string;
   };
+
+  agreementMessage: {
+    text: string[];
+    allow: string;
+    disallow: string;
+  };
 };
 
 export default Localization;

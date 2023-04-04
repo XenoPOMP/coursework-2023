@@ -1,0 +1,28 @@
+@import "src/assets/styles/templates";
+
+.message {
+  @extend %mainFont;
+  $maxHeight: calc(100vh - globalPadding(2));
+  $width: calc(100vw - globalPadding(2));
+
+  position: fixed;
+  bottom: globalPadding(1);
+  right: globalPadding(1);
+  padding: globalPadding(.5);
+  background: var(--head-button-back);
+  font-size: 20px;
+  border-radius: .85em;
+  max-width: 607px;
+  width: $width;
+  max-height: $maxHeight;
+
+  .text {
+    color: var(--sets-reject-font);
+
+    p {
+      &:not(:first-of-type) {
+        margin-top: .5em;
+      }
+    }
+  }
+}

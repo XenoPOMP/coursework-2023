@@ -255,6 +255,15 @@ const englishLocalization: Localization = {
       'We suggest you to go back to home.',
     backToHomeButton: 'Back to home',
   },
+
+  agreementMessage: {
+    text: [
+      'Our site collects user information for analytics, such as user login time, operating system, etc.',
+      'Allow the collection of information? (You can change the solution at any time in the settings)',
+    ],
+    allow: 'Allow',
+    disallow: 'Disallow',
+  },
 };
 
 export default englishLocalization;
