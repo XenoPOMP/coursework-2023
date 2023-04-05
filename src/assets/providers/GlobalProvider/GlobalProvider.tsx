@@ -11,19 +11,17 @@ import AnalyticsSavers from '@providers/AnalyticsSavers/AnalyticsSavers';
 const GlobalProvider: FC<ProviderProps> = ({ children }) => {
   return (
     <>
-      <AnalyticsSavers>
-        <LocaleChecker>
-          <AppSettingsSaver>
-            <ServiceListSaver>
-              <LayersProvider>
-                <SizesProvider>
-                  <ThemeProvider>{children}</ThemeProvider>
-                </SizesProvider>
-              </LayersProvider>
-            </ServiceListSaver>
-          </AppSettingsSaver>
-        </LocaleChecker>
-      </AnalyticsSavers>
+      <LocaleChecker>
+        <AppSettingsSaver>
+          <ServiceListSaver>
+            <LayersProvider>
+              <SizesProvider>
+                <ThemeProvider>{children}</ThemeProvider>
+              </SizesProvider>
+            </LayersProvider>
+          </ServiceListSaver>
+        </AppSettingsSaver>
+      </LocaleChecker>
     </>
   );
 };
