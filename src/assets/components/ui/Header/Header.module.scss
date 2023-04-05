@@ -19,6 +19,8 @@ header.appHeader {
   .container {
     @extend %flexCenter;
 
+    z-index: inherit;
+
     &.left {
       justify-content: start;
 
@@ -50,6 +52,7 @@ header.appHeader {
     height: 100%;
     background: var(--head-button-back);
     border-radius: 50%;
+    z-index: inherit;
 
     transition: background-color .15s ease;
 
