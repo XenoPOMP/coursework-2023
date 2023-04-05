@@ -147,6 +147,7 @@ const englishLocalization: Localization = {
     sidebar: {
       appearance: 'Appearance',
       localization: 'Localization',
+      confidentiality: 'Confidentiality',
       appVersion: 'App version: XX',
     },
 

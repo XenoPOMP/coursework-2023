@@ -148,6 +148,7 @@ const russianLocalization: Localization = {
     sidebar: {
       appearance: 'Внешний вид',
       localization: 'Локализация',
+      confidentiality: 'Конфиденциальность',
       appVersion: 'Версия приложения: XX',
     },
 
