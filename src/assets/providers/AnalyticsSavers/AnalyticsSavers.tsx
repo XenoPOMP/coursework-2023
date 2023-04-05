@@ -6,12 +6,12 @@ import useAnalyticsAllowed from '@hooks/useAnalyticsAllowed';
 import { v4 as uuid } from 'uuid';
 
 const AnalyticsSavers: FC<ProviderProps> = ({ children }) => {
-  const allowed = useAnalyticsAllowed();
+  const { isAllowed } = useAnalyticsAllowed();
   const token = useContext(SessionTokenContext);
 
   return (
     <SessionTokenContext.Provider value={uuid()}>
-      <WebsocketContext.Provider value={socket(allowed, token)}>
+      <WebsocketContext.Provider value={socket(isAllowed, token)}>
         {children}
       </WebsocketContext.Provider>
     </SessionTokenContext.Provider>
