@@ -6,7 +6,6 @@
   cursor: pointer;
   height: 100%;
   align-self: center;
-  z-index: var(--layer-header);
 
   @media (max-width: 460px) {
     height: 80%;
@@ -14,7 +13,6 @@
 
   svg {
     height: 100%;
-    z-index: var(--layer-header);
 
     path {
       transition: fill .15s ease;
