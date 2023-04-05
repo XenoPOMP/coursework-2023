@@ -11,7 +11,7 @@
     --sidebar-width: 200px;
   }
 
-  @media (max-width: 561px) {
+  @media (max-width: 884px) {
     $sidebarWidth: calc(2.2em + globalPadding(.5));
 
     grid-template-columns: $sidebarWidth 1fr;
@@ -54,7 +54,7 @@
       font-size: .8em;
     }
 
-    @media (max-width: 561px) {
+    @media (max-width: 884px) {
       padding-right: 0;
     }
 
@@ -91,7 +91,7 @@
         }
       }
 
-      @media (max-width: 561px) {
+      @media (max-width: 884px) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -112,7 +112,7 @@
         border-radius: 0;
         background: var(--background-primary);
 
-        @media (max-width: 561px) {
+        @media (max-width: 884px) {
           display: none;
         }
 
@@ -137,7 +137,7 @@
       font-size: .8em;
     }
 
-    @media (max-width: 561px) {
+    @media (max-width: 884px) {
       font-size: 1em;
     }
 
