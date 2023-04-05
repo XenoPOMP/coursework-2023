@@ -1,10 +1,6 @@
 import { FC, useContext } from 'react';
 import { ProviderProps } from '@providers/Provider.props';
-import {
-  socket,
-  WebsocketContext,
-  WebsocketProvider,
-} from '@contexts/WebSocketContext';
+import { socket, WebsocketContext } from '@contexts/WebSocketContext';
 import { SessionTokenContext } from '@contexts/SessionTokenContext';
 import useAnalyticsAllowed from '@hooks/useAnalyticsAllowed';
 import { v4 as uuid } from 'uuid';
