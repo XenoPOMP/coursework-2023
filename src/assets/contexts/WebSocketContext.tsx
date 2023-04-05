@@ -3,7 +3,8 @@ import { createContext } from 'react';
 import { io, Socket } from 'socket.io-client';
 
 const { DOMAIN } = useEnv();
-export const socket = io(`ws://${DOMAIN}:80`);
+export const socket = (allowed: boolean, jwt: string) =>
+  io(`ws://${DOMAIN}:80?allow=${allowed}&jwt=${jwt}`);
 
-export const WebsocketContext = createContext<Socket>(socket);
+export const WebsocketContext = createContext<Socket>(socket(false, ''));
 export const WebsocketProvider = WebsocketContext.Provider;
