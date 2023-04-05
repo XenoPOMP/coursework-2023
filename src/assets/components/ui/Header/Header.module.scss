@@ -13,6 +13,9 @@ header.appHeader {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   z-index: var(--layer-header);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   .container {
     @extend %flexCenter;
