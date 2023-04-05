@@ -12,6 +12,7 @@ nav.headerNav {
   border-radius: calc((var(--header-height) - globalPadding(2)) / 2);
   column-gap: 1em;
   float: left;
+  z-index: var(--layer-header);
 
   @media (max-width: 1000px) {
     display: none;
