@@ -15,9 +15,7 @@ const GlobalProvider: FC<ProviderProps> = ({ children }) => {
         <AppSettingsSaver>
           <ServiceListSaver>
             <LayersProvider>
-              <SizesProvider>
-                <ThemeProvider>{children}</ThemeProvider>
-              </SizesProvider>
+              <ThemeProvider>{children}</ThemeProvider>
             </LayersProvider>
           </ServiceListSaver>
         </AppSettingsSaver>
