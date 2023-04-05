@@ -13,7 +13,7 @@
   }
 
   @media (max-width: $mobileBreakpoint) {
-    $sidebarWidth: calc(2.2em + globalPadding(.5));
+    $sidebarWidth: calc(2.2em + globalPadding(1));
 
     grid-template-columns: $sidebarWidth 1fr;
   }
@@ -52,7 +52,7 @@
     padding-bottom: globalPadding(1);
 
     @media (max-width: 692px) {
-      font-size: .8em;
+      font-size: 1em;
     }
 
     @media (max-width: $mobileBreakpoint) {
