@@ -14,8 +14,6 @@ header.appHeader {
   grid-template-columns: repeat(3, 1fr);
   z-index: var(--layer-header);
 
-  background: red;
-
   @include boxSizing(border-box);
 
   .container {
