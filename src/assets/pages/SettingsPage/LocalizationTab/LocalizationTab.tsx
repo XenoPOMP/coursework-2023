@@ -1,6 +1,4 @@
-import cn from 'classnames';
 import { FC } from 'react';
-import styles from './LocalizationTab.module.scss';
 import { LocalizationTabProps } from './LocalizationTab.props';
 import useLocalization from '@hooks/useLocalization';
 import SetTitleBlock from '@ui/SetTitleBlock/SetTitleBlock';

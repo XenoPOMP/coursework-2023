@@ -1,0 +1,58 @@
+@import "src/assets/styles/templates";
+
+.message {
+  @extend %mainFont;
+  $maxHeight: calc(100vh - globalPadding(2));
+  $width: calc(100vw - globalPadding(2));
+
+  position: fixed;
+  bottom: globalPadding(1);
+  right: globalPadding(1);
+  padding: globalPadding(.5);
+  background: var(--head-button-back);
+  font-size: 20px;
+  border-radius: .85em;
+  max-width: 607px;
+  width: $width;
+  max-height: $maxHeight;
+
+  .text {
+    @extend %notSelectable;
+    color: var(--sets-reject-font);
+
+    p {
+      &:not(:first-of-type) {
+        margin-top: .5em;
+      }
+    }
+  }
+
+  .buttons {
+    @extend %flexCenter;
+    @extend %notSelectable;
+
+    justify-content: end;
+    margin-top: 1.3em;
+    column-gap: .5em;
+
+    .button {
+      @extend %flexCenter;
+
+      // min-height: 2.4em;
+      font-size: 1em;
+      padding: .6em .85em;
+      cursor: pointer;
+      border-radius: .35em;
+
+      &.disallow {
+        background: var(--sets-reject-back);
+        color: var(--sets-reject-font);
+      }
+
+      &.allow {
+        background: var(--sets-confirm-back);
+        color: var(--sets-confirm-font);
+      }
+    }
+  }
+}

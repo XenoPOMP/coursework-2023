@@ -33,6 +33,7 @@
       "@localization/*": ["src/assets/localization/*"],
       "@locales/*": ["src/assets/localization/locales/*"],
       "@errors/*": ["src/assets/errors/*"],
+      "@contexts/*": ["src/assets/contexts/*"],
     }
   },
   "include": ["src"],

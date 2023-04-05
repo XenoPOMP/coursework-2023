@@ -1,6 +1,7 @@
 @import "src/assets/styles/templates";
 
 .page {
+  $mobileBreakpoint: 884px;
   --sidebar-width: 416px;
 
   @media (max-width: 1300px) {
@@ -11,8 +12,8 @@
     --sidebar-width: 200px;
   }
 
-  @media (max-width: 561px) {
-    $sidebarWidth: calc(2.2em + globalPadding(.5));
+  @media (max-width: $mobileBreakpoint) {
+    $sidebarWidth: calc(2.2em + globalPadding(1));
 
     grid-template-columns: $sidebarWidth 1fr;
   }
@@ -51,10 +52,10 @@
     padding-bottom: globalPadding(1);
 
     @media (max-width: 692px) {
-      font-size: .8em;
+      font-size: 1em;
     }
 
-    @media (max-width: 561px) {
+    @media (max-width: $mobileBreakpoint) {
       padding-right: 0;
     }
 
@@ -91,7 +92,7 @@
         }
       }
 
-      @media (max-width: 561px) {
+      @media (max-width: $mobileBreakpoint) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -112,7 +113,7 @@
         border-radius: 0;
         background: var(--background-primary);
 
-        @media (max-width: 561px) {
+        @media (max-width: $mobileBreakpoint) {
           display: none;
         }
 
@@ -137,7 +138,7 @@
       font-size: .8em;
     }
 
-    @media (max-width: 561px) {
+    @media (max-width: $mobileBreakpoint) {
       font-size: 1em;
     }
 

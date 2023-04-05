@@ -97,6 +97,7 @@ type Localization = {
     sidebar: {
       appearance: string;
       localization: string;
+      confidentiality: string;
       appVersion: string;
     };
 
@@ -123,6 +124,17 @@ type Localization = {
         currencyVariants: {
           rub: string;
           usd: string;
+        };
+      };
+    };
+
+    confidentiality: {
+      title: SettingsTabTitleLocale;
+      items: {
+        allowed: SettingsTabTitleLocale;
+        allowVariants: {
+          allow: string;
+          disallow: string;
         };
       };
     };
@@ -159,6 +171,12 @@ type Localization = {
     oopsLabel: string;
     subOopsLabel: string;
     backToHomeButton: string;
+  };
+
+  agreementMessage: {
+    text: string[];
+    allow: string;
+    disallow: string;
   };
 };
 
