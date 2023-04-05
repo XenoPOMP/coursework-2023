@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import IStore from '@redux/types/redux-types';
 import { changeLastSettingsPage } from '@redux/reducers/lastPageSlice';
 import useAppSettings from '@hooks/useAppSettings';
+import PrivacyTab from '@pages/SettingsPage/PrivacyTab/PrivacyTab';
 
 export enum SettingsTabs {
   APPEARANCE,
@@ -118,6 +119,8 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
             {tab === SettingsTabs.APPEARANCE && <AppearanceTab />}
 
             {tab === SettingsTabs.LOCALIZATION && <LocalizationTab />}
+
+            {tab === SettingsTabs.CONFIDENTIALITY && <PrivacyTab />}
           </div>
 
           <div className={cn(styles.saveChanges)}>

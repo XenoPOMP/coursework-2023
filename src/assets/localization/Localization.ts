@@ -128,6 +128,17 @@ type Localization = {
       };
     };
 
+    confidentiality: {
+      title: SettingsTabTitleLocale;
+      items: {
+        allowed: SettingsTabTitleLocale;
+        allowVariants: {
+          allow: string;
+          disallow: string;
+        };
+      };
+    };
+
     saveChanges: {
       save: string;
       reject: string;

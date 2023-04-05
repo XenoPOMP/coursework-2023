@@ -147,7 +147,7 @@ const englishLocalization: Localization = {
     sidebar: {
       appearance: 'Appearance',
       localization: 'Localization',
-      confidentiality: 'Confidentiality',
+      confidentiality: 'Privacy',
       appVersion: 'App version: XX',
     },
 
@@ -195,6 +195,23 @@ const englishLocalization: Localization = {
         currencyVariants: {
           rub: 'Rubles',
           usd: 'US Dollars',
+        },
+      },
+    },
+
+    confidentiality: {
+      title: {
+        title: 'Privacy',
+        desc: 'Set up privacy settings: collection of analytical data, use of cookies, etc.',
+      },
+      items: {
+        allowed: {
+          title: 'Allow analytics data collection',
+          desc: 'Choose whether the application will be able to collect analytical data to improve it',
+        },
+        allowVariants: {
+          allow: 'Allow',
+          disallow: 'Disallow',
         },
       },
     },
