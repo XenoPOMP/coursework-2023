@@ -7,6 +7,7 @@ import { Article } from '@localization/Localization';
 import EndlessTimer from '@providers/EndlessTimer/EndlessTimer';
 import { Link } from 'react-router-dom';
 import MediaWidthView from '@ui/mediaQueries/MediaWidthView/MediaWidthView';
+import ProgressiveImage from '@ui/ProgressiveImage/ProgressiveImage';
 
 const ActualArticles: FC<ActualArticlesProps> = ({}) => {
   const loc = useLocalization();
@@ -20,7 +21,11 @@ const ActualArticles: FC<ActualArticlesProps> = ({}) => {
         to={`/blog/${actualArticles[index].id}`}
         className={cn(styles.preview)}
       >
-        <img
+        <ProgressiveImage
+          loaderColorScheme={{
+            backgroundColor: 'transparent',
+            loaderColor: 'var(--blog-font-primary)',
+          }}
           className={cn(styles.background)}
           src={actualArticles[index]?.bannerImg}
         />
