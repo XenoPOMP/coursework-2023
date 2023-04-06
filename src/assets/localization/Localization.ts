@@ -191,6 +191,9 @@ type Localization = {
   blogPage: {
     actualArticles: Article[];
     articles: Article[];
+    labels: {
+      newArticles: string;
+    };
   };
 };
 

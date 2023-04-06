@@ -12,5 +12,41 @@
   .content {
     @extend %scrollable;
     padding: 0 globalPadding(1) globalPadding(1) globalPadding(1);
+
+    .newArticles {
+      font-size: 20px;
+
+      @media (max-width: 498px) {
+        font-size: 17px;
+      }
+
+      @media (max-width: 401px) {
+        font-size: 16px;
+      }
+
+      h2 {
+        @extend %notSelectable;
+        @extend %specialFont;
+
+        font-size: 3.1em;
+        margin-bottom: .97em;
+        color: var(--blog-font-primary);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: globalPadding(.75);
+        font-size: 1em;
+
+        @media (max-width: 1422px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 920px) {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
   }
 }

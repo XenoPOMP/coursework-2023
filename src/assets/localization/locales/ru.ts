@@ -319,6 +319,7 @@ const russianLocalization: Localization = {
         content: '',
       },
     ],
+
     articles: [
       {
         id: '4',
@@ -327,7 +328,59 @@ const russianLocalization: Localization = {
         content:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et. Morbi non arcu risus quis varius quam. Diam sollicitudin tempor id eu nisl nunc.',
       },
+
+      {
+        id: '5',
+        title: 'Всемирный день бекапа',
+        date: 'Понедельник, Дек. 12, 2022',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et. Morbi non arcu risus quis varius quam. Diam sollicitudin tempor id eu nisl nunc.',
+      },
+
+      {
+        id: '6',
+        title: 'Всемирный день бекапа',
+        date: 'Понедельник, Дек. 12, 2022',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et. Morbi non arcu risus quis varius quam. Diam sollicitudin tempor id eu nisl nunc.',
+      },
+
+      {
+        id: '7',
+        title: 'Всемирный день бекапа',
+        date: 'Понедельник, Дек. 12, 2022',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et. Morbi non arcu risus quis varius quam. Diam sollicitudin tempor id eu nisl nunc.',
+      },
+
+      {
+        id: '8',
+        title: 'Всемирный день бекапа',
+        date: 'Понедельник, Дек. 12, 2022',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et. Morbi non arcu risus quis varius quam. Diam sollicitudin tempor id eu nisl nunc.',
+      },
+
+      {
+        id: '9',
+        title: 'Всемирный день бекапа',
+        date: 'Понедельник, Дек. 12, 2022',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et. Morbi non arcu risus quis varius quam. Diam sollicitudin tempor id eu nisl nunc.',
+      },
+
+      {
+        id: '10',
+        title: 'Всемирный день бекапа',
+        date: 'Понедельник, Дек. 12, 2022',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et. Morbi non arcu risus quis varius quam. Diam sollicitudin tempor id eu nisl nunc.',
+      },
     ],
+
+    labels: {
+      newArticles: 'Новые статьи',
+    },
   },
 };
 

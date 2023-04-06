@@ -1,0 +1,20 @@
+@import "src/assets/styles/templates";
+
+.preview {
+  @extend %notSelectable;
+
+  // 1em = 20px
+  background: var(--blog-back-primary);
+  padding: 2em;
+  border-radius: globalPadding(.5);
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--blog-font-secondary);
+
+  h3.title {
+    @extend %specialFont;
+
+    font-size: 2em;
+    color: var(--blog-font-primary);
+  }
+}

@@ -3067,6 +3067,11 @@ react-side-effect@^1.1.0:
   dependencies:
     shallowequal "^1.0.1"
 
+react-text-overflow@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-text-overflow/-/react-text-overflow-1.0.2.tgz#8a04717620b5a4a0868e9cffe52f85b2732638f9"
+  integrity sha512-NGCcGupT3yZVpPRcOHghBIFMgctLVGL6z1SXOoEoztMt9DHIHQzAy/gKsxh93jDdfmvP9VzS7ibixyliZexI7g==
+
 react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
