@@ -1,0 +1,122 @@
+@import "src/assets/styles/templates";
+
+.preview {
+  @extend %flexCenter;
+  @extend %notSelectable;
+
+  width: 100%;
+  aspect-ratio: 1840 / 816;
+  font-size: 20px;
+  background-size: contain;
+  position: relative;
+  overflow: hidden;
+  border-radius: globalPadding(1);
+  padding: globalPadding(1);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  cursor: pointer;
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .container {
+    @extend %flexCenter;
+    width: 100%;
+
+    &.date {
+      justify-content: end;
+    }
+
+    .block {
+      background: var(--background-primary);
+      padding: 1em 2em;
+      font-size: 1.04vw;
+      color: var(--blog-font-primary);
+      border-radius: 2em;
+    }
+
+    &.title {
+      @extend %specialFont;
+
+      padding: globalPadding(1);
+      background: var(--background-primary);
+      border-radius: .65em;
+      max-width: 53%;
+      // font-size: 3.1em;
+      font-size: 3.22vw;
+      color: var(--blog-font-primary);
+
+      @media (max-width: 840px) {
+        height: 100%;
+        flex-direction: column;
+        align-items: start;
+
+        p {
+          $padding: .5em;
+
+          font-size: .75em;
+          margin-top: $padding;
+          padding-top: $padding;
+          border-top: 1px solid var(--blog-font-primary);
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.slider {
+  width: 100%;
+  max-width: 50%;
+  height: 1vw;
+  max-height: 10px;
+  margin: globalPadding(1) auto 0 auto;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: globalPadding(.5);
+  transition: grid-template-columns .15s ease;
+
+  @media (max-width: 840px) {
+    max-width: unset;
+  }
+
+  .item {
+    width: 100%;
+    height: 100%;
+    background: var(--blog-font-secondary);
+    border-radius: inherit;
+    cursor: pointer;
+    transition: background .15s ease;
+
+    &.active {
+      background: var(--blog-font-primary);
+    }
+  }
+
+  &.first {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  &.second {
+    grid-template-columns: 1fr 1.5fr 1fr;
+  }
+
+  &.third {
+    grid-template-columns: 1fr 1fr 1.5fr;
+  }
+}
+
+.divider {
+  margin-top: globalPadding(3);
+  margin-bottom: globalPadding(4.375);
+  width: 100%;
+  height: 1px;
+  background: var(--service-border);
+}

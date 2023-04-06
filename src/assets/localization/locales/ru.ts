@@ -1,5 +1,7 @@
 import Localization from '@localization/Localization';
 
+import blackFridayGuideBanner from '@media/images/blog/xas12dsa.png';
+
 const russianLocalization: Localization = {
   meta: {
     mainPage: {
@@ -24,6 +26,12 @@ const russianLocalization: Localization = {
 
     orderPage: {
       pageTitle: 'Заказ',
+      pageDescription: '',
+      keywords: '',
+    },
+
+    blogPage: {
+      pageTitle: 'Блог',
       pageDescription: '',
       keywords: '',
     },
@@ -282,6 +290,44 @@ const russianLocalization: Localization = {
     ],
     allow: 'Разрешить',
     disallow: 'Запретить',
+  },
+
+  blogPage: {
+    actualArticles: [
+      {
+        id: '1',
+        bannerImg: blackFridayGuideBanner,
+        title:
+          'Гайд от SmartAce по проведению маркетинговых кампаний в Черную Пятницу',
+        date: 'Понедельник, Дек. 12, 2022',
+        content: '',
+      },
+      {
+        id: '2',
+        bannerImg: blackFridayGuideBanner,
+        title:
+          'Гайд от SmartAce по проведению маркетинговых кампаний в Черную Пятницу',
+        date: 'Понедельник, Дек. 12, 2022',
+        content: '',
+      },
+      {
+        id: '3',
+        bannerImg: blackFridayGuideBanner,
+        title:
+          'Гайд от SmartAce по проведению маркетинговых кампаний в Черную Пятницу',
+        date: 'Понедельник, Дек. 12, 2022',
+        content: '',
+      },
+    ],
+    articles: [
+      {
+        id: '4',
+        title: 'Всемирный день бекапа',
+        date: 'Понедельник, Дек. 12, 2022',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et. Morbi non arcu risus quis varius quam. Diam sollicitudin tempor id eu nisl nunc.',
+      },
+    ],
   },
 };
 

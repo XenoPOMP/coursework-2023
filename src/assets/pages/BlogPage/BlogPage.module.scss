@@ -1,0 +1,16 @@
+@import "src/assets/styles/templates";
+
+.page {
+  @extend %mainFont;
+
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: var(--header-height) 1fr;
+
+  .content {
+    @extend %scrollable;
+    padding: 0 globalPadding(1) globalPadding(1) globalPadding(1);
+  }
+}

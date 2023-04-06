@@ -1,5 +1,7 @@
 import Localization from '@localization/Localization';
 
+import blackFridayGuideBanner from '@media/images/blog/xas12dsa.png';
+
 const englishLocalization: Localization = {
   meta: {
     mainPage: {
@@ -24,6 +26,12 @@ const englishLocalization: Localization = {
 
     orderPage: {
       pageTitle: 'Order',
+      pageDescription: '',
+      keywords: '',
+    },
+
+    blogPage: {
+      pageTitle: 'Blog',
       pageDescription: '',
       keywords: '',
     },
@@ -281,6 +289,41 @@ const englishLocalization: Localization = {
     ],
     allow: 'Allow',
     disallow: 'Disallow',
+  },
+
+  blogPage: {
+    actualArticles: [
+      {
+        id: '1',
+        bannerImg: blackFridayGuideBanner,
+        title: 'SmartAce`s guide to marketing campaigns for Black Friday',
+        date: 'Monday, Dec. 12, 2022',
+        content: '',
+      },
+      {
+        id: '2',
+        bannerImg: blackFridayGuideBanner,
+        title: 'SmartAce`s guide to marketing campaigns for Black Friday',
+        date: 'Monday, Dec. 12, 2022',
+        content: '',
+      },
+      {
+        id: '3',
+        bannerImg: blackFridayGuideBanner,
+        title: 'SmartAce`s guide to marketing campaigns for Black Friday',
+        date: 'Monday, Dec. 12, 2022',
+        content: '',
+      },
+    ],
+    articles: [
+      {
+        id: '4',
+        title: 'World Backup day',
+        date: 'Monday, Dec. 12, 2022',
+        content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et. Morbi non arcu risus quis varius quam. Diam sollicitudin tempor id eu nisl nunc.',
+      },
+    ],
   },
 };
 

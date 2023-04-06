@@ -31,9 +31,12 @@ const Navbar: FC<NavbarProps> = ({ tabIndex }) => {
         {loc.header.nav.services}
       </NavLink>
 
-      <div className={cn(styles.item, tabIndex === 2 ? styles.active : '')}>
+      <NavLink
+        to={'/blog'}
+        className={cn(styles.item, tabIndex === 2 ? styles.active : '')}
+      >
         {loc.header.nav.blog}
-      </div>
+      </NavLink>
     </nav>
   );
 };
