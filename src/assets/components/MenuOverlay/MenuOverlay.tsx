@@ -56,7 +56,7 @@ const MenuOverlay: FC<MenuOverlayProps> = ({ isOpened, onLinkClick }) => {
           </Link>
 
           <Link
-            to={`/`}
+            to={`/blog`}
             onClick={() => {
               if (onLinkClick) {
                 onLinkClick();

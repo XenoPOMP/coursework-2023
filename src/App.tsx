@@ -4,6 +4,7 @@ import NotFound from '@pages/NotFound/NotFound';
 import ServicePage from '@pages/ServicePage/ServicePage';
 import SettingsPage from '@pages/SettingsPage/SettingsPage';
 import OrderPage from '@pages/OrderPage/OrderPage';
+import BlogPage from '@pages/BlogPage/BlogPage';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route path={'/settings'} element={<SettingsPage />} />
 
         <Route path={'/order'} element={<OrderPage />} />
+
+        <Route path={'/blog'} element={<BlogPage />} />
       </Routes>
     </Router>
   );

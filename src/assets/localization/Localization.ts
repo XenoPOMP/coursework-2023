@@ -38,6 +38,14 @@ export type SettingsTabTitleLocale = {
   desc: string;
 };
 
+export type Article = {
+  id: string;
+  bannerImg?: string;
+  title: string;
+  date: string;
+  content: string;
+};
+
 type Localization = {
   meta: {
     mainPage: MetaInfo;
@@ -46,6 +54,7 @@ type Localization = {
     };
     settingsPage: MetaInfo;
     orderPage: MetaInfo;
+    blogPage: MetaInfo;
   };
 
   header: {
@@ -177,6 +186,14 @@ type Localization = {
     text: string[];
     allow: string;
     disallow: string;
+  };
+
+  blogPage: {
+    actualArticles: Article[];
+    articles: Article[];
+    labels: {
+      newArticles: string;
+    };
   };
 };
 
