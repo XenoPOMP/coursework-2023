@@ -41,6 +41,12 @@ const englishLocalization: Localization = {
       pageDescription: '',
       keywords: '',
     },
+
+    dashboard: {
+      pageTitle: 'Dashboard',
+      pageDescription: '',
+      keywords: '',
+    },
   },
 
   header: {

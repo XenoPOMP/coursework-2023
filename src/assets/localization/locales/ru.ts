@@ -41,6 +41,12 @@ const russianLocalization: Localization = {
       pageDescription: '',
       keywords: '',
     },
+
+    dashboard: {
+      pageTitle: 'Панель администратора',
+      pageDescription: '',
+      keywords: '',
+    },
   },
 
   header: {

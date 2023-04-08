@@ -56,6 +56,7 @@ type Localization = {
     orderPage: MetaInfo;
     blogPage: MetaInfo;
     authForm: MetaInfo;
+    dashboard: MetaInfo;
   };
 
   header: {
