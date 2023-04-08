@@ -35,6 +35,12 @@ const russianLocalization: Localization = {
       pageDescription: '',
       keywords: '',
     },
+
+    authForm: {
+      pageTitle: 'Вход',
+      pageDescription: '',
+      keywords: '',
+    },
   },
 
   header: {

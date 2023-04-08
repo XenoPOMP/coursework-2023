@@ -35,6 +35,12 @@ const englishLocalization: Localization = {
       pageDescription: '',
       keywords: '',
     },
+
+    authForm: {
+      pageTitle: 'Login',
+      pageDescription: '',
+      keywords: '',
+    },
   },
 
   header: {
