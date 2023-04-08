@@ -72,25 +72,76 @@
         }
       }
 
-      .button {
-        @extend %flexCenter;
-        @extend %notSelectable;
+      .bottom {
+        display: flex;
+        align-items: center;
 
-        font-size: 1em;
-        padding: 1em;
-        color: var(--head-icon-color-inactive);
-        cursor: pointer;
-        pointer-events: none;
-        background: var(--background-secondary);
-        transition:
-                background .15s ease,
-                color .15s ease
+        .button {
+          @extend %flexCenter;
+          @extend %notSelectable;
+
+          width: 100%;
+          font-size: 1em;
+          padding: 1em;
+          color: var(--head-icon-color-inactive);
+          cursor: pointer;
+          pointer-events: none;
+          background: var(--background-secondary);
+          transition:
+                  background .15s ease,
+                  color .15s ease
         ;
 
-        &.canPress {
-          background: var(--service-foot-button-back);
-          color: var(--service-foot-button-font);
-          pointer-events: all;
+          &.canPress {
+            background: var(--service-foot-button-back);
+            color: var(--service-foot-button-font);
+            pointer-events: all;
+          }
+
+          .loader {
+            height: 20px;
+
+            g path {
+              fill: var(--head-icon-color-inactive);
+            }
+          }
+
+          .text {
+            width: 100%;
+            text-align: center;
+          }
+        }
+
+        .error {
+          @extend %flexCenter;
+
+          height: 100%;
+          width: 3em;
+          background: var(--head-button-back);
+
+          svg {
+            width: 1em;
+
+            path {
+              fill: var(--service-title);
+            }
+          }
+        }
+
+        .continue {
+          @extend %flexCenter;
+
+          height: 100%;
+          width: 4em;
+
+          svg {
+            width: 1em;
+            cursor: pointer;
+
+            path {
+              fill: var(--service-title);
+            }
+          }
         }
       }
     }

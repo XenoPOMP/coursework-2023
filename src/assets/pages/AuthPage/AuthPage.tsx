@@ -8,26 +8,28 @@ import Logotype from '@ui/Logotype/Logotype';
 import useBoolean from '@hooks/useBoolean';
 import { useQuery } from 'react-query';
 import { LoginService } from '@services/Login.service';
+import CircleLoader from '@ui/CircleLoader/CircleLoader';
+import { useNavigate } from 'react-router-dom';
 
 const AuthPage: FC<AuthPageProps> = ({}) => {
   const loc = useLocalization();
+  const navigate = useNavigate();
 
   const [login, setLogin] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [canLogin, setCanLogin] = useState<boolean>(false);
   const [visible, toggleVisibility] = useBoolean(false);
+  const [loginSuccessful, setLoginSuccessful] = useState<boolean>(false);
+  const [isError, setIsError] = useState<boolean>(false);
 
-  const { data, isLoading, error } = useQuery('Login query sql', () =>
+  const { data, isLoading, error, refetch } = useQuery('Login', () =>
     LoginService.login(login, password),
   );
 
-  const cachedMutatedData = useMemo(() => {
-    if (isLoading || error) return null;
-
-    return data;
-  }, [data, isLoading, error]);
-
+  // Check for input format
   useEffect(() => {
+    setIsError(false);
+
     const forbiddenCharsPattern = /([А-Яа-я]|[\s!@#$%^&*?:;№"'])+/gi;
     const lengthPattern = /^\w{3,15}$/i;
 
@@ -38,6 +40,22 @@ const AuthPage: FC<AuthPageProps> = ({}) => {
         lengthPattern.test(password),
     );
   }, [login, password]);
+
+  // Login
+  const onLogin = async () => {
+    setIsError(false);
+
+    await refetch().then((res) => {
+      const { response, uuid } = res.data?.data;
+
+      if (response === 'wrong data') {
+        setIsError(true);
+        return;
+      }
+
+      setLoginSuccessful(true);
+    });
+  };
 
   return (
     <Page
@@ -114,8 +132,54 @@ const AuthPage: FC<AuthPageProps> = ({}) => {
             )}
           </div>
 
-          <div className={cn(styles.button, canLogin && styles.canPress)}>
-            {loc.authPage.placeholders.loginAction}
+          <div className={cn(styles.bottom)}>
+            <div
+              className={cn(
+                styles.button,
+                canLogin && !isLoading && !loginSuccessful && styles.canPress,
+              )}
+              onClick={onLogin}
+            >
+              {isLoading ? (
+                <CircleLoader className={cn(styles.loader)} />
+              ) : (
+                <div className={cn(styles.text)}>
+                  {loginSuccessful
+                    ? loc.authPage.placeholders.loginSuccess
+                    : loc.authPage.placeholders.loginAction}
+                </div>
+              )}
+            </div>
+
+            {isError && (
+              <div className={cn(styles.error)}>
+                <svg
+                  viewBox='0 0 25 25'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path d='M24.0437 24.0437C22.7686 25.3188 20.7013 25.3188 19.4262 24.0437L0.956311 5.57379C-0.31877 4.29871 -0.31877 2.23139 0.956311 0.956311C2.23139 -0.31877 4.29871 -0.31877 5.57379 0.956311L24.0437 19.4262C25.3188 20.7013 25.3188 22.7686 24.0437 24.0437Z' />
+                  <path d='M0.956311 24.0437C-0.31877 22.7686 -0.31877 20.7013 0.956311 19.4262L19.4262 0.956311C20.7013 -0.31877 22.7686 -0.31877 24.0437 0.956311C25.3188 2.23139 25.3188 4.29871 24.0437 5.57379L5.57379 24.0437C4.29871 25.3188 2.23139 25.3188 0.956311 24.0437Z' />
+                </svg>
+              </div>
+            )}
+
+            {loginSuccessful && (
+              <div className={cn(styles.continue)}>
+                <svg
+                  viewBox='0 0 30 24'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
+                  onClick={() =>
+                    navigate('/admin/dashboard', {
+                      preventScrollReset: false,
+                    })
+                  }
+                >
+                  <path d='M29.0607 13.0607C29.6464 12.4749 29.6464 11.5251 29.0607 10.9393L19.5147 1.3934C18.9289 0.807612 17.9792 0.807612 17.3934 1.3934C16.8076 1.97918 16.8076 2.92893 17.3934 3.51472L25.8787 12L17.3934 20.4853C16.8076 21.0711 16.8076 22.0208 17.3934 22.6066C17.9792 23.1924 18.9289 23.1924 19.5147 22.6066L29.0607 13.0607ZM0 13.5H28V10.5H0V13.5Z' />
+                </svg>
+              </div>
+            )}
           </div>
         </div>
       </div>

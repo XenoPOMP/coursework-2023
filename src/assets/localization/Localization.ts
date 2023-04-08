@@ -201,6 +201,7 @@ type Localization = {
     placeholders: {
       login: string;
       password: string;
+      loginSuccess: string;
       loginAction: string;
     };
   };

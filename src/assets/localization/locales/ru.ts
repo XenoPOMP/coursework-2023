@@ -393,6 +393,7 @@ const russianLocalization: Localization = {
     placeholders: {
       login: 'Логин',
       password: 'Пароль',
+      loginSuccess: 'Успешно!',
       loginAction: 'Войти',
     },
   },

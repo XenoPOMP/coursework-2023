@@ -383,6 +383,7 @@ const englishLocalization: Localization = {
     placeholders: {
       login: 'Login',
       password: 'Password',
+      loginSuccess: 'Success!',
       loginAction: 'Log in',
     },
   },
