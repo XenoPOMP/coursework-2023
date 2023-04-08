@@ -378,6 +378,14 @@ const englishLocalization: Localization = {
       newArticles: 'New articles',
     },
   },
+
+  authPage: {
+    placeholders: {
+      login: 'Login',
+      password: 'Password',
+      loginAction: 'Log in',
+    },
+  },
 };
 
 export default englishLocalization;

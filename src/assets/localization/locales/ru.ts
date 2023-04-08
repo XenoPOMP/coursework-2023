@@ -388,6 +388,14 @@ const russianLocalization: Localization = {
       newArticles: 'Новые статьи',
     },
   },
+
+  authPage: {
+    placeholders: {
+      login: 'Логин',
+      password: 'Пароль',
+      loginAction: 'Войти',
+    },
+  },
 };
 
 export default russianLocalization;

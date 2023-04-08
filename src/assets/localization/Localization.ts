@@ -196,6 +196,14 @@ type Localization = {
       newArticles: string;
     };
   };
+
+  authPage: {
+    placeholders: {
+      login: string;
+      password: string;
+      loginAction: string;
+    };
+  };
 };
 
 export default Localization;
