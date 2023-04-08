@@ -16,9 +16,6 @@ const AnalyticsSavers: FC<ProviderProps> = ({ children }) => {
     const connected = activeSocket.connected;
     const disconnected = activeSocket.disconnected;
 
-    console.log(`Socket connected: ${connected}`);
-    console.log(`Allowed: ${isAllowed}`);
-
     // Disconnect client if analytics are not
     // allowed
     if (!isAllowed && connected) {
@@ -31,8 +28,6 @@ const AnalyticsSavers: FC<ProviderProps> = ({ children }) => {
       activeSocket.connect();
     }
   }, [isAllowed]);
-
-  console.log(deviceType);
 
   return (
     <SessionTokenContext.Provider value={uuid()}>
