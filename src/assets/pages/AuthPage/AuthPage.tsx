@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { FC, useEffect, useMemo, useState } from 'react';
+import { FC, useEffect, useLayoutEffect, useMemo, useState } from 'react';
 import styles from './AuthPage.module.scss';
 import { AuthPageProps } from './AuthPage.props';
 import Page from '@components/Page/Page';
@@ -10,10 +10,12 @@ import { useQuery } from 'react-query';
 import { LoginService } from '@services/Login.service';
 import CircleLoader from '@ui/CircleLoader/CircleLoader';
 import { useNavigate } from 'react-router-dom';
+import useAuth from '@hooks/useAuth';
 
 const AuthPage: FC<AuthPageProps> = ({}) => {
   const loc = useLocalization();
   const navigate = useNavigate();
+  const { signUp, uuid, isLogged } = useAuth();
 
   const [login, setLogin] = useState<string>('');
   const [password, setPassword] = useState<string>('');
@@ -25,6 +27,13 @@ const AuthPage: FC<AuthPageProps> = ({}) => {
   const { data, isLoading, error, refetch } = useQuery('Login', () =>
     LoginService.login(login, password),
   );
+
+  useLayoutEffect(() => {
+    if (isLogged) {
+      console.log(`Logged as ${uuid}`);
+      setLoginSuccessful(true);
+    }
+  }, [isLogged]);
 
   // Check for input format
   useEffect(() => {
@@ -54,6 +63,7 @@ const AuthPage: FC<AuthPageProps> = ({}) => {
       }
 
       setLoginSuccessful(true);
+      signUp(uuid);
     });
   };
 
