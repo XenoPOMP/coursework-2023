@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react';
+import { FC, useContext, useEffect } from 'react';
 import { ProviderProps } from '@providers/Provider.props';
 import { socket, WebsocketContext } from '@contexts/WebSocketContext';
 import { SessionTokenContext } from '@contexts/SessionTokenContext';
@@ -9,7 +9,28 @@ import useDeviceType from '@hooks/useDeviceType';
 const AnalyticsSavers: FC<ProviderProps> = ({ children }) => {
   const { isAllowed } = useAnalyticsAllowed();
   const token = useContext(SessionTokenContext);
+  const activeSocket = useContext(WebsocketContext);
   const deviceType = useDeviceType();
+
+  useEffect(() => {
+    const connected = activeSocket.connected;
+    const disconnected = activeSocket.disconnected;
+
+    console.log(`Socket connected: ${connected}`);
+    console.log(`Allowed: ${isAllowed}`);
+
+    // Disconnect client if analytics are not
+    // allowed
+    if (!isAllowed && connected) {
+      activeSocket.disconnect();
+    }
+
+    // Connect user to socket server if
+    // he / she is not connected yet
+    if (isAllowed && disconnected) {
+      activeSocket.connect();
+    }
+  }, [isAllowed]);
 
   console.log(deviceType);
 

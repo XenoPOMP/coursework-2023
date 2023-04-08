@@ -11,6 +11,10 @@ export const socket = (
 ) =>
   io(
     `ws://${DOMAIN}:80?allow=${allowed}&sessionToken=${sessionToken}&device=${device}`,
+    {
+      autoConnect: allowed,
+      reconnection: false,
+    },
   );
 
 export const WebsocketContext = createContext<Socket>(
