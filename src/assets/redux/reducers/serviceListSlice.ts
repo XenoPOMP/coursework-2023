@@ -3,7 +3,7 @@ import { ReduxAction } from '@redux/types/redux-types';
 import { ServiceLocale } from '@localization/Localization';
 import useLocalization from '@hooks/useLocalization';
 
-export type ServiceIcon = 'thunderbolt';
+export type ServiceIcon = 'thunderbolt' | 'mall';
 
 export type ServiceList = {
   search: string;
@@ -25,7 +25,7 @@ const initialState: ServiceList = {
 
     {
       isFavorite: false,
-      icon: 'thunderbolt',
+      icon: 'mall',
       index: 1,
     },
   ],

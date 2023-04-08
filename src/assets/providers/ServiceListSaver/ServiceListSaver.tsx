@@ -39,6 +39,14 @@ const ServiceListSaver: FC<ProviderProps> = ({ children }) => {
     setCookieServices(servicesFromRedux);
   }
 
+  // Check for correct icon name
+  servicesFromRedux.map((serv, index) => {
+    if (serv.icon !== getCookieServices[index].icon) {
+      console.warn('Icon has been updated, reset service state.');
+      setCookieServices(servicesFromRedux);
+    }
+  });
+
   // Save items to local storage
   useEffect(() => {
     setCookieServices(servicesFromRedux);
