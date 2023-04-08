@@ -5,6 +5,10 @@ export interface Env {
   TESTING_MODE?: TestingMode;
   DOMAIN?: string;
   APP_PORT?: number;
+  SSL?: {
+    WEBSOCKET?: string;
+    HTTP?: string;
+  };
 }
 
 const useEnv = (): Env => {
@@ -15,6 +19,10 @@ const useEnv = (): Env => {
     TESTING_MODE: env.VITE_TESTING_MODE,
     DOMAIN: env.VITE_DOMAIN,
     APP_PORT: env.VITE_APP_PORT,
+    SSL: {
+      WEBSOCKET: env.VITE_WS_SSL,
+      HTTP: env.VITE_HTTP_SSL,
+    },
   };
 };
 

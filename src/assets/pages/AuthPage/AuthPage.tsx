@@ -1,11 +1,13 @@
 import cn from 'classnames';
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useMemo, useState } from 'react';
 import styles from './AuthPage.module.scss';
 import { AuthPageProps } from './AuthPage.props';
 import Page from '@components/Page/Page';
 import useLocalization from '@hooks/useLocalization';
 import Logotype from '@ui/Logotype/Logotype';
 import useBoolean from '@hooks/useBoolean';
+import { useQuery } from 'react-query';
+import { LoginService } from '@services/Login.service';
 
 const AuthPage: FC<AuthPageProps> = ({}) => {
   const loc = useLocalization();
@@ -14,6 +16,16 @@ const AuthPage: FC<AuthPageProps> = ({}) => {
   const [password, setPassword] = useState<string>('');
   const [canLogin, setCanLogin] = useState<boolean>(false);
   const [visible, toggleVisibility] = useBoolean(false);
+
+  const { data, isLoading, error } = useQuery('Login query sql', () =>
+    LoginService.login(login, password),
+  );
+
+  const cachedMutatedData = useMemo(() => {
+    if (isLoading || error) return null;
+
+    return data;
+  }, [data, isLoading, error]);
 
   useEffect(() => {
     const forbiddenCharsPattern = /([А-Яа-я]|[\s!@#$%^&*?:;№"'])+/gi;
