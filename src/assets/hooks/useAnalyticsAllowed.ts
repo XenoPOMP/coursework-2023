@@ -4,7 +4,6 @@ import {
 } from '@redux/reducers/analyticsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import IStore from '@redux/types/redux-types';
-import { useMemo } from 'react';
 
 const useAnalyticsAllowed = (): {
   isAllowed: boolean;
