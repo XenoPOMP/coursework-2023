@@ -5,7 +5,7 @@
 
   // 1em = 20px
   background: var(--blog-back-primary);
-  padding: 2em;
+  padding: globalPadding(1);
   border-radius: globalPadding(.5);
   cursor: pointer;
   font-size: 1em;
