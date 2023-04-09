@@ -210,6 +210,12 @@ type Localization = {
 
   dashboard: {
     accessDenied: string;
+    dateParts: {
+      day: string;
+      week: string;
+      month: string;
+      year: string;
+    };
   };
 };
 

@@ -2,6 +2,7 @@
 
 .button {
   @extend %notSelectable;
+  @extend %mainFont;
 
   // 1em = 20px
   padding: .25em .5em;

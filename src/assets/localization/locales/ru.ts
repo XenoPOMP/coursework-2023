@@ -407,6 +407,12 @@ const russianLocalization: Localization = {
 
   dashboard: {
     accessDenied: 'Доступ запрещен',
+    dateParts: {
+      day: 'За день',
+      week: 'За неделю',
+      month: 'За месяц',
+      year: 'За год',
+    },
   },
 };
 

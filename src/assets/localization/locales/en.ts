@@ -397,6 +397,12 @@ const englishLocalization: Localization = {
 
   dashboard: {
     accessDenied: 'Access denied',
+    dateParts: {
+      day: 'Last day',
+      week: 'Last week',
+      month: 'Last month',
+      year: 'Last year',
+    },
   },
 };
 

@@ -3,6 +3,7 @@ import { ServiceList } from '@redux/reducers/serviceListSlice';
 import { LastPageList } from '@redux/reducers/lastPageSlice';
 import { Analytics } from '@redux/reducers/analyticsSlice';
 import { AuthState } from '@redux/reducers/authSlice';
+import { AdminPage } from '@redux/reducers/adminSlice';
 
 interface IStore {
   appSettings: AppSettings;
@@ -10,6 +11,7 @@ interface IStore {
   lastPage: LastPageList;
   analytics: Analytics;
   auth: AuthState;
+  admin: AdminPage;
 }
 
 export type ReduxAction<A> = {

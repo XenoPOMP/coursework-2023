@@ -6,11 +6,20 @@ import Page from '@components/Page/Page';
 import useLocalization from '@hooks/useLocalization';
 import useAuth from '@hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
+import SelectButton from '@ui/SelectButton/SelectButton';
+import numericGenerator from '@utils/numericGenerator';
+import { changeDatePart, DatePart } from '@redux/reducers/adminSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import IStore from '@redux/types/redux-types';
 
 const Dashboard: FC<DashboardProps> = ({}) => {
   const loc = useLocalization();
   const { isLogged } = useAuth();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const currentDatePart: DatePart = useSelector(
+    (state: IStore) => state.admin.datePart,
+  );
 
   return (
     <Page
@@ -21,7 +30,41 @@ const Dashboard: FC<DashboardProps> = ({}) => {
       meta={loc.meta.dashboard}
     >
       {isLogged ? (
-        <></>
+        <div className={cn(styles.page)}>
+          <div className={cn(styles.content)}>
+            <div className={cn(styles.datepart)}>
+              <SelectButton
+                isTriggered={currentDatePart === 'day'}
+                onClick={() => dispatch(changeDatePart('day'))}
+              >
+                {loc.dashboard.dateParts.day}
+              </SelectButton>
+
+              <SelectButton
+                isTriggered={currentDatePart === 'week'}
+                onClick={() => dispatch(changeDatePart('week'))}
+              >
+                {loc.dashboard.dateParts.week}
+              </SelectButton>
+
+              <SelectButton
+                isTriggered={currentDatePart === 'month'}
+                onClick={() => dispatch(changeDatePart('month'))}
+              >
+                {loc.dashboard.dateParts.month}
+              </SelectButton>
+
+              <SelectButton
+                isTriggered={currentDatePart === 'year'}
+                onClick={() => dispatch(changeDatePart('year'))}
+              >
+                {loc.dashboard.dateParts.year}
+              </SelectButton>
+            </div>
+
+            <div className={cn(styles.grid)}></div>
+          </div>
+        </div>
       ) : (
         <div className={cn(styles.denied)}>
           <svg
