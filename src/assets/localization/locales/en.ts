@@ -394,6 +394,10 @@ const englishLocalization: Localization = {
       loginAction: 'Log in',
     },
   },
+
+  dashboard: {
+    accessDenied: 'Access denied',
+  },
 };
 
 export default englishLocalization;

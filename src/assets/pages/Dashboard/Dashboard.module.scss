@@ -1,0 +1,32 @@
+@import "src/assets/styles/templates";
+
+.denied {
+  @extend %flexCenter;
+  @extend %mainFont;
+  @extend %semiBold;
+  @extend %notSelectable;
+
+  width: 100vw;
+  height: 100vh;
+  padding:
+          var(--header-height)
+          globalPadding(1)
+          globalPadding(1)
+          globalPadding(1);
+  font-size: 60px;
+  flex-direction: column;
+
+  svg {
+    width: 4.68em;
+
+    path {
+      fill: var(--service-font);
+    }
+  }
+
+  .text {
+    font-size: 1em;
+    margin-top: .53em;
+    color: var(--service-font);
+  }
+}

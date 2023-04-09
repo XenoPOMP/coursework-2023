@@ -207,6 +207,10 @@ type Localization = {
       loginAction: string;
     };
   };
+
+  dashboard: {
+    accessDenied: string;
+  };
 };
 
 export default Localization;

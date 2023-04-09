@@ -404,6 +404,10 @@ const russianLocalization: Localization = {
       loginAction: 'Войти',
     },
   },
+
+  dashboard: {
+    accessDenied: 'Доступ запрещен',
+  },
 };
 
 export default russianLocalization;
