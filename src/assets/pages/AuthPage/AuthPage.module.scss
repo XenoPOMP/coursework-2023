@@ -61,6 +61,13 @@
           border: none;
           padding: 1em 0;
 
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus {
+            -webkit-text-fill-color: var(--service-font);
+            -webkit-box-shadow: 0 0 5000px var(--head-button-back) inset;
+          }
+
           &::-webkit-input-placeholder,
           &:-moz-placeholder {
             color: var(--service-title);
