@@ -12,6 +12,7 @@ const Dashboard: FC<DashboardProps> = ({}) => {
     <Page
       header={{
         tabIndex: -1,
+        renderNav: false,
       }}
       meta={loc.meta.dashboard}
     ></Page>
