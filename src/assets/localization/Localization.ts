@@ -65,6 +65,7 @@ type Localization = {
       services: string;
       blog: string;
       settings: string;
+      analytics: string;
     };
   };
 

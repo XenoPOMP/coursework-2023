@@ -55,6 +55,7 @@ const russianLocalization: Localization = {
       services: 'Услуги',
       blog: 'Блог',
       settings: 'Настройки',
+      analytics: 'Аналитика',
     },
   },
 

@@ -50,6 +50,14 @@
           }
         }
 
+        &.toDashboard {
+          display: none;
+
+          @media (max-width: 400px) {
+            display: initial;
+          }
+        }
+
         &:hover {
           color: var(--ov-font-active);
         }

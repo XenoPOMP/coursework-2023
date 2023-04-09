@@ -7,12 +7,14 @@ import useLocalization from '@hooks/useLocalization';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import IStore from '@redux/types/redux-types';
+import useAuth from '@hooks/useAuth';
 
 const MenuOverlay: FC<MenuOverlayProps> = ({ isOpened, onLinkClick }) => {
   const loc = useLocalization();
   const lastServicePage = useSelector(
     (state: IStore) => state.lastPage.service,
   );
+  const { isLogged } = useAuth();
 
   return (
     <motion.div
@@ -79,6 +81,20 @@ const MenuOverlay: FC<MenuOverlayProps> = ({ isOpened, onLinkClick }) => {
           >
             {loc.header.nav.settings}
           </Link>
+
+          {isLogged && (
+            <Link
+              to={`/admin/dashboard`}
+              onClick={() => {
+                if (onLinkClick) {
+                  onLinkClick();
+                }
+              }}
+              className={cn(styles.toDashboard)}
+            >
+              {loc.header.nav.analytics}
+            </Link>
+          )}
         </div>
       </div>
     </motion.div>

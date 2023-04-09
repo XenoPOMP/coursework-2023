@@ -55,6 +55,7 @@ const englishLocalization: Localization = {
       services: 'Services',
       blog: 'Blog',
       settings: 'Settings',
+      analytics: 'Analytics',
     },
   },
 

@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import useAppSettings from '@hooks/useAppSettings';
 import useBoolean from '@hooks/useBoolean';
 import MenuOverlay from '@components/MenuOverlay/MenuOverlay';
+import useAuth from '@hooks/useAuth';
 
 const Header: FC<HeaderProps> = (props) => {
   const {
@@ -26,6 +27,7 @@ const Header: FC<HeaderProps> = (props) => {
   };
 
   const navigate = useNavigate();
+  const { isLogged } = useAuth();
   const [menuOpened, toggleMenu] = useBoolean(false);
 
   useEffect(() => {
@@ -70,6 +72,23 @@ const Header: FC<HeaderProps> = (props) => {
           <div className={cn(styles.container, styles.right)}>
             {renderRightButtons && (
               <>
+                {isLogged && (
+                  <Link
+                    to={'/admin/dashboard'}
+                    className={cn(styles.squareButton, styles.dashboard)}
+                  >
+                    <svg
+                      width='30'
+                      height='30'
+                      viewBox='0 0 30 30'
+                      fill='none'
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path d='M0 30V26.6667L3.33333 23.3333V30H0ZM6.66667 30V20L10 16.6667V30H6.66667ZM13.3333 30V16.6667L16.6667 20.0417V30H13.3333ZM20 30V20.0417L23.3333 16.7083V30H20ZM26.6667 30V13.3333L30 10V30H26.6667ZM0 21.375V16.6667L11.6667 5L18.3333 11.6667L30 0V4.70833L18.3333 16.375L11.6667 9.70833L0 21.375Z' />
+                    </svg>
+                  </Link>
+                )}
+
                 <Link
                   to={'/settings'}
                   className={cn(styles.squareButton, styles.settings)}
