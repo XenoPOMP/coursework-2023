@@ -59,6 +59,13 @@ type Localization = {
     dashboard: MetaInfo;
   };
 
+  useFormattedTime: {
+    ms: string;
+    s: string;
+    min: string;
+    hour: string;
+  };
+
   header: {
     nav: {
       mainPage: string;

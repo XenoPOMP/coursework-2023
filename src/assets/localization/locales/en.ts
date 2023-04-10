@@ -49,6 +49,13 @@ const englishLocalization: Localization = {
     },
   },
 
+  useFormattedTime: {
+    ms: 'ms',
+    s: 'sec',
+    min: 'min',
+    hour: 'h',
+  },
+
   header: {
     nav: {
       mainPage: 'Main',

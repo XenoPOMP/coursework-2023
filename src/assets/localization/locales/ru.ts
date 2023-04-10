@@ -49,6 +49,13 @@ const russianLocalization: Localization = {
     },
   },
 
+  useFormattedTime: {
+    ms: 'мс',
+    s: 'сек',
+    min: 'мин',
+    hour: 'ч',
+  },
+
   header: {
     nav: {
       mainPage: 'Главная',
