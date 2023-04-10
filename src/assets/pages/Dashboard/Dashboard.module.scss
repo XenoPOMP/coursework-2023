@@ -69,6 +69,22 @@
       display: grid;
       grid-gap: globalPadding(1);
       grid-template-columns: repeat(5, 1fr);
+
+      @media (max-width: 1663px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media (max-width: 1406px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 1052px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 709px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
   }
 }
