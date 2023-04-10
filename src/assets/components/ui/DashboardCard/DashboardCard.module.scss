@@ -1,0 +1,42 @@
+@import "src/assets/styles/templates";
+
+.card {
+  @extend %flexCenter;
+  @extend %mainFont;
+
+  // 1em = 20px
+  font-size: 1em;
+  width: 100%;
+  padding: globalPadding(.5);
+  border-radius: globalPadding(.625);
+  background: var(--head-button-back);
+  flex-direction: column;
+  row-gap: 1em;
+  color: var(--service-font);
+
+  .body {
+    @extend %flexCenter;
+
+    min-height: 6.9em;
+    font-size: 1em;
+    text-align: center;
+
+    svg {
+      &.error {
+        width: 3em;
+      }
+
+      path {
+        fill: var(--service-font);
+      }
+    }
+  }
+
+  .title {
+    @extend %flexCenter;
+
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+  }
+}

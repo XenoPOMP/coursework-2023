@@ -53,6 +53,12 @@ header.appHeader {
 
     transition: background-color .15s ease;
 
+    &.dashboard {
+      @media (max-width: 400px) {
+        display: none;
+      }
+    }
+
     &.settings {
       @media (max-width: 552px) {
         display: none;

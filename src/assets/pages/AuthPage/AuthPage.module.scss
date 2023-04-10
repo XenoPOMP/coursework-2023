@@ -1,0 +1,156 @@
+@import "src/assets/styles/templates";
+
+.page {
+  @extend %scrollable;
+  @extend %flexCenter;
+  @extend %mainFont;
+
+  width: 100vw;
+  height: 100vh;
+  padding: globalPadding(1);
+  font-size: 20px;
+  flex-direction: column;
+
+  .container {
+    &.logo {
+      height: 3.3em;
+      margin-bottom: 2.85em;
+    }
+
+    &.form {
+      border-radius: .15em;
+      overflow: hidden;
+      max-width: 312px;
+      width: 100%;
+      background: var(--head-button-back);
+
+      .input {
+        @extend %flexCenter;
+
+        width: 100%;
+        padding: 0 1em;
+        justify-content: space-between;
+        column-gap: 1em;
+
+        svg {
+          @extend %notSelectable;
+          width: 1em;
+
+          path {
+            fill: var(--service-icon);
+          }
+
+          &.visibility {
+            width: 1.25em;
+            cursor: pointer;
+
+            path {
+              fill: var(--service-font);
+            }
+          }
+        }
+
+        input {
+          @extend %mainFont;
+
+          width: 100%;
+          font-size: 1em;
+          color: var(--service-font);
+          background: none;
+          outline: none;
+          border: none;
+          padding: 1em 0;
+
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus {
+            -webkit-text-fill-color: var(--service-font);
+            -webkit-box-shadow: 0 0 5000px var(--head-button-back) inset;
+          }
+
+          &::-webkit-input-placeholder,
+          &:-moz-placeholder {
+            color: var(--service-title);
+          }
+        }
+
+        &:first-of-type {
+          border-bottom: 1px solid var(--service-title);
+        }
+      }
+
+      .bottom {
+        display: flex;
+        align-items: center;
+
+        .button {
+          @extend %flexCenter;
+          @extend %notSelectable;
+
+          width: 100%;
+          font-size: 1em;
+          padding: 1em;
+          color: var(--head-icon-color-inactive);
+          cursor: pointer;
+          pointer-events: none;
+          background: var(--background-secondary);
+          transition:
+                  background .15s ease,
+                  color .15s ease
+        ;
+
+          &.canPress {
+            background: var(--service-foot-button-back);
+            color: var(--service-foot-button-font);
+            pointer-events: all;
+          }
+
+          .loader {
+            height: 20px;
+
+            g path {
+              fill: var(--head-icon-color-inactive);
+            }
+          }
+
+          .text {
+            width: 100%;
+            text-align: center;
+          }
+        }
+
+        .error {
+          @extend %flexCenter;
+
+          height: 100%;
+          width: 3em;
+          background: var(--head-button-back);
+
+          svg {
+            width: 1em;
+
+            path {
+              fill: var(--service-title);
+            }
+          }
+        }
+
+        .continue {
+          @extend %flexCenter;
+
+          height: 100%;
+          width: 4em;
+
+          svg {
+            width: 1em;
+            cursor: pointer;
+
+            path {
+              fill: var(--service-title);
+            }
+          }
+        }
+      }
+    }
+  }
+}

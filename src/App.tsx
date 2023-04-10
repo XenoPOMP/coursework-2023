@@ -5,6 +5,8 @@ import ServicePage from '@pages/ServicePage/ServicePage';
 import SettingsPage from '@pages/SettingsPage/SettingsPage';
 import OrderPage from '@pages/OrderPage/OrderPage';
 import BlogPage from '@pages/BlogPage/BlogPage';
+import AuthPage from '@pages/AuthPage/AuthPage';
+import Dashboard from '@pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -21,6 +23,10 @@ function App() {
         <Route path={'/order'} element={<OrderPage />} />
 
         <Route path={'/blog'} element={<BlogPage />} />
+
+        <Route path={'/admin/login'} element={<AuthPage />} />
+
+        <Route path={'/admin/dashboard'} element={<Dashboard />} />
       </Routes>
     </Router>
   );

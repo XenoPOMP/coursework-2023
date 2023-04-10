@@ -1,0 +1,90 @@
+@import "src/assets/styles/templates";
+
+.denied {
+  @extend %flexCenter;
+  @extend %mainFont;
+  @extend %semiBold;
+  @extend %notSelectable;
+
+  width: 100vw;
+  height: 100vh;
+  padding:
+          var(--header-height)
+          globalPadding(1)
+          globalPadding(1)
+          globalPadding(1);
+  font-size: 60px;
+  flex-direction: column;
+
+  svg {
+    width: 4.68em;
+
+    path {
+      fill: var(--service-font);
+    }
+  }
+
+  .text {
+    font-size: 1em;
+    margin-top: .53em;
+    color: var(--service-font);
+  }
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: var(--header-height) 1fr;
+  padding: 0 globalPadding(1) globalPadding(1) globalPadding(1);
+
+  .content {
+    @extend %notSelectable;
+    @extend %scrollable;
+
+    grid-row-start: 2;
+    width: 100%;
+    height: 100%;
+
+    .datepart {
+      $gap: globalPadding(.25);
+
+      font-size: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      flex-wrap: wrap;
+      column-gap: $gap;
+      row-gap: $gap;
+      padding-bottom: globalPadding(1);
+      background: var(--background-primary);
+      position: sticky;
+      top: 0;
+      left: 0;
+    }
+
+    .grid {
+      font-size: 20px;
+      width: 100%;
+      display: grid;
+      grid-gap: globalPadding(.5);
+      grid-template-columns: repeat(5, 1fr);
+
+      @media (max-width: 1663px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media (max-width: 1406px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 1052px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 709px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

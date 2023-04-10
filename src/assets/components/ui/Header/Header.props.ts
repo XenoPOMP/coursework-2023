@@ -3,4 +3,5 @@ export interface HeaderProps {
   renderNav?: boolean;
   renderBackButton?: boolean;
   renderRightButtons?: boolean;
+  renderHeader?: boolean;
 }

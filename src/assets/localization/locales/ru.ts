@@ -35,6 +35,25 @@ const russianLocalization: Localization = {
       pageDescription: '',
       keywords: '',
     },
+
+    authForm: {
+      pageTitle: 'Вход',
+      pageDescription: '',
+      keywords: '',
+    },
+
+    dashboard: {
+      pageTitle: 'Панель администратора',
+      pageDescription: '',
+      keywords: '',
+    },
+  },
+
+  useFormattedTime: {
+    ms: 'мс',
+    s: 'сек',
+    min: 'мин',
+    hour: 'ч',
   },
 
   header: {
@@ -43,6 +62,7 @@ const russianLocalization: Localization = {
       services: 'Услуги',
       blog: 'Блог',
       settings: 'Настройки',
+      analytics: 'Аналитика',
     },
   },
 
@@ -380,6 +400,30 @@ const russianLocalization: Localization = {
 
     labels: {
       newArticles: 'Новые статьи',
+    },
+  },
+
+  authPage: {
+    placeholders: {
+      login: 'Логин',
+      password: 'Пароль',
+      loginSuccess: 'Успешно!',
+      loginAction: 'Войти',
+    },
+  },
+
+  dashboard: {
+    accessDenied: 'Доступ запрещен',
+    dateParts: {
+      hour: 'За час',
+      day: 'За день',
+      week: 'За неделю',
+      month: 'За месяц',
+      year: 'За год',
+    },
+    cards: {
+      averageSessionTime: 'Среднее время сеанса',
+      sessionCount: 'Кол-во посещений',
     },
   },
 };

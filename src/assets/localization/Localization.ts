@@ -55,6 +55,15 @@ type Localization = {
     settingsPage: MetaInfo;
     orderPage: MetaInfo;
     blogPage: MetaInfo;
+    authForm: MetaInfo;
+    dashboard: MetaInfo;
+  };
+
+  useFormattedTime: {
+    ms: string;
+    s: string;
+    min: string;
+    hour: string;
   };
 
   header: {
@@ -63,6 +72,7 @@ type Localization = {
       services: string;
       blog: string;
       settings: string;
+      analytics: string;
     };
   };
 
@@ -193,6 +203,30 @@ type Localization = {
     articles: Article[];
     labels: {
       newArticles: string;
+    };
+  };
+
+  authPage: {
+    placeholders: {
+      login: string;
+      password: string;
+      loginSuccess: string;
+      loginAction: string;
+    };
+  };
+
+  dashboard: {
+    accessDenied: string;
+    dateParts: {
+      hour: string;
+      day: string;
+      week: string;
+      month: string;
+      year: string;
+    };
+    cards: {
+      averageSessionTime: string;
+      sessionCount: string;
     };
   };
 };

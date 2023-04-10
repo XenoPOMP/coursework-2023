@@ -35,6 +35,25 @@ const englishLocalization: Localization = {
       pageDescription: '',
       keywords: '',
     },
+
+    authForm: {
+      pageTitle: 'Login',
+      pageDescription: '',
+      keywords: '',
+    },
+
+    dashboard: {
+      pageTitle: 'Dashboard',
+      pageDescription: '',
+      keywords: '',
+    },
+  },
+
+  useFormattedTime: {
+    ms: 'ms',
+    s: 'sec',
+    min: 'min',
+    hour: 'h',
   },
 
   header: {
@@ -43,6 +62,7 @@ const englishLocalization: Localization = {
       services: 'Services',
       blog: 'Blog',
       settings: 'Settings',
+      analytics: 'Analytics',
     },
   },
 
@@ -370,6 +390,30 @@ const englishLocalization: Localization = {
 
     labels: {
       newArticles: 'New articles',
+    },
+  },
+
+  authPage: {
+    placeholders: {
+      login: 'Login',
+      password: 'Password',
+      loginSuccess: 'Success!',
+      loginAction: 'Log in',
+    },
+  },
+
+  dashboard: {
+    accessDenied: 'Access denied',
+    dateParts: {
+      hour: 'Last hour',
+      day: 'Last day',
+      week: 'Last week',
+      month: 'Last month',
+      year: 'Last year',
+    },
+    cards: {
+      averageSessionTime: 'Average session time',
+      sessionCount: 'Visit count',
     },
   },
 };
