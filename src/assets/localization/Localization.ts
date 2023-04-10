@@ -226,6 +226,7 @@ type Localization = {
     };
     cards: {
       averageSessionTime: string;
+      sessionCount: string;
     };
   };
 };

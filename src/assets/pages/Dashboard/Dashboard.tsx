@@ -72,11 +72,23 @@ const Dashboard: FC<DashboardProps> = ({}) => {
 
             <div className={cn(styles.grid)}>
               <DashboardCard
+                index={0}
                 query={'session/average/{{datepart}}'}
                 labels={{
                   data: 'XX',
                   title: loc.dashboard.cards.averageSessionTime,
                 }}
+                isDate={true}
+              />
+
+              <DashboardCard
+                index={1}
+                query={'session/count/{{datepart}}'}
+                labels={{
+                  data: 'XX',
+                  title: loc.dashboard.cards.sessionCount,
+                }}
+                isDate={false}
               />
             </div>
           </div>

@@ -413,6 +413,7 @@ const englishLocalization: Localization = {
     },
     cards: {
       averageSessionTime: 'Average session time',
+      sessionCount: 'Visit count',
     },
   },
 };

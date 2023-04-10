@@ -11,7 +11,12 @@ import DashboardService from '@services/Dashboard.service';
 import CircleLoader from '@ui/CircleLoader/CircleLoader';
 import useFormattedTime from '@hooks/useFormattedTime';
 
-const DashboardCard: FC<DashboardCardProps> = ({ query, labels }) => {
+const DashboardCard: FC<DashboardCardProps> = ({
+  index,
+  query,
+  labels,
+  isDate,
+}) => {
   const currentDatePart: DatePart = useSelector(
     (state: IStore) => state.admin.datePart,
   );
@@ -19,10 +24,10 @@ const DashboardCard: FC<DashboardCardProps> = ({ query, labels }) => {
   const formattedQuery = query.replace(/{{datepart}}/gi, currentDatePart);
 
   const { isLoading, error, data, refetch, isRefetching } = useQuery(
-    `Query for ${query}`,
+    `Dashboard card ${index}`,
     () => DashboardService.execQuery(formattedQuery, uuid),
   );
-  const numericData = useFormattedTime(data?.data);
+  const numericData = isDate ? useFormattedTime(data?.data) : data?.data;
 
   useEffect(() => {
     refetch();

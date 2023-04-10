@@ -423,6 +423,7 @@ const russianLocalization: Localization = {
     },
     cards: {
       averageSessionTime: 'Среднее время сеанса',
+      sessionCount: 'Кол-во посещений',
     },
   },
 };
