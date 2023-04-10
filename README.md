@@ -20,15 +20,14 @@
 <a href="https://sass-lang.com/"><img src="https://img.shields.io/static/v1?label=&message=sass&color=%23CC6699&logo=sass&logoColor=white" alt="sass"></a>
 </p>
 
-# 
-
+#
 <p align='center'>
 <a href='https://github.com/XenoPOMP/coursework-2023/releases/latest'>
 <img src='https://badgen.net/github/release/XenoPOMP/coursework-2023' alt='latest github release' />
 </a>
 </p>
 
-# 
+<hr>
 
 <h2 align="center">Getting started</h2>
 
