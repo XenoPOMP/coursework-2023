@@ -218,10 +218,14 @@ type Localization = {
   dashboard: {
     accessDenied: string;
     dateParts: {
+      hour: string;
       day: string;
       week: string;
       month: string;
       year: string;
+    };
+    cards: {
+      averageSessionTime: string;
     };
   };
 };

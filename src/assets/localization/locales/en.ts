@@ -405,10 +405,14 @@ const englishLocalization: Localization = {
   dashboard: {
     accessDenied: 'Access denied',
     dateParts: {
+      hour: 'Last hour',
       day: 'Last day',
       week: 'Last week',
       month: 'Last month',
       year: 'Last year',
+    },
+    cards: {
+      averageSessionTime: 'Average session time',
     },
   },
 };

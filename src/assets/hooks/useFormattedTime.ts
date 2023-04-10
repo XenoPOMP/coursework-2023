@@ -12,6 +12,12 @@ const useFormattedTime = (time: number): string => {
 
   if (time > SECONDS_IN_MINUTE) {
     const minutes = time / SECONDS_IN_MINUTE;
+    return `${roundTime(minutes)} ${loc.useFormattedTime.min}`;
+  }
+
+  if (time > SECONDS_IN_HOUR) {
+    const hours = time / SECONDS_IN_MINUTE;
+    return `${roundTime(hours)} ${loc.useFormattedTime.min}`;
   }
 
   return `${roundTime(time)} ${loc.useFormattedTime.s}`;

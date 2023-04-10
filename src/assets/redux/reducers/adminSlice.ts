@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { ReduxAction } from '@redux/types/redux-types';
 
-export type DatePart = 'day' | 'week' | 'month' | 'year';
+export type DatePart = 'hour' | 'day' | 'week' | 'month' | 'year';
 
 export type AdminPage = {
   datePart: DatePart;

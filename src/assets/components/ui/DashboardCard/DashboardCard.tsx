@@ -9,6 +9,7 @@ import useAuth from '@hooks/useAuth';
 import { useQuery } from 'react-query';
 import DashboardService from '@services/Dashboard.service';
 import CircleLoader from '@ui/CircleLoader/CircleLoader';
+import useFormattedTime from '@hooks/useFormattedTime';
 
 const DashboardCard: FC<DashboardCardProps> = ({ query, labels }) => {
   const currentDatePart: DatePart = useSelector(
@@ -21,6 +22,7 @@ const DashboardCard: FC<DashboardCardProps> = ({ query, labels }) => {
     `Query for ${query}`,
     () => DashboardService.execQuery(formattedQuery, uuid),
   );
+  const numericData = useFormattedTime(data?.data);
 
   useEffect(() => {
     refetch();
@@ -33,7 +35,7 @@ const DashboardCard: FC<DashboardCardProps> = ({ query, labels }) => {
           isLoading || isRefetching ? (
             <CircleLoader className={cn(styles.loader)} />
           ) : (
-            <div>{labels?.data?.replace(/XX/gi, `${data?.data}`)}</div>
+            <div>{labels?.data?.replace(/XX/gi, `${numericData}`)}</div>
           )
         ) : (
           <div></div>

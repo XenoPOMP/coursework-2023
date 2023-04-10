@@ -415,10 +415,14 @@ const russianLocalization: Localization = {
   dashboard: {
     accessDenied: 'Доступ запрещен',
     dateParts: {
+      hour: 'За час',
       day: 'За день',
       week: 'За неделю',
       month: 'За месяц',
       year: 'За год',
+    },
+    cards: {
+      averageSessionTime: 'Среднее время сеанса',
     },
   },
 };

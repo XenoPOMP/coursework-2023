@@ -35,6 +35,13 @@ const Dashboard: FC<DashboardProps> = ({}) => {
           <div className={cn(styles.content)}>
             <div className={cn(styles.datepart)}>
               <SelectButton
+                isTriggered={currentDatePart === 'hour'}
+                onClick={() => dispatch(changeDatePart('hour'))}
+              >
+                {loc.dashboard.dateParts.hour}
+              </SelectButton>
+
+              <SelectButton
                 isTriggered={currentDatePart === 'day'}
                 onClick={() => dispatch(changeDatePart('day'))}
               >
@@ -67,8 +74,8 @@ const Dashboard: FC<DashboardProps> = ({}) => {
               <DashboardCard
                 query={'session/average/{{datepart}}'}
                 labels={{
-                  data: 'XX seconds',
-                  title: 'Average session time',
+                  data: 'XX',
+                  title: loc.dashboard.cards.averageSessionTime,
                 }}
               />
             </div>
