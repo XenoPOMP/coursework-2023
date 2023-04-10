@@ -11,6 +11,7 @@ import numericGenerator from '@utils/numericGenerator';
 import { changeDatePart, DatePart } from '@redux/reducers/adminSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import IStore from '@redux/types/redux-types';
+import DashboardCard from '@ui/DashboardCard/DashboardCard';
 
 const Dashboard: FC<DashboardProps> = ({}) => {
   const loc = useLocalization();
@@ -62,7 +63,15 @@ const Dashboard: FC<DashboardProps> = ({}) => {
               </SelectButton>
             </div>
 
-            <div className={cn(styles.grid)}></div>
+            <div className={cn(styles.grid)}>
+              <DashboardCard
+                query={'session/average/{{datepart}}'}
+                labels={{
+                  data: 'XX seconds',
+                  title: 'Average session time',
+                }}
+              />
+            </div>
           </div>
         </div>
       ) : (
