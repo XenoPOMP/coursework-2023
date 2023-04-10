@@ -25,6 +25,7 @@
 <a href='https://github.com/XenoPOMP/coursework-2023/releases/latest'>
 <img src='https://badgen.net/github/release/XenoPOMP/coursework-2023' alt='latest github release' />
 </a>
+<a href="https://xeno-coursework-2023.netlify.app"><img src="https://img.shields.io/static/v1?label=&message=Netlify&color=white&logo=Netlify" alt="Netlify"></a>
 </p>
 
 <hr>
