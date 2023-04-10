@@ -67,7 +67,7 @@
       font-size: 20px;
       width: 100%;
       display: grid;
-      grid-gap: globalPadding(1);
+      grid-gap: globalPadding(.5);
       grid-template-columns: repeat(5, 1fr);
 
       @media (max-width: 1663px) {
