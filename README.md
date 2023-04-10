@@ -21,7 +21,7 @@
 </p>
 
 <p align='center'>
-<a href='github.com/XenoPOMP/coursework-2023/releases/latest'>
+<a href='https://github.com/XenoPOMP/coursework-2023/releases/latest'>
 <img src='https://badgen.net/github/release/XenoPOMP/coursework-2023' alt='latest github release' />
 </a>
 </p>
