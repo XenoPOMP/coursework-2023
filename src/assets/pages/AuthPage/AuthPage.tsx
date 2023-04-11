@@ -11,6 +11,7 @@ import { LoginService } from '@services/Login.service';
 import CircleLoader from '@ui/CircleLoader/CircleLoader';
 import { useNavigate } from 'react-router-dom';
 import useAuth from '@hooks/useAuth';
+import { AxiosError } from 'axios';
 
 const AuthPage: FC<AuthPageProps> = ({}) => {
   const loc = useLocalization();
@@ -161,7 +162,7 @@ const AuthPage: FC<AuthPageProps> = ({}) => {
               )}
             </div>
 
-            {isError && (
+            {(isError || (error as AxiosError)?.code === '500') && (
               <div className={cn(styles.error)}>
                 <svg
                   viewBox='0 0 25 25'
