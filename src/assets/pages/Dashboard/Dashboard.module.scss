@@ -29,6 +29,18 @@
     margin-top: .53em;
     color: var(--service-font);
   }
+
+  @media (max-width: 640px) {
+    font-size: 45px;
+  }
+
+  @media (max-width: 526px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 372px) {
+    font-size: 25px;
+  }
 }
 
 .page {

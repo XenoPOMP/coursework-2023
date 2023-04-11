@@ -27,6 +27,7 @@ const Dashboard: FC<DashboardProps> = ({}) => {
       header={{
         tabIndex: -1,
         renderNav: false,
+        renderSignOutButton: true,
       }}
       meta={loc.meta.dashboard}
     >
