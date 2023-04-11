@@ -9,6 +9,8 @@ import useAppSettings from '@hooks/useAppSettings';
 import useBoolean from '@hooks/useBoolean';
 import MenuOverlay from '@components/MenuOverlay/MenuOverlay';
 import useAuth from '@hooks/useAuth';
+import { useDispatch } from 'react-redux';
+import { changeUuid } from '@redux/reducers/authSlice';
 
 const Header: FC<HeaderProps> = (props) => {
   const {
@@ -17,22 +19,35 @@ const Header: FC<HeaderProps> = (props) => {
     renderRightButtons,
     renderBackButton,
     renderHeader,
+    renderSignOutButton,
   }: HeaderProps = {
     tabIndex: 0,
     renderNav: true,
     renderBackButton: false,
     renderRightButtons: true,
     renderHeader: true,
+    renderSignOutButton: false,
     ...props,
   };
 
   const navigate = useNavigate();
-  const { isLogged } = useAuth();
+  const { isLogged, signUp } = useAuth();
   const [menuOpened, toggleMenu] = useBoolean(false);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (renderNav && renderBackButton) {
       throw new Error('Can`t render navbar and back button at the same time');
+    }
+
+    if (renderNav && renderBackButton && renderSignOutButton) {
+      throw new Error('Can render only one instance at once');
+    }
+
+    if (renderBackButton && renderSignOutButton) {
+      throw new Error(
+        'Can`t render back button and sign out button at the same time`',
+      );
     }
   }, []);
 
@@ -60,6 +75,27 @@ const Header: FC<HeaderProps> = (props) => {
                   xmlns='http://www.w3.org/2000/svg'
                 >
                   <path d='M0.939341 10.9393C0.353554 11.5251 0.353554 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97918 12.6066 1.3934C12.0208 0.80761 11.0711 0.80761 10.4853 1.3934L0.939341 10.9393ZM31 10.5L2 10.5L2 13.5L31 13.5L31 10.5Z' />
+                </svg>
+              </div>
+            )}
+
+            {renderSignOutButton && isLogged && (
+              <div
+                className={cn(styles.squareButton)}
+                onClick={() => {
+                  signUp(null);
+                  // navigate('/');
+                }}
+              >
+                <svg
+                  width='21'
+                  height='21'
+                  viewBox='0 0 21 21'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path d='M0.43934 0.43934C1.02513 -0.146446 1.97487 -0.146446 2.56066 0.43934L20.2383 18.117C20.8241 18.7028 20.8241 19.6525 20.2383 20.2383C19.6525 20.8241 18.7028 20.8241 18.117 20.2383L0.43934 2.56066C-0.146446 1.97487 -0.146446 1.02513 0.43934 0.43934Z' />
+                  <path d='M20.2383 0.43934C20.8241 1.02513 20.8241 1.97487 20.2383 2.56066L2.56066 20.2383C1.97487 20.8241 1.02513 20.8241 0.43934 20.2383C-0.146447 19.6525 -0.146447 18.7028 0.43934 18.117L18.117 0.439339C18.7028 -0.146447 19.6525 -0.146446 20.2383 0.43934Z' />
                 </svg>
               </div>
             )}

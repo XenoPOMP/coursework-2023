@@ -4,4 +4,5 @@ export interface HeaderProps {
   renderBackButton?: boolean;
   renderRightButtons?: boolean;
   renderHeader?: boolean;
+  renderSignOutButton?: boolean;
 }
