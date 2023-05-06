@@ -13,6 +13,8 @@
   column-gap: globalPadding(2);
   position: relative;
   overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
 
   @media (max-width: 1270px) {
     flex-direction: column-reverse;

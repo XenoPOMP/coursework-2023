@@ -5,6 +5,8 @@
   height: 100vh;
   display: grid;
   grid-template-columns: 6.6fr 20px 3.3fr;
+  max-width: 1920px;
+  margin: 0 auto;
 
   @media (max-width: 1168px) {
     grid-template-columns: 1fr 20px 1fr;

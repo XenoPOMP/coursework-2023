@@ -49,7 +49,7 @@
       border-radius: .65em;
       max-width: 53%;
       // font-size: 3.1em;
-      font-size: 3.22vw;
+      font-size: min(3.22vw, 3em);
       color: var(--blog-font-primary);
 
       @media (max-width: 840px) {

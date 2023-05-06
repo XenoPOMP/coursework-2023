@@ -26,6 +26,8 @@
     font-size: 1em;
     color: var(--ov-font-inactive);
     flex-direction: column;
+    max-width: 1920px;
+    margin: 0 auto;
 
     .block {
       @extend %flexCenter;
