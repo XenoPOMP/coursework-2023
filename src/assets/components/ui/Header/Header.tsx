@@ -5,12 +5,11 @@ import { HeaderProps } from './Header.props';
 import Logotype from '@ui/Logotype/Logotype';
 import Navbar from '@ui/Navbar/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
-import useAppSettings from '@hooks/useAppSettings';
 import useBoolean from '@hooks/useBoolean';
 import MenuOverlay from '@components/MenuOverlay/MenuOverlay';
 import useAuth from '@hooks/useAuth';
 import { useDispatch } from 'react-redux';
-import { changeUuid } from '@redux/reducers/authSlice';
+import { isFirefox } from 'react-device-detect';
 
 const Header: FC<HeaderProps> = (props) => {
   const {
@@ -54,7 +53,7 @@ const Header: FC<HeaderProps> = (props) => {
   return (
     <>
       {renderHeader && (
-        <header className={cn(styles.appHeader)}>
+        <header className={cn(styles.appHeader, isFirefox && styles.firefox)}>
           <MenuOverlay isOpened={menuOpened} onLinkClick={toggleMenu} />
 
           <div className={cn(styles.container, styles.left)}>

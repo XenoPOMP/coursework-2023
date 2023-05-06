@@ -3,6 +3,8 @@
 header.appHeader {
   // @extend %flexCenter;
 
+  $buttonHeight: calc(var(--header-height) - globalPadding(2));
+
   justify-content: space-between;
   height: var(--header-height);
   width: 100vw;
@@ -14,6 +16,27 @@ header.appHeader {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   z-index: var(--layer-header);
+
+  &.firefox {
+    .container.left {
+      @media (max-width: 1000px) {
+        display: none;
+        // grid-column-start: 1;
+      }
+    }
+
+    .container.center {
+      // display: inline-block;
+      width: 100%;
+      height: $buttonHeight;
+
+      @media (max-width: 1000px) {
+        grid-column: span 2;
+        // grid-column-start: 1;
+        justify-content: start;
+      }
+    }
+  }
 
   @media (min-width: 1920px) {
     left: calc(50% - 1920px / 2);
@@ -52,7 +75,7 @@ header.appHeader {
 
     cursor: pointer;
     aspect-ratio: 1;
-    height: 100%;
+    height: $buttonHeight;
     background: var(--head-button-back);
     border-radius: 50%;
 
