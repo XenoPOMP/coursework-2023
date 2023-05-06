@@ -9,6 +9,13 @@ import { useSelector } from 'react-redux';
 import IStore from '@redux/types/redux-types';
 import useAuth from '@hooks/useAuth';
 
+/**
+ * Menu overlay contains doubled nav links.
+ *
+ * @param {boolean} isOpened       show overlay if true
+ * @param {void} [onLinkClick]     link callback
+ * @constructor
+ */
 const MenuOverlay: FC<MenuOverlayProps> = ({ isOpened, onLinkClick }) => {
   const loc = useLocalization();
   const lastServicePage = useSelector(
