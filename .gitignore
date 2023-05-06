@@ -17,6 +17,9 @@ coverage/*
 **/__snapshots__/*
 *.snap
 
+# Microsoft Office temp files
+**/~$*.docx
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
