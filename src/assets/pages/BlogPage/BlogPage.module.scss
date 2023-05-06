@@ -8,6 +8,8 @@
   height: 100vh;
   display: grid;
   grid-template-rows: var(--header-height) 1fr;
+  max-width: 1920px;
+  margin: 0 auto;
 
   .content {
     @extend %scrollable;

@@ -1,1 +1,10 @@
 @import "src/assets/styles/templates";
+
+main.appMain {
+  // max-width: 1920px;
+  // margin: 0 auto;
+
+  @media (min-width: 1920px) {
+    // margin: 0 auto;
+  }
+}

@@ -36,6 +36,10 @@
       grid-gap: globalPadding(.5);
       grid-template-rows: 1.9em 1fr 3.8em;
 
+      @media (min-width: 1920px) {
+        max-width: 1920px;
+      }
+
       h2 {
         @extend %flexCenter;
         @extend %mainFont;
