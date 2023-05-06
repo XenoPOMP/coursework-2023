@@ -75,7 +75,7 @@ header.appHeader {
 
     cursor: pointer;
     aspect-ratio: 1;
-    height: 100%;
+    height: $buttonHeight;
     background: var(--head-button-back);
     border-radius: 50%;
 
