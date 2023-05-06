@@ -1,8 +1,8 @@
 %scrollable {
   overflow-y: scroll;
+  scrollbar-width: none;
 
   &::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+    display: none;
   }
 }
