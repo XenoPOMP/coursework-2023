@@ -9,6 +9,11 @@ import { Link } from 'react-router-dom';
 import MediaWidthView from '@ui/mediaQueries/MediaWidthView/MediaWidthView';
 import ProgressiveImage from '@ui/ProgressiveImage/ProgressiveImage';
 
+/**
+ * This component stores last actual articles.
+ *
+ * @constructor
+ */
 const ActualArticles: FC<ActualArticlesProps> = ({}) => {
   const loc = useLocalization();
   const [index, setIndex] = useState<number>(0);
