@@ -4,7 +4,15 @@ import styles from './ArticlePreview.module.scss';
 import { ArticlePreviewProps } from './ArticlePreview.props';
 import { Link } from 'react-router-dom';
 import TextOverflow from 'react-text-overflow';
+import { Article } from '@localization/Localization';
 
+/**
+ * Component of article preview placed under
+ * actual articles slider.
+ *
+ * @param {Article} locales   object with article locales
+ * @constructor
+ */
 const ArticlePreview: FC<ArticlePreviewProps> = ({ locales }) => {
   return (
     <Link to={`/blog/${locales.id}`} className={cn(styles.preview)}>
