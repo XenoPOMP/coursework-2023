@@ -6,44 +6,57 @@ import RunningLine from '@ui/RunningLine/RunningLine';
 import numericGenerator from '@utils/numericGenerator';
 import { MobileView, BrowserView } from 'react-device-detect';
 import { motion } from 'framer-motion';
+import { isFirefox } from 'react-device-detect';
 
 const Patch: FC<PatchProps> = ({}) => {
   const scrollSpeed = 8;
 
+  const AnimatedLine = (): JSX.Element => {
+    return (
+      <RunningLine
+        direction={'up'}
+        className={cn(styles.patch)}
+        scrollSpeed={scrollSpeed}
+        scrollDelay={0}
+      >
+        <div className={cn(styles.content)}>
+          {numericGenerator(70).map((key) => (
+            <span className={cn(styles.word)} key={`patch-element-${key}`}>
+              smartace{' '}
+            </span>
+          ))}
+        </div>
+      </RunningLine>
+    );
+  };
+
+  const StaticLine = (): JSX.Element => {
+    return (
+      <motion.div
+        initial={{
+          y: '50%',
+        }}
+        className={cn(styles.patch)}
+      >
+        <div className={cn(styles.content)}>
+          {numericGenerator(70).map((key) => (
+            <span className={cn(styles.word)} key={`patch-element-${key}`}>
+              smartace{' '}
+            </span>
+          ))}
+        </div>
+      </motion.div>
+    );
+  };
+
   return (
     <>
       <BrowserView>
-        <RunningLine
-          direction={'up'}
-          className={cn(styles.patch)}
-          scrollSpeed={scrollSpeed}
-          scrollDelay={0}
-        >
-          <div className={cn(styles.content)}>
-            {numericGenerator(70).map((key) => (
-              <span className={cn(styles.word)} key={`patch-element-${key}`}>
-                smartace{' '}
-              </span>
-            ))}
-          </div>
-        </RunningLine>
+        {!isFirefox ? <AnimatedLine /> : <StaticLine />}
       </BrowserView>
 
       <MobileView>
-        <motion.div
-          initial={{
-            y: '50%',
-          }}
-          className={cn(styles.patch)}
-        >
-          <div className={cn(styles.content)}>
-            {numericGenerator(70).map((key) => (
-              <span className={cn(styles.word)} key={`patch-element-${key}`}>
-                smartace{' '}
-              </span>
-            ))}
-          </div>
-        </motion.div>
+        <StaticLine />
       </MobileView>
     </>
   );
