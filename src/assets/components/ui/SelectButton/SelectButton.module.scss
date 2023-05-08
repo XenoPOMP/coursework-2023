@@ -16,4 +16,16 @@
   &.active {
     border-color: var(--sets-confirm-back);
   }
+
+  &.withIcon {
+    display: flex;
+    align-items: center;
+    column-gap: .5em;
+
+    &.right {}
+
+    &.left {
+      flex-direction: row-reverse;
+    }
+  }
 }
