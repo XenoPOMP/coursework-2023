@@ -5,6 +5,7 @@ import SetTitleBlock from '@ui/SetTitleBlock/SetTitleBlock';
 import SetItemBlock from '@ui/SetItemBlock/SetItemBlock';
 import SelectButton from '@ui/SelectButton/SelectButton';
 import useAppSettings from '@hooks/useAppSettings';
+import Emoji from 'react-ios-emojis';
 
 const LocalizationTab: FC<LocalizationTabProps> = () => {
   const loc = useLocalization();
@@ -25,7 +26,8 @@ const LocalizationTab: FC<LocalizationTabProps> = () => {
             currency.set('rub');
           }}
         >
-          {loc.settingsPage.localization.items.languageVariants.russian}
+          {loc.settingsPage.localization.items.languageVariants.russian}{' '}
+          <Emoji name={'flagRussia'} />
         </SelectButton>
 
         <SelectButton
@@ -35,7 +37,8 @@ const LocalizationTab: FC<LocalizationTabProps> = () => {
             currency.set('usd');
           }}
         >
-          {loc.settingsPage.localization.items.languageVariants.english}
+          {loc.settingsPage.localization.items.languageVariants.english}{' '}
+          <Emoji name={'flagEngland'} />
         </SelectButton>
       </SetItemBlock>
 
