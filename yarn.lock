@@ -2994,10 +2994,10 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-ios-emojis@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-ios-emojis/-/react-ios-emojis-1.0.0.tgz#ac4ae5388299b223cc6f86523fb525ccc3985cbe"
-  integrity sha512-ZY8IcdguHzWgSMw1fXJZgVbhahiqtxFgJhM5j40teCxPUHk4hfI55LDHnioxVtH2+rq0GuKlO5lkZyPNvZ4ZFQ==
+react-ios-emojis@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-ios-emojis/-/react-ios-emojis-1.0.2.tgz#fd7546b6b1f98765891b193f4a707c2e2045aee9"
+  integrity sha512-kVmmQgOQjANgT4gsn+CkuDT1KQlFKbSg1AuBOmTpPKedyUFPj5U0gPBBCCy7PlCPohKTAFsyuoQ40KQslpiXKw==
   dependencies:
     classnames "^2.3.2"
     node-sass "^8.0.0"
