@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { motion } from 'framer-motion';
 import { FC } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
-import { isFirefox } from 'react-device-detect';
+import { isFirefox, isMobile } from 'react-device-detect';
 
 import RunningLine from '@ui/RunningLine/RunningLine';
 
@@ -18,7 +18,7 @@ const Patch: FC<PatchProps> = ({}) => {
 		return (
 			<RunningLine
 				direction={'up'}
-				className={cn(styles.patch)}
+				className={cn(styles.patch, isMobile && styles.mobile)}
 				scrollSpeed={scrollSpeed}
 				scrollDelay={0}
 			>
@@ -39,7 +39,7 @@ const Patch: FC<PatchProps> = ({}) => {
 				initial={{
 					y: '50%',
 				}}
-				className={cn(styles.patch)}
+				className={cn(styles.patch, isMobile && styles.mobile)}
 			>
 				<div className={cn(styles.content)}>
 					{numericGenerator(70).map(key => (

@@ -20,6 +20,10 @@
 
   transition: color .15s ease;
 
+  &.mobile {
+    z-index: var(--layer-header);
+  }
+
   .content {
     display: flex;
     flex-direction: row;

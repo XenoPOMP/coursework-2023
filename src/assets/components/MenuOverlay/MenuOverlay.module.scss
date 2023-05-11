@@ -13,6 +13,8 @@
   z-index: var(--layer-overlay);
   padding: var(--header-height) globalPadding(1) globalPadding(1) globalPadding(1);
 
+  transition: .15s ease background;
+
   .blocks {
     @extend %flexCenter;
     @extend %scrollable;
@@ -28,6 +30,8 @@
     flex-direction: column;
     max-width: 1920px;
     margin: 0 auto;
+
+    transition: .15s ease color;
 
     .block {
       @extend %flexCenter;
