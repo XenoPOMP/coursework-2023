@@ -1,16 +1,17 @@
 import { FC, useEffect } from 'react';
+
 import { EndlessTimerProps } from './EndlessTimer.props';
 
 const EndlessTimer: FC<EndlessTimerProps> = ({ callback, interval }) => {
-  useEffect(() => {
-    const timerId = setInterval(callback, interval);
+	useEffect(() => {
+		const timerId = setInterval(callback, interval);
 
-    return () => {
-      clearInterval(timerId);
-    };
-  }, []);
+		return () => {
+			clearInterval(timerId);
+		};
+	}, []);
 
-  return <></>;
+	return <></>;
 };
 
 export default EndlessTimer;

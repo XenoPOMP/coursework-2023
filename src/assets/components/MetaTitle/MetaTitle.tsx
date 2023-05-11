@@ -1,7 +1,8 @@
 import { FC } from 'react';
-import { MetaTitleProps } from './MetaTitle.props';
 // @ts-ignore
 import DocumentMeta from 'react-document-meta';
+
+import { MetaTitleProps } from './MetaTitle.props';
 
 /**
  * Adds meta tags to head filled with your data.
@@ -17,22 +18,22 @@ import DocumentMeta from 'react-document-meta';
  * @constructor
  */
 const MetaTitle: FC<MetaTitleProps> = ({
-  pageTitle,
-  pageDescription,
-  keywords,
+	pageTitle,
+	pageDescription,
+	keywords,
 }) => {
-  const meta = {
-    title: pageTitle,
-    description: pageDescription,
-    meta: {
-      charset: 'utf-8',
-      name: {
-        keywords: keywords,
-      },
-    },
-  };
+	const meta = {
+		title: pageTitle,
+		description: pageDescription,
+		meta: {
+			charset: 'utf-8',
+			name: {
+				keywords: keywords,
+			},
+		},
+	};
 
-  return <DocumentMeta {...meta}></DocumentMeta>;
+	return <DocumentMeta {...meta}></DocumentMeta>;
 };
 
 export default MetaTitle;

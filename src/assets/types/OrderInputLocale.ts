@@ -1,5 +1,5 @@
 export type OrderInputLocale = {
-  title: string;
-  placeholder: string;
-  popup: string;
+	title: string;
+	placeholder: string;
+	popup: string;
 };

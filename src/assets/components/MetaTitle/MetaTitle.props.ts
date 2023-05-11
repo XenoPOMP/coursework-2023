@@ -1,5 +1,5 @@
 export interface MetaTitleProps {
-  pageTitle: string;
-  pageDescription?: string;
-  keywords: string;
+	pageTitle: string;
+	pageDescription?: string;
+	keywords: string;
 }

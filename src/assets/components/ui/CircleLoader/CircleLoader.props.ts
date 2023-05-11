@@ -1,3 +1,3 @@
 export interface CircleLoaderProps {
-  className?: string;
+	className?: string;
 }

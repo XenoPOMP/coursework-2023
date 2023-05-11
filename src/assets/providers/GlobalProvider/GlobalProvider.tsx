@@ -1,31 +1,32 @@
 import { FC } from 'react';
-import { ProviderProps } from '@providers/Provider.props';
-import ThemeProvider from '@providers/ThemeProvider/ThemeProvider';
-import SizesProvider from '@providers/SizesProvider/SizesProvider';
-import LayersProvider from '@providers/LayersProvider/LayersProvider';
-import ServiceListSaver from '@providers/ServiceListSaver/ServiceListSaver';
+
 import AppSettingsSaver from '@providers/AppSettingsSaver/AppSettingsSaver';
-import LocaleChecker from '@providers/LocaleChecker/LocaleChecker';
 import AuthSaver from '@providers/AuthSaver/AuthSaver';
+import LayersProvider from '@providers/LayersProvider/LayersProvider';
+import LocaleChecker from '@providers/LocaleChecker/LocaleChecker';
+import { ProviderProps } from '@providers/Provider.props';
+import ServiceListSaver from '@providers/ServiceListSaver/ServiceListSaver';
+import SizesProvider from '@providers/SizesProvider/SizesProvider';
+import ThemeProvider from '@providers/ThemeProvider/ThemeProvider';
 
 const GlobalProvider: FC<ProviderProps> = ({ children }) => {
-  return (
-    <>
-      <AuthSaver>
-        <LocaleChecker>
-          <AppSettingsSaver>
-            <ServiceListSaver>
-              <LayersProvider>
-                <SizesProvider>
-                  <ThemeProvider>{children}</ThemeProvider>
-                </SizesProvider>
-              </LayersProvider>
-            </ServiceListSaver>
-          </AppSettingsSaver>
-        </LocaleChecker>
-      </AuthSaver>
-    </>
-  );
+	return (
+		<>
+			<AuthSaver>
+				<LocaleChecker>
+					<AppSettingsSaver>
+						<ServiceListSaver>
+							<LayersProvider>
+								<SizesProvider>
+									<ThemeProvider>{children}</ThemeProvider>
+								</SizesProvider>
+							</LayersProvider>
+						</ServiceListSaver>
+					</AppSettingsSaver>
+				</LocaleChecker>
+			</AuthSaver>
+		</>
+	);
 };
 
 export default GlobalProvider;

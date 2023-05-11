@@ -1,3 +1,3 @@
 export interface NavbarProps {
-  tabIndex: number;
+	tabIndex: number;
 }

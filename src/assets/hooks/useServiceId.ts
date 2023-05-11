@@ -1,15 +1,15 @@
 import { useSearchParams } from 'react-router-dom';
 
 const useServiceId = (): number => {
-  const [getParams, setParams] = useSearchParams();
+	const [getParams, setParams] = useSearchParams();
 
-  const idFromParams = getParams.get('serviceId');
+	const idFromParams = getParams.get('serviceId');
 
-  if (idFromParams === null) {
-    return -1;
-  }
+	if (idFromParams === null) {
+		return -1;
+	}
 
-  return parseInt(idFromParams);
+	return parseInt(idFromParams);
 };
 
 export default useServiceId;

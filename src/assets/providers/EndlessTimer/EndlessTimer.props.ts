@@ -1,5 +1,5 @@
 export interface EndlessTimerProps {
-  name?: string;
-  callback: () => void;
-  interval: number;
+	name?: string;
+	callback: () => void;
+	interval: number;
 }
