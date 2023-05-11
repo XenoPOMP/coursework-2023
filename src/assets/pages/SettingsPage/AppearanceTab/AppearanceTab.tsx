@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import { FC } from 'react';
+import Emoji from 'react-ios-emojis';
 
 import SelectButton from '@ui/SelectButton/SelectButton';
 import SetItemBlock from '@ui/SetItemBlock/SetItemBlock';
@@ -25,8 +26,10 @@ const AppearanceTab: FC<AppearanceTabProps> = () => {
 					onClick={() => {
 						theme.set('light');
 					}}
+					variant={'with-icon-right'}
 				>
-					{loc.settingsPage.appearance.items.themeVariants.light}
+					{loc.settingsPage.appearance.items.themeVariants.light}{' '}
+					<Emoji name={'sunWithFace'} />
 				</SelectButton>
 
 				<SelectButton
@@ -34,8 +37,10 @@ const AppearanceTab: FC<AppearanceTabProps> = () => {
 					onClick={() => {
 						theme.set('dark');
 					}}
+					variant={'with-icon-right'}
 				>
-					{loc.settingsPage.appearance.items.themeVariants.dark}
+					{loc.settingsPage.appearance.items.themeVariants.dark}{' '}
+					<Emoji name={'newMoonFace'} />
 				</SelectButton>
 			</SetItemBlock>
 		</>
