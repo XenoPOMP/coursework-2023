@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import { FC } from 'react';
+import Emoji from 'react-ios-emojis';
 
 import SelectButton from '@ui/SelectButton/SelectButton';
 import SetItemBlock from '@ui/SetItemBlock/SetItemBlock';
@@ -23,12 +24,22 @@ const PrivacyTab: FC<PrivacyTabProps> = ({}) => {
 				locales={loc.settingsPage.confidentiality.items.allowed}
 				flexWrap
 			>
-				<SelectButton isTriggered={!isAllowed} onClick={() => disallow()}>
-					{loc.settingsPage.confidentiality.items.allowVariants.disallow}
+				<SelectButton
+					isTriggered={!isAllowed}
+					onClick={() => disallow()}
+					variant={'with-icon-right'}
+				>
+					{loc.settingsPage.confidentiality.items.allowVariants.disallow}{' '}
+					<Emoji name={'prohibited'} />
 				</SelectButton>
 
-				<SelectButton isTriggered={isAllowed} onClick={() => allow()}>
-					{loc.settingsPage.confidentiality.items.allowVariants.allow}
+				<SelectButton
+					isTriggered={isAllowed}
+					onClick={() => allow()}
+					variant={'with-icon-right'}
+				>
+					{loc.settingsPage.confidentiality.items.allowVariants.allow}{' '}
+					<Emoji name={'checkMarkButton'} />
 				</SelectButton>
 			</SetItemBlock>
 		</>
