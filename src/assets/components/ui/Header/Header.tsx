@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { FC, useEffect } from 'react';
-import { isFirefox } from 'react-device-detect';
+import { isFirefox, isMobile } from 'react-device-detect';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -57,7 +57,13 @@ const Header: FC<HeaderProps> = props => {
 	return (
 		<>
 			{renderHeader && (
-				<header className={cn(styles.appHeader, isFirefox && styles.firefox)}>
+				<header
+					className={cn(
+						styles.appHeader,
+						isFirefox && styles.firefox,
+						isMobile && styles.mobile
+					)}
+				>
 					<MenuOverlay isOpened={menuOpened} onLinkClick={toggleMenu} />
 
 					<div className={cn(styles.container, styles.left)}>

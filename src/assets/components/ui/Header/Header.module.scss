@@ -38,6 +38,11 @@ header.appHeader {
     }
   }
 
+  &.mobile {
+    background: var(--background-primary);
+    transition: background .15s ease;
+  }
+
   @media (min-width: 1920px) {
     left: calc(50% - 1920px / 2);
   }
