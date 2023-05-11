@@ -1,10 +1,11 @@
+import { Article } from '@localization/Localization';
 import cn from 'classnames';
 import { FC } from 'react';
-import styles from './ArticlePreview.module.scss';
-import { ArticlePreviewProps } from './ArticlePreview.props';
 import { Link } from 'react-router-dom';
 import TextOverflow from 'react-text-overflow';
-import { Article } from '@localization/Localization';
+
+import styles from './ArticlePreview.module.scss';
+import { ArticlePreviewProps } from './ArticlePreview.props';
 
 /**
  * Component of article preview placed under
@@ -14,13 +15,13 @@ import { Article } from '@localization/Localization';
  * @constructor
  */
 const ArticlePreview: FC<ArticlePreviewProps> = ({ locales }) => {
-  return (
-    <Link to={`/blog/${locales.id}`} className={cn(styles.preview)}>
-      <h3 className={cn(styles.title)}>{locales.title}</h3>
+	return (
+		<Link to={`/blog/${locales.id}`} className={cn(styles.preview)}>
+			<h3 className={cn(styles.title)}>{locales.title}</h3>
 
-      <TextOverflow text={locales.content} />
-    </Link>
-  );
+			<TextOverflow text={locales.content} />
+		</Link>
+	);
 };
 
 export default ArticlePreview;

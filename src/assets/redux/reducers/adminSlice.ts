@@ -1,24 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
+
 import { ReduxAction } from '@redux/types/redux-types';
 
 export type DatePart = 'hour' | 'day' | 'week' | 'month' | 'year';
 
 export type AdminPage = {
-  datePart: DatePart;
+	datePart: DatePart;
 };
 
 const initialState: AdminPage = {
-  datePart: 'day',
+	datePart: 'day',
 };
 
 const adminSlice = createSlice({
-  name: 'admin',
-  initialState,
-  reducers: {
-    changeDatePart(state, action: ReduxAction<DatePart>) {
-      state.datePart = action.payload;
-    },
-  },
+	name: 'admin',
+	initialState,
+	reducers: {
+		changeDatePart(state, action: ReduxAction<DatePart>) {
+			state.datePart = action.payload;
+		},
+	},
 });
 
 export default adminSlice.reducer;

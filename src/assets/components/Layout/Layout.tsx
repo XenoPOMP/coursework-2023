@@ -1,11 +1,14 @@
+import cn from 'classnames';
 import { FC, ReactNode } from 'react';
-import { LayoutProps } from './Layout.props';
+
 import GlobalProvider from '@providers/GlobalProvider/GlobalProvider';
+
+import AnalyticsAgreementMessage from '@ui/AnalyticsAgreementMessage/AnalyticsAgreementMessage';
 import Header from '@ui/Header/Header';
 import { HeaderProps } from '@ui/Header/Header.props';
-import AnalyticsAgreementMessage from '@ui/AnalyticsAgreementMessage/AnalyticsAgreementMessage';
+
 import styles from './Layout.module.scss';
-import cn from 'classnames';
+import { LayoutProps } from './Layout.props';
 
 /**
  * Layout component. Contains header, main part and analytics agreement
@@ -16,15 +19,15 @@ import cn from 'classnames';
  * @constructor
  */
 const Layout: FC<LayoutProps> = ({ children, header }) => {
-  return (
-    <GlobalProvider>
-      <Header {...header} />
+	return (
+		<GlobalProvider>
+			<Header {...header} />
 
-      <main className={cn(styles.appMain)}>{children}</main>
+			<main className={cn(styles.appMain)}>{children}</main>
 
-      <AnalyticsAgreementMessage />
-    </GlobalProvider>
-  );
+			<AnalyticsAgreementMessage />
+		</GlobalProvider>
+	);
 };
 
 export default Layout;

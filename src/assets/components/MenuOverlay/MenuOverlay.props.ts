@@ -1,4 +1,4 @@
 export interface MenuOverlayProps {
-  isOpened: boolean;
-  onLinkClick?: () => void;
+	isOpened: boolean;
+	onLinkClick?: () => void;
 }

@@ -1,9 +1,12 @@
 import { FC, ReactNode } from 'react';
-import { PageProps } from './Page.props';
+
 import Layout from '@components/Layout/Layout';
 import MetaTitle from '@components/MetaTitle/MetaTitle';
-import type { MetaInfo } from './Page.props';
+
 import type { HeaderProps } from '@ui/Header/Header.props';
+
+import { PageProps } from './Page.props';
+import type { MetaInfo } from './Page.props';
 
 /**
  * Component that provides page implementation.
@@ -15,16 +18,16 @@ import type { HeaderProps } from '@ui/Header/Header.props';
  * @constructor
  */
 const Page: FC<PageProps> = ({ meta, children, header }) => {
-  return (
-    <Layout header={header}>
-      <MetaTitle
-        pageTitle={meta.pageTitle}
-        pageDescription={meta.pageDescription}
-        keywords={meta.keywords}
-      />
-      {children}
-    </Layout>
-  );
+	return (
+		<Layout header={header}>
+			<MetaTitle
+				pageTitle={meta.pageTitle}
+				pageDescription={meta.pageDescription}
+				keywords={meta.keywords}
+			/>
+			{children}
+		</Layout>
+	);
 };
 
 export default Page;
