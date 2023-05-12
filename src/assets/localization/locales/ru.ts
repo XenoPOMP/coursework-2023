@@ -145,6 +145,76 @@ const russianLocalization: Localization = {
 
 						reviews: [],
 					},
+
+					{
+						index: 2,
+						name: 'Веб-портал',
+						desc: 'Многостраничный сайт, предоставляющий пользователю различные интерактивные интернет-сервисы, которые работают в рамках этого сайта.',
+
+						stats: {
+							minPrice: {
+								inRubles: '35000 руб.',
+								inDollars: '500 долларов',
+							},
+
+							executionTime: 'от 8 до 16 недель',
+
+							hardness: 4,
+
+							rating: 'N/A',
+						},
+
+						reviews: [],
+					},
+				],
+			},
+
+			{
+				title: 'Хостинг',
+				services: [
+					{
+						index: 3,
+						name: 'VPS сервер',
+						desc:
+							'Виртуальный приватный сервер, машина, на которой находится все программное ' +
+							'обеспечение и все данные, необходимые для работы веб-сайта или приложения.',
+
+						stats: {
+							minPrice: {
+								inRubles: '1000 руб. / месяц',
+								inDollars: '15 долларов / месяц',
+							},
+
+							executionTime: 'моментально',
+
+							hardness: 1,
+
+							rating: 'N/A',
+						},
+
+						reviews: [],
+					},
+
+					{
+						index: 4,
+						name: 'Хостинг сайта',
+						desc: 'Закажите выделенный web-сервер для вашего сайта.',
+
+						stats: {
+							minPrice: {
+								inRubles: '850 руб. / месяц',
+								inDollars: '15 долларов / месяц',
+							},
+
+							executionTime: 'моментально',
+
+							hardness: 1,
+
+							rating: 'N/A',
+						},
+
+						reviews: [],
+					},
 				],
 			},
 		],

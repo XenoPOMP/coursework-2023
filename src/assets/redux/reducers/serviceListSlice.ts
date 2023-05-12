@@ -1,11 +1,13 @@
-import { ServiceLocale } from '@localization/Localization';
 import { createSlice } from '@reduxjs/toolkit';
 
 import { ReduxAction } from '@redux/types/redux-types';
 
-import useLocalization from '@hooks/useLocalization';
-
-export type ServiceIcon = 'thunderbolt' | 'mall';
+export type ServiceIcon =
+	| 'thunderbolt'
+	| 'mall'
+	| 'captive-portal'
+	| 'server'
+	| 'globe';
 
 export type ServiceList = {
 	search: string;
@@ -29,6 +31,24 @@ const initialState: ServiceList = {
 			isFavorite: false,
 			icon: 'mall',
 			index: 1,
+		},
+
+		{
+			isFavorite: false,
+			icon: 'captive-portal',
+			index: 2,
+		},
+
+		{
+			isFavorite: false,
+			icon: 'server',
+			index: 3,
+		},
+
+		{
+			isFavorite: false,
+			icon: 'globe',
+			index: 4,
 		},
 	],
 };
