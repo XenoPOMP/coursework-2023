@@ -167,6 +167,34 @@ const englishLocalization: Localization = {
 					},
 				],
 			},
+
+			{
+				title: 'Hosting',
+				services: [
+					{
+						index: 3,
+						name: 'VPS server',
+						desc:
+							'A virtual private server, a machine on which all the software and all ' +
+							'the data necessary for the operation of a website or application are located.',
+
+						stats: {
+							minPrice: {
+								inRubles: '1000 RUB per month',
+								inDollars: '15 USD per month',
+							},
+
+							executionTime: 'instantly',
+
+							hardness: 1,
+
+							rating: 'N/A',
+						},
+
+						reviews: [],
+					},
+				],
+			},
 		],
 
 		notSelectedLabel: 'Select a service',

@@ -168,6 +168,34 @@ const russianLocalization: Localization = {
 					},
 				],
 			},
+
+			{
+				title: 'Хостинг',
+				services: [
+					{
+						index: 3,
+						name: 'VPS сервер',
+						desc:
+							'Виртуальный приватный сервер, машина, на которой находится все программное ' +
+							'обеспечение и все данные, необходимые для работы веб-сайта или приложения.',
+
+						stats: {
+							minPrice: {
+								inRubles: '1000 руб. / месяц',
+								inDollars: '15 долларов / месяц',
+							},
+
+							executionTime: 'моментально',
+
+							hardness: 1,
+
+							rating: 'N/A',
+						},
+
+						reviews: [],
+					},
+				],
+			},
 		],
 
 		notSelectedLabel: 'Вы не выбрали услугу',
