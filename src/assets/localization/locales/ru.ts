@@ -145,6 +145,27 @@ const russianLocalization: Localization = {
 
 						reviews: [],
 					},
+
+					{
+						index: 2,
+						name: 'Веб-портал',
+						desc: 'Многостраничный сайт, предоставляющий пользователю различные интерактивные интернет-сервисы, которые работают в рамках этого сайта.',
+
+						stats: {
+							minPrice: {
+								inRubles: '35000 руб.',
+								inDollars: '500 долларов',
+							},
+
+							executionTime: 'от 8 до 16 недель',
+
+							hardness: 4,
+
+							rating: 'N/A',
+						},
+
+						reviews: [],
+					},
 				],
 			},
 		],

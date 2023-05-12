@@ -144,6 +144,27 @@ const englishLocalization: Localization = {
 
 						reviews: [],
 					},
+
+					{
+						index: 2,
+						name: 'Web-portal',
+						desc: 'A multi-page website that provides the user with various interactive Internet services that work within the framework of this site.',
+
+						stats: {
+							minPrice: {
+								inRubles: '35000 RUB',
+								inDollars: '500 USD',
+							},
+
+							executionTime: '8-16',
+
+							hardness: 4,
+
+							rating: 'N/A',
+						},
+
+						reviews: [],
+					},
 				],
 			},
 		],
