@@ -194,6 +194,27 @@ const russianLocalization: Localization = {
 
 						reviews: [],
 					},
+
+					{
+						index: 4,
+						name: 'Хостинг сайта',
+						desc: 'Закажите выделенный web-сервер для вашего сайта.',
+
+						stats: {
+							minPrice: {
+								inRubles: '850 руб. / месяц',
+								inDollars: '15 долларов / месяц',
+							},
+
+							executionTime: 'моментально',
+
+							hardness: 1,
+
+							rating: 'N/A',
+						},
+
+						reviews: [],
+					},
 				],
 			},
 		],

@@ -2,7 +2,12 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import { ReduxAction } from '@redux/types/redux-types';
 
-export type ServiceIcon = 'thunderbolt' | 'mall' | 'global' | 'server';
+export type ServiceIcon =
+	| 'thunderbolt'
+	| 'mall'
+	| 'captive-portal'
+	| 'server'
+	| 'globe';
 
 export type ServiceList = {
 	search: string;
@@ -30,7 +35,7 @@ const initialState: ServiceList = {
 
 		{
 			isFavorite: false,
-			icon: 'global',
+			icon: 'captive-portal',
 			index: 2,
 		},
 
@@ -38,6 +43,12 @@ const initialState: ServiceList = {
 			isFavorite: false,
 			icon: 'server',
 			index: 3,
+		},
+
+		{
+			isFavorite: false,
+			icon: 'globe',
+			index: 4,
 		},
 	],
 };

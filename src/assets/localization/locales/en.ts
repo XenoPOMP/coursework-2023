@@ -193,6 +193,27 @@ const englishLocalization: Localization = {
 
 						reviews: [],
 					},
+
+					{
+						index: 4,
+						name: 'Website hosting',
+						desc: 'Order a dedicated web server for your site.',
+
+						stats: {
+							minPrice: {
+								inRubles: '850 RUB per month',
+								inDollars: '15 USD per month',
+							},
+
+							executionTime: 'instantly',
+
+							hardness: 1,
+
+							rating: 'N/A',
+						},
+
+						reviews: [],
+					},
 				],
 			},
 		],
