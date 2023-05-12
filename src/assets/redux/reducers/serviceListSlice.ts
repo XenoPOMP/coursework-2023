@@ -1,9 +1,6 @@
-import { ServiceLocale } from '@localization/Localization';
 import { createSlice } from '@reduxjs/toolkit';
 
 import { ReduxAction } from '@redux/types/redux-types';
-
-import useLocalization from '@hooks/useLocalization';
 
 export type ServiceIcon = 'thunderbolt' | 'mall' | 'global' | 'server';
 
