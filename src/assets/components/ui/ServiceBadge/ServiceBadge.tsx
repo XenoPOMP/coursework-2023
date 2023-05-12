@@ -70,7 +70,13 @@ const ServiceBadge: FC<ServiceBadgeProps> = ({ locales }) => {
 	};
 
 	const nameIsMatch = (): boolean => {
-		const pattern: RegExp = new RegExp(`${search}`, 'gi');
+		const parsedSearch: string = Array.from(search)
+			.map(letter => {
+				return `\\${letter}`;
+			})
+			.join('');
+
+		const pattern: RegExp = new RegExp(`${parsedSearch}`, 'gi');
 
 		return pattern.test(name);
 	};
