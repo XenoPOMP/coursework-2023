@@ -1,4 +1,5 @@
 import Localization from '@localization/Localization';
+import Emoji from 'react-ios-emojis';
 
 import blackFridayGuideBanner from '@media/images/blog/xas12dsa.png';
 
@@ -320,12 +321,145 @@ const englishLocalization: Localization = {
 			records: [
 				[
 					{
+						version: '1.0',
+						date: {
+							day: 7,
+							month: 'April',
+							year: 2023,
+						},
+						paragraphs: ['First release version of application.'],
+					},
+
+					{
+						version: '1.0.1',
+						date: {
+							day: 7,
+							month: 'April',
+							year: 2023,
+						},
+						paragraphs: [
+							'The changes on the blog page are designed to improve the experience of using the app.',
+							'Now the images of current articles are loaded line by line, and using the download icon.',
+						],
+					},
+
+					{
+						version: '1.0.1.1',
+						date: {
+							day: 8,
+							month: 'April',
+							year: 2023,
+						},
+						paragraphs: [
+							'Visual changes on the blog page.',
+							'The paddings in the link to the article have been changed.',
+						],
+					},
+
+					{
+						version: '1.0.2',
+						date: {
+							day: 8,
+							month: 'апреля',
+							year: 2023,
+						},
+						paragraphs: [
+							'Changes in the collection of analytical data.',
+							'Now the application will not connect to the server if the user has banned the collection of analytical data.',
+						],
+					},
+				],
+
+				[
+					{
+						version: '1.1',
+						date: {
+							day: 10,
+							month: 'April',
+							year: 2023,
+						},
+						paragraphs: [
+							'Added admin dashboard page.',
+							'To open this page you have to login first.',
+						],
+					},
+
+					{
+						version: '1.1.1',
+						date: {
+							day: 11,
+							month: 'April',
+							year: 2023,
+						},
+						paragraphs: ['Sign out button has been added to the dashboard.'],
+					},
+
+					{
+						version: '1.1.2',
+						date: {
+							day: 6,
+							month: 'April',
+							year: 2023,
+						},
+						paragraphs: [
+							'The width of all pages was limited.',
+							'Now the page will not stretch in width by more than 1920 pixels.',
+						],
+					},
+				],
+
+				[
+					{
+						version: '1.2.0',
+						date: {
+							day: 6,
+							month: 'May',
+							year: 2023,
+						},
+						paragraphs: [
+							'This version brings various bug fixes for various browsers.',
+							'* The size of the interface elements in the header has been fixed.',
+							'* Fixed the location of the logo in the header in Firefox.',
+						],
+					},
+
+					{
+						version: '1.2.2',
+						date: {
+							day: 8,
+							month: 'May',
+							year: 2023,
+						},
+						paragraphs: [
+							`Added emojis.`,
+							'* Added library ``react-ios-emojis`` that provides iOS emojis.',
+							'* Changed the emoji display on the settings page.',
+						],
+					},
+
+					{
+						version: '1.2.3',
+						date: {
+							day: 12,
+							month: 'May',
+							year: 2023,
+						},
+						paragraphs: [
+							'Added new services:',
+							'* Web-portal.',
+							'* VPS.',
+							'* Website hosting.',
+						],
+					},
+
+					{
 						version: '1.2.4',
 						date: {
 							day: 12,
-							month: 'may',
+							month: 'May',
 							year: 2023,
 						},
+						paragraphs: [`This update adds changelog page.`],
 					},
 				],
 			],

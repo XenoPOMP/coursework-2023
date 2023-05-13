@@ -1,4 +1,5 @@
 import Localization from '@localization/Localization';
+import Emoji from 'react-ios-emojis';
 
 import blackFridayGuideBanner from '@media/images/blog/xas12dsa.png';
 
@@ -419,8 +420,38 @@ const russianLocalization: Localization = {
 							year: 2023,
 						},
 						paragraphs: [
-							'Эта версия приносит различные фикс багов в браузерах.',
+							'Эта версия приносит различные фиксы багов в браузерах.',
 							'* Был исправлен размер элементов интерфейса в шапке.',
+							'* Исправил расположение логотипа в шапке в Firefox.',
+						],
+					},
+
+					{
+						version: '1.2.2',
+						date: {
+							day: 8,
+							month: 'мая',
+							year: 2023,
+						},
+						paragraphs: [
+							`На сайт были добавлены эмодзи.`,
+							'* Добавлена библиотека ``react-ios-emojis``.',
+							'* Поменял отображение эмодзи на странице настроек.',
+						],
+					},
+
+					{
+						version: '1.2.3',
+						date: {
+							day: 12,
+							month: 'мая',
+							year: 2023,
+						},
+						paragraphs: [
+							'Были добавлены новые услуги.',
+							'* Веб-портал.',
+							'* VPS.',
+							'* Хостинг вебсайта.',
 						],
 					},
 
@@ -431,6 +462,7 @@ const russianLocalization: Localization = {
 							month: 'мая',
 							year: 2023,
 						},
+						paragraphs: [`Эта версия добавляет страницу с историей версий.`],
 					},
 				],
 			],
