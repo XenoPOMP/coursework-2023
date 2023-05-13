@@ -267,6 +267,7 @@ const russianLocalization: Localization = {
 				themeVariants: {
 					light: 'Светлая',
 					dark: 'Темная',
+					retroWave: 'Ретро-вейв',
 				},
 			},
 		},
@@ -463,6 +464,18 @@ const russianLocalization: Localization = {
 							year: 2023,
 						},
 						paragraphs: [`Эта версия добавляет страницу с историей версий.`],
+					},
+				],
+
+				[
+					{
+						version: '1.3.0',
+						date: {
+							day: 14,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: [`Новая тема - ретровейв!`],
 					},
 				],
 			],

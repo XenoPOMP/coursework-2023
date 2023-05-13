@@ -3,6 +3,8 @@ import type { OrderInputLocale } from '@type/OrderInputLocale';
 
 import { MetaInfo } from '@components/Page/Page.props';
 
+import { Theme } from '@redux/reducers/appSettingsSlice';
+
 export type LandingCardLocale = {
 	imageTitle: string;
 	title: string;
@@ -128,8 +130,7 @@ type Localization = {
 			items: {
 				theme: SettingsTabTitleLocale;
 				themeVariants: {
-					light: string;
-					dark: string;
+					[theme in Theme]: string;
 				};
 			};
 		};

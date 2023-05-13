@@ -42,6 +42,17 @@ const AppearanceTab: FC<AppearanceTabProps> = () => {
 					{loc.settingsPage.appearance.items.themeVariants.dark}{' '}
 					<Emoji name={'newMoonFace'} />
 				</SelectButton>
+
+				<SelectButton
+					isTriggered={theme.get() === 'retroWave'}
+					onClick={() => {
+						theme.set('retroWave');
+					}}
+					variant={'with-icon-right'}
+				>
+					{loc.settingsPage.appearance.items.themeVariants.retroWave}{' '}
+					<Emoji name={'sunset'} />
+				</SelectButton>
 			</SetItemBlock>
 		</>
 	);

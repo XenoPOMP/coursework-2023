@@ -12,8 +12,9 @@ const ThemeProvider: FC<ProviderProps> = ({ children }) => {
 
 	document.body.className = cn(
 		styles.themes,
-		theme.get() === 'light' ? styles.light : '',
-		theme.get() === 'dark' ? styles.dark : ''
+		theme.get() === 'light' && styles.light,
+		theme.get() === 'dark' && styles.dark,
+		theme.get() === 'retroWave' && styles.retroWave
 	);
 
 	return <>{children}</>;
