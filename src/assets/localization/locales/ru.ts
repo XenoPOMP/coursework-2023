@@ -412,6 +412,19 @@ const russianLocalization: Localization = {
 
 				[
 					{
+						version: '1.2.0',
+						date: {
+							day: 6,
+							month: 'мая',
+							year: 2023,
+						},
+						paragraphs: [
+							'Эта версия приносит различные фикс багов в браузерах.',
+							'* Был исправлен размер элементов интерфейса в шапке.',
+						],
+					},
+
+					{
 						version: '1.2.4',
 						date: {
 							day: 12,
