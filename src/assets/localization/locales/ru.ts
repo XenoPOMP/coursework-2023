@@ -247,7 +247,8 @@ const russianLocalization: Localization = {
 			appearance: 'Внешний вид',
 			localization: 'Локализация',
 			confidentiality: 'Конфиденциальность',
-			appVersion: 'верXX',
+			changeLog: 'Что нового?',
+			appVersion: 'vXX',
 		},
 
 		appearance: {
@@ -313,6 +314,20 @@ const russianLocalization: Localization = {
 					disallow: 'Запретить',
 				},
 			},
+		},
+
+		changeLogTab: {
+			title: 'Что нового?',
+			records: [
+				{
+					version: '1.2.4',
+					date: {
+						day: 12,
+						month: 'мая',
+						year: 2023,
+					},
+				},
+			],
 		},
 
 		saveChanges: {

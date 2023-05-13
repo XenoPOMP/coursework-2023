@@ -246,6 +246,7 @@ const englishLocalization: Localization = {
 			appearance: 'Appearance',
 			localization: 'Localization',
 			confidentiality: 'Privacy',
+			changeLog: 'What`s new?',
 			appVersion: 'vXX',
 		},
 
@@ -312,6 +313,20 @@ const englishLocalization: Localization = {
 					disallow: 'Disallow',
 				},
 			},
+		},
+
+		changeLogTab: {
+			title: 'What`s new?',
+			records: [
+				{
+					version: '1.2.4',
+					date: {
+						day: 12,
+						month: 'may',
+						year: 2023,
+					},
+				},
+			],
 		},
 
 		saveChanges: {

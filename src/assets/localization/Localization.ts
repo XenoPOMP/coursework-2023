@@ -1,4 +1,5 @@
-import { OrderInputLocale } from '@type/OrderInputLocale';
+import type { ChangelogRecord } from '@type/ChangelogRecord';
+import type { OrderInputLocale } from '@type/OrderInputLocale';
 
 import { MetaInfo } from '@components/Page/Page.props';
 
@@ -118,6 +119,7 @@ type Localization = {
 			appearance: string;
 			localization: string;
 			confidentiality: string;
+			changeLog: string;
 			appVersion: string;
 		};
 
@@ -157,6 +159,11 @@ type Localization = {
 					disallow: string;
 				};
 			};
+		};
+
+		changeLogTab: {
+			title: string;
+			records?: ChangelogRecord[];
 		};
 
 		saveChanges: {
