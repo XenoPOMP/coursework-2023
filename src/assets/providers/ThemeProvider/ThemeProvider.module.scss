@@ -114,4 +114,62 @@
     --sets-confirm-font: #000000;
     --sets-reject-font: #FFFFFF;
   }
+
+  &.retroWave {
+    --logo-main: #FE954E;
+    --logo-font-color: #FFFFFF;
+
+    --background-primary: #1B0636;
+    --background-secondary: #190631;
+    --background-third: #130327;
+    --head-button-back: #261042;
+    --head-icon-color: #746387;
+    --head-notify-back: #FF0000;
+    --head-icon-color-inactive: #68537E;
+    --patch: #FFFFFF;
+    --main-left-header: #FFFFFF;
+    --main-card-content-font: #FFFFFF;
+    --main-card-header: #FFFFFF;
+    --main-card-back: #210E3A;
+    --main-link-button: #000000;
+
+    --service-title: #BDB9B9;
+    --service-font: #FFFFFF;
+    --service-foot-button-back: #FE17CF;
+    --service-speed-two: #3CE02E;
+    --service-speed-three: #FFB800;
+    --service-speed-four: #FF8A00;
+    --service-speed-max: #FF0000;
+    --service-foot-button-font: #FFFFFF;
+    --service-icon: #558BC2;
+    --service-star: #E4CF0A;
+    --service-border: #250F42;
+    --service-selection: #4DFC30;
+
+    --ov-backdrop: rgba(0, 0, 0, 0.8);
+    --ov-section: #161616;
+    --ov-font-inactive: #C4C4C4;
+    --ov-font-active: #FFFFFF;
+
+    --blog-font-primary: #FFFFFF;
+    --blog-font-secondary: #B8B7B7;
+    --blog-back-primary: #261042;
+
+    --ord-font-primary: #FFFFFF;
+    --ord-font-error: #FF0000;
+    --ord-button-shadow: 0 0 9px rgba(0, 0, 0, 0.25);
+
+    --inp-back: #261042;
+
+    --popup-back: #000000;
+    --popup-font: #FFFFFF;
+
+    --sets-font-primary: #FFFFFF;
+    --sets-font-secondary: #B9B9BA;
+    --sets-border: #261042;
+    --sets-confirm-back: #FF16CE;
+    --sets-reject-back: #261042;
+    --sets-confirm-font: #FFFFFF;
+    --sets-reject-font: #FFFFFF;
+  }
 }

@@ -266,6 +266,7 @@ const englishLocalization: Localization = {
 				themeVariants: {
 					light: 'Light',
 					dark: 'Dark',
+					retroWave: 'Retro-wave',
 				},
 			},
 		},
@@ -460,6 +461,18 @@ const englishLocalization: Localization = {
 							year: 2023,
 						},
 						paragraphs: [`This update adds changelog page.`],
+					},
+				],
+
+				[
+					{
+						version: '1.3.0',
+						date: {
+							day: 14,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: [`New theme - retro-wave!`],
 					},
 				],
 			],

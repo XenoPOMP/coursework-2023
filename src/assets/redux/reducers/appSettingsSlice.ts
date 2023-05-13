@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { ReduxAction } from '@redux/types/redux-types';
 
 export type Language = 'ru' | 'en';
-export type Theme = 'light' | 'dark';
+export type Theme = 'light' | 'dark' | 'retroWave';
 export type Currency = 'rub' | 'usd';
 
 export type AppSettings = {
