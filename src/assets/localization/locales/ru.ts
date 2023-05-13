@@ -247,7 +247,7 @@ const russianLocalization: Localization = {
 			appearance: 'Внешний вид',
 			localization: 'Локализация',
 			confidentiality: 'Конфиденциальность',
-			appVersion: 'Версия приложения: XX',
+			appVersion: 'верXX',
 		},
 
 		appearance: {

@@ -21,6 +21,7 @@ export enum SettingsTabs {
 	APPEARANCE,
 	LOCALIZATION,
 	CONFIDENTIALITY,
+	CHANGELOG,
 }
 
 const SettingsPage: FC<SettingsPageProps> = ({}) => {

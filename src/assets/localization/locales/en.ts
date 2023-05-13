@@ -246,7 +246,7 @@ const englishLocalization: Localization = {
 			appearance: 'Appearance',
 			localization: 'Localization',
 			confidentiality: 'Privacy',
-			appVersion: 'App version: XX',
+			appVersion: 'vXX',
 		},
 
 		appearance: {
