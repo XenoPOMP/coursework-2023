@@ -324,7 +324,7 @@ const englishLocalization: Localization = {
 						version: '1.0',
 						date: {
 							day: 7,
-							month: 'April',
+							month: 4,
 							year: 2023,
 						},
 						paragraphs: ['First release version of application.'],
@@ -334,7 +334,7 @@ const englishLocalization: Localization = {
 						version: '1.0.1',
 						date: {
 							day: 7,
-							month: 'April',
+							month: 4,
 							year: 2023,
 						},
 						paragraphs: [
@@ -347,7 +347,7 @@ const englishLocalization: Localization = {
 						version: '1.0.1.1',
 						date: {
 							day: 8,
-							month: 'April',
+							month: 4,
 							year: 2023,
 						},
 						paragraphs: [
@@ -360,7 +360,7 @@ const englishLocalization: Localization = {
 						version: '1.0.2',
 						date: {
 							day: 8,
-							month: 'апреля',
+							month: 4,
 							year: 2023,
 						},
 						paragraphs: [
@@ -375,7 +375,7 @@ const englishLocalization: Localization = {
 						version: '1.1',
 						date: {
 							day: 10,
-							month: 'April',
+							month: 4,
 							year: 2023,
 						},
 						paragraphs: [
@@ -388,7 +388,7 @@ const englishLocalization: Localization = {
 						version: '1.1.1',
 						date: {
 							day: 11,
-							month: 'April',
+							month: 4,
 							year: 2023,
 						},
 						paragraphs: ['Sign out button has been added to the dashboard.'],
@@ -398,7 +398,7 @@ const englishLocalization: Localization = {
 						version: '1.1.2',
 						date: {
 							day: 6,
-							month: 'April',
+							month: 4,
 							year: 2023,
 						},
 						paragraphs: [
@@ -413,7 +413,7 @@ const englishLocalization: Localization = {
 						version: '1.2.0',
 						date: {
 							day: 6,
-							month: 'May',
+							month: 5,
 							year: 2023,
 						},
 						paragraphs: [
@@ -427,7 +427,7 @@ const englishLocalization: Localization = {
 						version: '1.2.2',
 						date: {
 							day: 8,
-							month: 'May',
+							month: 5,
 							year: 2023,
 						},
 						paragraphs: [
@@ -441,7 +441,7 @@ const englishLocalization: Localization = {
 						version: '1.2.3',
 						date: {
 							day: 12,
-							month: 'May',
+							month: 5,
 							year: 2023,
 						},
 						paragraphs: [
@@ -455,14 +455,15 @@ const englishLocalization: Localization = {
 					{
 						version: '1.2.4',
 						date: {
-							day: 12,
-							month: 'May',
+							day: 13,
+							month: 5,
 							year: 2023,
 						},
 						paragraphs: [`This update adds changelog page.`],
 					},
 				],
 			],
+			datetimeLocale: 'en-US',
 		},
 
 		saveChanges: {

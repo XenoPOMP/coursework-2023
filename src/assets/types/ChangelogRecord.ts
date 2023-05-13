@@ -2,7 +2,7 @@ export interface ChangelogRecord {
 	version: string;
 	date: {
 		day: number;
-		month: string;
+		month: number;
 		year: number;
 	};
 	/**

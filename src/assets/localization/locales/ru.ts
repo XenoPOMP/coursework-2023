@@ -325,7 +325,7 @@ const russianLocalization: Localization = {
 						version: '1.0',
 						date: {
 							day: 7,
-							month: 'апреля',
+							month: 4,
 							year: 2023,
 						},
 						paragraphs: ['Первая релизная версия приложения'],
@@ -335,7 +335,7 @@ const russianLocalization: Localization = {
 						version: '1.0.1',
 						date: {
 							day: 7,
-							month: 'апреля',
+							month: 4,
 							year: 2023,
 						},
 						paragraphs: [
@@ -348,7 +348,7 @@ const russianLocalization: Localization = {
 						version: '1.0.1.1',
 						date: {
 							day: 8,
-							month: 'апреля',
+							month: 4,
 							year: 2023,
 						},
 						paragraphs: [
@@ -361,7 +361,7 @@ const russianLocalization: Localization = {
 						version: '1.0.2',
 						date: {
 							day: 8,
-							month: 'апреля',
+							month: 4,
 							year: 2023,
 						},
 						paragraphs: [
@@ -376,7 +376,7 @@ const russianLocalization: Localization = {
 						version: '1.1',
 						date: {
 							day: 10,
-							month: 'апреля',
+							month: 4,
 							year: 2023,
 						},
 						paragraphs: [
@@ -389,7 +389,7 @@ const russianLocalization: Localization = {
 						version: '1.1.1',
 						date: {
 							day: 11,
-							month: 'апреля',
+							month: 4,
 							year: 2023,
 						},
 						paragraphs: [
@@ -401,7 +401,7 @@ const russianLocalization: Localization = {
 						version: '1.1.2',
 						date: {
 							day: 6,
-							month: 'мая',
+							month: 5,
 							year: 2023,
 						},
 						paragraphs: [
@@ -416,7 +416,7 @@ const russianLocalization: Localization = {
 						version: '1.2.0',
 						date: {
 							day: 6,
-							month: 'мая',
+							month: 5,
 							year: 2023,
 						},
 						paragraphs: [
@@ -430,7 +430,7 @@ const russianLocalization: Localization = {
 						version: '1.2.2',
 						date: {
 							day: 8,
-							month: 'мая',
+							month: 5,
 							year: 2023,
 						},
 						paragraphs: [
@@ -444,7 +444,7 @@ const russianLocalization: Localization = {
 						version: '1.2.3',
 						date: {
 							day: 12,
-							month: 'мая',
+							month: 5,
 							year: 2023,
 						},
 						paragraphs: [
@@ -458,14 +458,15 @@ const russianLocalization: Localization = {
 					{
 						version: '1.2.4',
 						date: {
-							day: 12,
-							month: 'мая',
+							day: 13,
+							month: 5,
 							year: 2023,
 						},
 						paragraphs: [`Эта версия добавляет страницу с историей версий.`],
 					},
 				],
 			],
+			datetimeLocale: 'ru-RU',
 		},
 
 		saveChanges: {

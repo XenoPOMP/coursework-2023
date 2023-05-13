@@ -24,7 +24,10 @@
 
     .record {
       color: var(--sets-font-secondary);
-      padding-bottom: 3em;
+
+      &:not(:last-of-type) {
+        padding-bottom: 3em;
+      }
 
       h3.title {
         color: var(--sets-font-primary);
@@ -38,6 +41,20 @@
         display: flex;
         flex-direction: column;
         row-gap: .7em;
+
+        mark {
+          background: var(--background-third);
+          color: var(--sets-font-primary);
+
+          border-radius: .15em;
+          padding: .25em .4em;
+        }
+      }
+
+      .date {
+        font-size: 1.1em;
+        margin-top: 1.45em;
+        font-style: italic;
       }
     }
   }

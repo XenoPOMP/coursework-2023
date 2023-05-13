@@ -166,6 +166,7 @@ type Localization = {
 			title: string;
 			/** This item is grouped list of changelog records. */
 			records?: ChangelogRecord[][];
+			datetimeLocale: string;
 		};
 
 		saveChanges: {
