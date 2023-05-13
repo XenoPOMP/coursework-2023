@@ -318,14 +318,16 @@ const englishLocalization: Localization = {
 		changeLogTab: {
 			title: 'What`s new?',
 			records: [
-				{
-					version: '1.2.4',
-					date: {
-						day: 12,
-						month: 'may',
-						year: 2023,
+				[
+					{
+						version: '1.2.4',
+						date: {
+							day: 12,
+							month: 'may',
+							year: 2023,
+						},
 					},
-				},
+				],
 			],
 		},
 

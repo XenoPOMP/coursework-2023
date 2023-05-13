@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Page from '@components/Page/Page';
 
 import AppearanceTab from '@pages/SettingsPage/AppearanceTab/AppearanceTab';
+import ChangelogTab from '@pages/SettingsPage/ChangelogTab/ChangelogTab';
 import LocalizationTab from '@pages/SettingsPage/LocalizationTab/LocalizationTab';
 import PrivacyTab from '@pages/SettingsPage/PrivacyTab/PrivacyTab';
 
@@ -149,6 +150,8 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
 						{tab === SettingsTabs.LOCALIZATION && <LocalizationTab />}
 
 						{tab === SettingsTabs.CONFIDENTIALITY && <PrivacyTab />}
+
+						{tab === SettingsTabs.CHANGELOG && <ChangelogTab />}
 					</div>
 
 					<div className={cn(styles.saveChanges)}>

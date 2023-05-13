@@ -162,8 +162,10 @@ type Localization = {
 		};
 
 		changeLogTab: {
+			/** Changelog tab title */
 			title: string;
-			records?: ChangelogRecord[];
+			/** This item is grouped list of changelog records. */
+			records?: ChangelogRecord[][];
 		};
 
 		saveChanges: {
