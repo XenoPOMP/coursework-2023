@@ -1,0 +1,61 @@
+@import "src/assets/styles/templates";
+
+.tab {
+  @extend %mainFont;
+
+  // 1em = 20px
+  color: var(--sets-font-primary);
+
+  h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 1.43em;
+  }
+
+  .recordGroup {
+    margin-bottom: 1em;
+    padding: 1em;
+    background: var(--background-secondary);
+    border-radius: 1em;
+
+    &:last-of-type {
+      margin-bottom: 3em;
+    }
+
+    .record {
+      color: var(--sets-font-secondary);
+
+      &:not(:last-of-type) {
+        padding-bottom: 3em;
+      }
+
+      h3.title {
+        color: var(--sets-font-primary);
+        font-size: 1.25em;
+        font-weight: bold;
+        margin-bottom: 1.25em;
+      }
+
+      .paragraphGroup {
+        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+        row-gap: .7em;
+
+        mark {
+          background: var(--background-third);
+          color: var(--sets-font-primary);
+
+          border-radius: .15em;
+          padding: .25em .4em;
+        }
+      }
+
+      .date {
+        font-size: 1.1em;
+        margin-top: 1.45em;
+        font-style: italic;
+      }
+    }
+  }
+}

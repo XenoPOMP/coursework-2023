@@ -1,0 +1,23 @@
+@import "src/assets/styles/templates";
+
+.link {
+  @extend %flexCenter;
+  @extend %mainFont;
+  @extend %notSelectable;
+
+  $linkColor: var(--sets-confirm-back);
+
+  color: $linkColor;
+  font-size: 1em;
+  align-items: center;
+  column-gap: .4em;
+  cursor: pointer;
+
+  svg {
+    width: .5em;
+
+    path {
+      fill: $linkColor;
+    }
+  }
+}

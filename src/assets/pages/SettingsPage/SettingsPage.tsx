@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Page from '@components/Page/Page';
 
 import AppearanceTab from '@pages/SettingsPage/AppearanceTab/AppearanceTab';
+import ChangelogTab from '@pages/SettingsPage/ChangelogTab/ChangelogTab';
 import LocalizationTab from '@pages/SettingsPage/LocalizationTab/LocalizationTab';
 import PrivacyTab from '@pages/SettingsPage/PrivacyTab/PrivacyTab';
 
@@ -21,6 +22,7 @@ export enum SettingsTabs {
 	APPEARANCE,
 	LOCALIZATION,
 	CONFIDENTIALITY,
+	CHANGELOG,
 }
 
 const SettingsPage: FC<SettingsPageProps> = ({}) => {
@@ -111,6 +113,28 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
 						<span>{loc.settingsPage.sidebar.confidentiality}</span>
 					</div>
 
+					<div
+						className={cn(
+							styles.item,
+							tab == SettingsTabs.CHANGELOG ? styles.active : ''
+						)}
+						onClick={() => {
+							setTab(SettingsTabs.CHANGELOG);
+						}}
+					>
+						<svg
+							width='25'
+							height='20'
+							viewBox='0 0 25 20'
+							fill='none'
+							xmlns='http://www.w3.org/2000/svg'
+						>
+							<path d='M2.5 20C1.8125 20 1.22396 19.7552 0.734375 19.2656C0.244792 18.776 0 18.1875 0 17.5V2.5C0 1.8125 0.244792 1.22396 0.734375 0.734375C1.22396 0.244792 1.8125 0 2.5 0H8.75V2.5H2.5V17.5H22.5V2.5H16.25V0H22.5C23.1875 0 23.776 0.244792 24.2656 0.734375C24.7552 1.22396 25 1.8125 25 2.5V17.5C25 18.1875 24.7552 18.776 24.2656 19.2656C23.776 19.7552 23.1875 20 22.5 20H2.5ZM12.5 14.25L6.25 8L8 6.25L11.25 9.5V0H13.75V9.5L17 6.25L18.75 8L12.5 14.25Z' />
+						</svg>
+
+						<span>{loc.settingsPage.sidebar.changeLog}</span>
+					</div>
+
 					<div className={cn(styles.item, styles.version)}>
 						{loc.settingsPage.sidebar.appVersion.replace(
 							/XX/gi,
@@ -126,6 +150,8 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
 						{tab === SettingsTabs.LOCALIZATION && <LocalizationTab />}
 
 						{tab === SettingsTabs.CONFIDENTIALITY && <PrivacyTab />}
+
+						{tab === SettingsTabs.CHANGELOG && <ChangelogTab />}
 					</div>
 
 					<div className={cn(styles.saveChanges)}>
