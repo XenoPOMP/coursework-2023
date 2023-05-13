@@ -1,5 +1,3 @@
-export type ChangelogParagraph = string | HTMLUListElement;
-
 export interface ChangelogRecord {
 	version: string;
 	date: {
@@ -7,5 +5,10 @@ export interface ChangelogRecord {
 		month: string;
 		year: number;
 	};
-	paragraphs?: ChangelogParagraph[];
+	/**
+	 * Array of paragraphs.
+	 *
+	 * Marked list item: *{text}
+	 */
+	paragraphs?: string[];
 }
