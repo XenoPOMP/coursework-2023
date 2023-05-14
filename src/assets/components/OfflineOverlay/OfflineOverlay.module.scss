@@ -1,0 +1,46 @@
+@import "src/assets/styles/templates";
+
+.offlineOverlay {
+  @extend %flexCenter;
+  @extend %mainFont;
+  @extend %notSelectable;
+
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--background-primary);
+  z-index: var(--layer-overlay);
+  font-size: 20px;
+  color: var(--service-font);
+  flex-direction: column;
+  padding: globalPadding(1);
+
+  svg.icon {
+    width: 4.45em;
+
+    path {
+      fill: var(--service-font);;
+    }
+  }
+
+  .text {
+    font-size: 1em;
+    color: inherit;
+    text-align: center;
+    margin: 3.25em 0;
+  }
+
+  .retryButton {
+    @extend %medium;
+    @extend %notSelectable;
+
+    font-size: 1em;
+    color: var(--service-foot-button-font);
+    background: var(--service-foot-button-back);
+    padding: .6em 2.1em;
+    cursor: pointer;
+    border-radius: .6em;
+  }
+}

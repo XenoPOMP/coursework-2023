@@ -673,6 +673,14 @@ const russianLocalization: Localization = {
 			sessionCount: 'Кол-во посещений',
 		},
 	},
+
+	offlineScreen: {
+		noConnectionLabel: [
+			'Нет подключения к сети',
+			'Пожалуйста, проверьте ваше подключение',
+		],
+		retryLabel: 'Повторить попытку',
+	},
 };
 
 export default russianLocalization;

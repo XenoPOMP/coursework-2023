@@ -661,6 +661,14 @@ const englishLocalization: Localization = {
 			sessionCount: 'Visit count',
 		},
 	},
+
+	offlineScreen: {
+		noConnectionLabel: [
+			'No Internet Connection found',
+			'Check your connection',
+		],
+		retryLabel: 'Retry',
+	},
 };
 
 export default englishLocalization;
