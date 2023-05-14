@@ -474,16 +474,6 @@ const englishLocalization: Localization = {
 						},
 						paragraphs: [`New theme - retro-wave!`],
 					},
-
-					{
-						version: '1.3.1',
-						date: {
-							day: 14,
-							month: 5,
-							year: 2023,
-						},
-						paragraphs: ['Added ``No connection`` screen.'],
-					},
 				],
 			],
 			datetimeLocale: 'en-US',
