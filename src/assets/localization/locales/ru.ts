@@ -471,11 +471,21 @@ const russianLocalization: Localization = {
 					{
 						version: '1.3.0',
 						date: {
-							day: 14,
+							day: 13,
 							month: 5,
 							year: 2023,
 						},
 						paragraphs: [`Новая тема - ретровейв!`],
+					},
+
+					{
+						version: '1.3.1',
+						date: {
+							day: 14,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: ['Добавлен экран ``Нет подключения к сети``'],
 					},
 				],
 			],
