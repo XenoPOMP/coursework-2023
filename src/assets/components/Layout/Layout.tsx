@@ -1,6 +1,8 @@
 import cn from 'classnames';
 import { FC, ReactNode } from 'react';
 
+import OfflineOverlay from '@components/OfflineOverlay/OfflineOverlay';
+
 import GlobalProvider from '@providers/GlobalProvider/GlobalProvider';
 
 import AnalyticsAgreementMessage from '@ui/AnalyticsAgreementMessage/AnalyticsAgreementMessage';
@@ -26,6 +28,7 @@ const Layout: FC<LayoutProps> = ({ children, header }) => {
 			<main className={cn(styles.appMain)}>{children}</main>
 
 			<AnalyticsAgreementMessage />
+			<OfflineOverlay />
 		</GlobalProvider>
 	);
 };

@@ -241,6 +241,11 @@ type Localization = {
 			sessionCount: string;
 		};
 	};
+
+	offlineScreen: {
+		noConnectionLabel: [string, string];
+		retryLabel: string;
+	};
 };
 
 export default Localization;
