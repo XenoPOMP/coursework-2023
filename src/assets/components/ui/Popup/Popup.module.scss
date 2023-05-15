@@ -14,8 +14,16 @@
   padding: .66em;
   border-radius: .46em;
   z-index: var(--layer-under-overlay);
+  pointer-events: none !important;
 
-  &.rightX {}
+  &.rightX {
+    left: calc(100% + $arrowHeight);
+
+    &:before {
+      right: calc(100% - $arrowHeight / 2);
+      top: calc(50% - $arrowHeight / 2);
+    }
+  }
 
   &.leftX {}
 
@@ -36,12 +44,20 @@
     }
   }
 
-  &.centerY {}
+  &.centerY {
+    top: calc(50% - $arrowWidth);
+  }
 
   // Rotation variants
   &.centerX.bottomY {
     &:before {
       // transform: rotate(.5turn);
+    }
+  }
+
+  &.rightX.centerY {
+    &:before {
+      transform: rotate(-.25turn);
     }
   }
 

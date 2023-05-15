@@ -64,6 +64,9 @@ const englishLocalization: Localization = {
 			blog: 'Blog',
 			settings: 'Settings',
 			analytics: 'Analytics',
+			menu: 'Menu',
+			goBack: 'Go back',
+			logout: 'Log out',
 		},
 	},
 

@@ -77,6 +77,9 @@ type Localization = {
 			blog: string;
 			settings: string;
 			analytics: string;
+			menu: string;
+			goBack: string;
+			logout: string;
 		};
 	};
 

@@ -64,6 +64,9 @@ const russianLocalization: Localization = {
 			blog: 'Блог',
 			settings: 'Настройки',
 			analytics: 'Аналитика',
+			menu: 'Меню',
+			goBack: 'Назад',
+			logout: 'Выйти',
 		},
 	},
 
