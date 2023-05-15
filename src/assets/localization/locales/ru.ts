@@ -272,6 +272,16 @@ const russianLocalization: Localization = {
 					dark: 'Темная',
 					retroWave: 'Ретро-вейв',
 				},
+
+				popups: {
+					title: 'Всплывающие подсказки',
+					desc: 'Разрешите или запретите показывать всплывающие подсказки.',
+				},
+
+				popupVariants: {
+					prohibited: 'Не показывать',
+					allowed: 'Показывать',
+				},
 			},
 		},
 

@@ -17,7 +17,7 @@ import styles from './AppSettingsSaver.module.scss';
 import { AppSettingsSaverProps } from './AppSettingsSaver.props';
 
 const AppSettingsSaver: FC<ProviderProps> = ({ children }) => {
-	const { theme, language, cookiePrefix, currency } = useAppSettings();
+	const { theme, language, cookiePrefix, popups, currency } = useAppSettings();
 	const dispatch = useDispatch();
 
 	// Local storage
@@ -32,12 +32,13 @@ const AppSettingsSaver: FC<ProviderProps> = ({ children }) => {
 		theme.set(getCookieSettings.theme);
 		language.set(getCookieSettings.language);
 		currency.set(getCookieSettings.currency);
+		popups.set(getCookieSettings.popupsEnabled);
 	}, []);
 
 	// Save app settings to cookie
 	useEffect(() => {
 		setCookieSettings(appSettings);
-	}, [theme.get(), language.get(), currency.get()]);
+	}, [theme.get(), language.get(), currency.get(), popups.get()]);
 
 	return <>{children}</>;
 };

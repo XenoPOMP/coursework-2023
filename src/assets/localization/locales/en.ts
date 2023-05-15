@@ -271,6 +271,16 @@ const englishLocalization: Localization = {
 					dark: 'Dark',
 					retroWave: 'Retro-wave',
 				},
+
+				popups: {
+					title: 'Popups',
+					desc: 'Allow or prohibit the display of tooltips.',
+				},
+
+				popupVariants: {
+					prohibited: 'Don`t show',
+					allowed: 'Show',
+				},
 			},
 		},
 

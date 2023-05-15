@@ -135,6 +135,11 @@ type Localization = {
 				themeVariants: {
 					[theme in Theme]: string;
 				};
+				popups: SettingsTabTitleLocale;
+				popupVariants: {
+					prohibited: string;
+					allowed: string;
+				};
 			};
 		};
 

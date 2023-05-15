@@ -6,6 +6,7 @@ import {
 	Theme,
 	changeCurrency,
 	changeLang,
+	changePopups,
 	changeTheme,
 } from '@redux/reducers/appSettingsSlice';
 import IStore from '@redux/types/redux-types';
@@ -20,6 +21,7 @@ interface IUseAppSettings {
 	language: SettingController<Language>;
 	cookiePrefix: Omit<SettingController<string>, 'set'>;
 	theme: SettingController<Theme>;
+	popups: SettingController<boolean>;
 	currency: SettingController<Currency>;
 }
 
@@ -40,6 +42,11 @@ const useAppSettings = (): IUseAppSettings => {
 		theme: {
 			get: () => useSelector((state: IStore) => state.appSettings.theme),
 			set: newValue => dispatch(changeTheme(newValue)),
+		},
+		popups: {
+			get: () =>
+				useSelector((state: IStore) => state.appSettings.popupsEnabled),
+			set: newValue => dispatch(changePopups(newValue)),
 		},
 		currency: {
 			get: () => useSelector((state: IStore) => state.appSettings.currency),
