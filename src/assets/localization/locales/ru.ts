@@ -488,6 +488,20 @@ const russianLocalization: Localization = {
 						paragraphs: ['Был добавлен экран ``Нет подключения к сети``'],
 					},
 				],
+
+				[
+					{
+						version: '1.4.0',
+						date: {
+							day: 15,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: [
+							'Эта версия привносит всплывающие сообщения для элементов интрефейса.',
+						],
+					},
+				],
 			],
 			datetimeLocale: 'ru-RU',
 		},

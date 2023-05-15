@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: 'Figerona';
-  src: url("./src/media/fonts/Figerona-VF.ttf");
+  src: url("src/media/fonts/Figerona-VF.ttf");
 }
 
 %mainFont {
@@ -13,6 +13,10 @@
 
 %specialFont {
   font-family: 'Balsamiq Sans', cursive;
+}
+
+%light {
+  font-weight: 300;
 }
 
 %medium {

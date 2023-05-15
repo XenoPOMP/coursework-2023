@@ -83,6 +83,7 @@ header.appHeader {
     height: $buttonHeight;
     background: var(--head-button-back);
     border-radius: 50%;
+    position: relative;
 
     transition: background-color .15s ease;
 
