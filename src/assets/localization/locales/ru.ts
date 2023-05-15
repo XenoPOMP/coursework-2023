@@ -64,6 +64,9 @@ const russianLocalization: Localization = {
 			blog: 'Блог',
 			settings: 'Настройки',
 			analytics: 'Аналитика',
+			menu: 'Меню',
+			goBack: 'Назад',
+			logout: 'Выйти',
 		},
 	},
 
@@ -486,6 +489,20 @@ const russianLocalization: Localization = {
 							year: 2023,
 						},
 						paragraphs: ['Был добавлен экран ``Нет подключения к сети``'],
+					},
+				],
+
+				[
+					{
+						version: '1.4.0',
+						date: {
+							day: 15,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: [
+							'Эта версия привносит |всплывающие сообщения| для элементов интрефейса.',
+						],
 					},
 				],
 			],

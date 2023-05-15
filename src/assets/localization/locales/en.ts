@@ -64,6 +64,9 @@ const englishLocalization: Localization = {
 			blog: 'Blog',
 			settings: 'Settings',
 			analytics: 'Analytics',
+			menu: 'Menu',
+			goBack: 'Go back',
+			logout: 'Log out',
 		},
 	},
 
@@ -483,6 +486,20 @@ const englishLocalization: Localization = {
 							year: 2023,
 						},
 						paragraphs: ['Added ``No connection`` screen'],
+					},
+				],
+
+				[
+					{
+						version: '1.4.0',
+						date: {
+							day: 15,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: [
+							'This update brings |popup messages| for UI elements.',
+						],
 					},
 				],
 			],
