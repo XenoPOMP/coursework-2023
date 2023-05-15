@@ -38,7 +38,7 @@ const ChangelogTab: FC<ChangelogTabProps> = ({}) => {
 
 						// Replace `` `` with mark component
 						let output: ReactNode[] = replacedText
-							.split(/(``.*``)/g)
+							.split(/(``.*``)|(\|.*\|)/g)
 							.map(res => {
 								if (/(``.*``)/g.test(res)) {
 									return (
@@ -46,6 +46,10 @@ const ChangelogTab: FC<ChangelogTabProps> = ({}) => {
 											{res.replace(/``/gi, '')}
 										</mark>
 									);
+								}
+
+								if (/(\|.*\|)/g.test(res)) {
+									return <u>{res.replace(/\|/gi, '')}</u>;
 								}
 
 								return res;
