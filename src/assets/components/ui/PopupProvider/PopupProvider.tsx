@@ -2,6 +2,8 @@ import cn from 'classnames';
 import { motion } from 'framer-motion';
 import { FC, PropsWithChildren } from 'react';
 
+import useAppSettings from '@hooks/useAppSettings';
+
 import styles from './PopupProvider.module.scss';
 import { PopupProviderProps } from './PopupProvider.props';
 
@@ -29,8 +31,13 @@ import { PopupProviderProps } from './PopupProvider.props';
 const PopupProvider: FC<PropsWithChildren<PopupProviderProps>> = ({
 	children,
 }) => {
+	const { popups } = useAppSettings();
+
 	return (
-		<motion.div initial={'initial'} whileHover={'appear'}>
+		<motion.div
+			initial={'initial'}
+			whileHover={popups.get() ? 'appear' : 'initial'}
+		>
 			{children}
 		</motion.div>
 	);
