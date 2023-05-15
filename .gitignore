@@ -16,7 +16,6 @@ dist-ssr
 coverage/*
 **/__snapshots__/*
 *.snap
-!coverage/index.html
 
 # Microsoft Office temp files
 **/~$*.docx
