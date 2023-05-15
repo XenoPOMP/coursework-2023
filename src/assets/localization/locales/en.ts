@@ -501,6 +501,20 @@ const englishLocalization: Localization = {
 							'This update brings |popup messages| for UI elements.',
 						],
 					},
+
+					{
+						version: '1.4.1',
+						date: {
+							day: 15,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: [
+							'* Added popup messages switcher.',
+							'* Added **easter egg**.',
+							'//Can you find it?//',
+						],
+					},
 				],
 			],
 			datetimeLocale: 'en-US',
