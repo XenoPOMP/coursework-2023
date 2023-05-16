@@ -19,6 +19,7 @@ coverage/*
 
 # Microsoft Office temp files
 **/~$*.docx
+**/~$*.vsdx
 
 # Editor directories and files
 .vscode/*
