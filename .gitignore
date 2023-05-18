@@ -18,7 +18,8 @@ coverage/*
 *.snap
 
 # Microsoft Office temp files
-**/~$*.docx
+**/~$*.*docx
+**/~$*.*vsdx
 
 # Editor directories and files
 .vscode/*

@@ -36,20 +36,32 @@ const ChangelogTab: FC<ChangelogTabProps> = ({}) => {
 					{recordLocale.paragraphs?.map((paragraph, index) => {
 						const replacedText = paragraph.replace(/^\*/i, ' • ');
 
-						// Replace `` `` with mark component
+						// Replace text styles
 						let output: ReactNode[] = replacedText
-							.split(/(``.*``)|(\|.*\|)/g)
+							.split(/(``.*``)|(\|.*\|)|(\*\*.*\*\*)|(\/\/.*\/\/)/g)
 							.map(res => {
+								// Replace `` `` with <mark/>
 								if (/(``.*``)/g.test(res)) {
 									return (
 										<mark key={`fragment-${res}`}>
-											{res.replace(/``/gi, '')}
+											{res.replace(/(^``)|(``$)/gi, '')}
 										</mark>
 									);
 								}
 
+								// Replace | | with <u/>
 								if (/(\|.*\|)/g.test(res)) {
-									return <u>{res.replace(/\|/gi, '')}</u>;
+									return <u>{res.replace(/(^\|)|(\|$)/gi, '')}</u>;
+								}
+
+								// Replace ** ** with <b/>
+								if (/(\*\*.*\*\*)/g.test(res)) {
+									return <b>{res.replace(/(^\*\*)|(\*\*$)/gi, '')}</b>;
+								}
+
+								// Replace // // with <i/>
+								if (/(\/\/.*\/\/)/g.test(res)) {
+									return <i>{res.replace(/(^\/\/)|(\/\/$)/g, '')}</i>;
 								}
 
 								return res;

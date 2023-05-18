@@ -14,7 +14,7 @@ import { AppearanceTabProps } from './AppearanceTab.props';
 
 const AppearanceTab: FC<AppearanceTabProps> = () => {
 	const loc = useLocalization();
-	const { theme } = useAppSettings();
+	const { theme, popups } = useAppSettings();
 
 	return (
 		<>
@@ -52,6 +52,30 @@ const AppearanceTab: FC<AppearanceTabProps> = () => {
 				>
 					{loc.settingsPage.appearance.items.themeVariants.retroWave}{' '}
 					<Emoji name={'sunset'} />
+				</SelectButton>
+			</SetItemBlock>
+
+			<SetItemBlock locales={loc.settingsPage.appearance.items.popups} flexWrap>
+				<SelectButton
+					isTriggered={!popups.get()}
+					onClick={() => {
+						popups.set(false);
+					}}
+					variant={'with-icon-right'}
+				>
+					{loc.settingsPage.appearance.items.popupVariants.prohibited}{' '}
+					<Emoji name={'prohibited'} />
+				</SelectButton>
+
+				<SelectButton
+					isTriggered={popups.get()}
+					onClick={() => {
+						popups.set(true);
+					}}
+					variant={'with-icon-right'}
+				>
+					{loc.settingsPage.appearance.items.popupVariants.allowed}{' '}
+					<Emoji name={'checkMarkButton'} />
 				</SelectButton>
 			</SetItemBlock>
 		</>

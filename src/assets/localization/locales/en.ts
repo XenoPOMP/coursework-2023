@@ -271,6 +271,16 @@ const englishLocalization: Localization = {
 					dark: 'Dark',
 					retroWave: 'Retro-wave',
 				},
+
+				popups: {
+					title: 'Popups',
+					desc: 'Allow or prohibit the display of tooltips.',
+				},
+
+				popupVariants: {
+					prohibited: 'Don`t show',
+					allowed: 'Show',
+				},
 			},
 		},
 
@@ -499,6 +509,20 @@ const englishLocalization: Localization = {
 						},
 						paragraphs: [
 							'This update brings |popup messages| for UI elements.',
+						],
+					},
+
+					{
+						version: '1.4.1',
+						date: {
+							day: 15,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: [
+							'* Added popup messages switcher.',
+							'* Added **easter egg**.',
+							'//Can you find it?//',
 						],
 					},
 				],

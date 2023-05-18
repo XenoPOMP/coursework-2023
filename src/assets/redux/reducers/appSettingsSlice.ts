@@ -11,14 +11,16 @@ export type AppSettings = {
 	language: Language;
 	cookiePrefix: string;
 	theme: Theme;
+	popupsEnabled: boolean;
 	currency: Currency;
 };
 
 const initialState: AppSettings = {
-	appVersion: '1.4.0',
+	appVersion: '1.4.1',
 	language: 'ru',
 	cookiePrefix: 'smart-ace',
 	theme: 'light',
+	popupsEnabled: true,
 	currency: 'rub',
 };
 
@@ -34,6 +36,10 @@ const appSettingsSlice = createSlice({
 			state.theme = action.payload;
 		},
 
+		changePopups(state, action: ReduxAction<boolean>) {
+			state.popupsEnabled = action.payload;
+		},
+
 		changeCurrency(state, action: ReduxAction<Currency>) {
 			state.currency = action.payload;
 		},
@@ -41,6 +47,6 @@ const appSettingsSlice = createSlice({
 });
 
 export default appSettingsSlice.reducer;
-export const { changeLang, changeTheme, changeCurrency } =
+export const { changeLang, changeTheme, changePopups, changeCurrency } =
 	appSettingsSlice.actions;
 export const initialAppSettings = appSettingsSlice.getInitialState();
