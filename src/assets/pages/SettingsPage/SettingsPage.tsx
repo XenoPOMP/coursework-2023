@@ -73,6 +73,7 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
 							)}
 							onClick={() => {
 								setTab(SettingsTabs.APPEARANCE);
+								setParams({});
 							}}
 						>
 							<svg
@@ -93,6 +94,7 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
 							)}
 							onClick={() => {
 								setTab(SettingsTabs.LOCALIZATION);
+								setParams({});
 							}}
 						>
 							<svg
@@ -115,6 +117,7 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
 							)}
 							onClick={() => {
 								setTab(SettingsTabs.CONFIDENTIALITY);
+								setParams({});
 							}}
 						>
 							<svg
@@ -137,6 +140,7 @@ const SettingsPage: FC<SettingsPageProps> = ({}) => {
 							)}
 							onClick={() => {
 								setTab(SettingsTabs.CHANGELOG);
+								setParams({});
 							}}
 						>
 							<svg

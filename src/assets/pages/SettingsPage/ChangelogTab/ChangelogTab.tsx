@@ -35,7 +35,7 @@ const ChangelogTab: FC<ChangelogTabProps> = ({}) => {
 
 				<div className={cn(styles.paragraphGroup)}>
 					{recordLocale.paragraphs?.map((paragraph, index) => {
-						const replacedText = paragraph.replace(/^\*/i, ' • ');
+						const replacedText = paragraph.replace(/^\*(?!\*)/i, ' • ');
 
 						// Replace text styles
 						let output: ReactNode[] = replacedText

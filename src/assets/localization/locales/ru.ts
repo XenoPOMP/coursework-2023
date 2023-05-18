@@ -449,7 +449,7 @@ const russianLocalization: Localization = {
 						},
 						paragraphs: [
 							`На сайт были добавлены эмодзи.`,
-							'* Добавлена библиотека ``react-ios-emojis``.',
+							'* Добавлена библиотека [react-ios-emojis](~https://www.npmjs.com/package/react-ios-emojis).',
 							'* Поменял отображение эмодзи на странице настроек.',
 						],
 					},
@@ -522,7 +522,23 @@ const russianLocalization: Localization = {
 							month: 5,
 							year: 2023,
 						},
-						paragraphs: ['* Добавлен переключатель всплывающих подсказок.'],
+						paragraphs: [
+							'* Добавлен [переключатель](//settings?initialTab=0) всплывающих подсказок.',
+						],
+					},
+
+					{
+						version: '1.4.2',
+						date: {
+							day: 18,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: [
+							'Обновление **PWA**.',
+							'* Добавлена иконка сайта.',
+							'* Добавлена поддержка PWA - теперь вы можете добавить сайт на главный экран телефона.',
+						],
 					},
 				],
 			],

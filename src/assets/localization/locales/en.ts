@@ -446,7 +446,7 @@ const englishLocalization: Localization = {
 						},
 						paragraphs: [
 							`Added emojis.`,
-							'* Added library ``react-ios-emojis`` that provides iOS emojis.',
+							'* Added library [react-ios-emojis](~https://www.npmjs.com/package/react-ios-emojis) that provides iOS emojis.',
 							'* Changed the emoji display on the settings page.',
 						],
 					},
@@ -519,7 +519,21 @@ const englishLocalization: Localization = {
 							month: 5,
 							year: 2023,
 						},
-						paragraphs: ['* Added popup messages switcher.'],
+						paragraphs: ['* Added popup [switcher](//settings?initialTab=0).'],
+					},
+
+					{
+						version: '1.4.2',
+						date: {
+							day: 18,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: [
+							'**PWA** update.',
+							'* Added site icons.',
+							'* Added PWA support. Now you can add site to the main screen of your phone.',
+						],
 					},
 				],
 			],
