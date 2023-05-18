@@ -37,17 +37,20 @@
       }
 
       .paragraphGroup {
+        $markVerticalPadding: .4em;
+
         font-size: 1em;
         display: flex;
         flex-direction: column;
         row-gap: .7em;
+        line-height: calc(1em + 2 * $markVerticalPadding);
 
         mark {
           background: var(--background-third);
           color: var(--sets-font-primary);
 
           border-radius: .15em;
-          padding: .25em .4em;
+          padding: .25em $markVerticalPadding;
         }
       }
 
