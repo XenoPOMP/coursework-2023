@@ -540,6 +540,19 @@ const russianLocalization: Localization = {
 							'* Добавлена поддержка PWA - теперь вы можете добавить сайт на главный экран телефона.',
 						],
 					},
+
+					{
+						version: '1.4.3',
+						date: {
+							day: 18,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: [
+							'Обновление шрифтов.',
+							'* Новый основной шрифт ``IBM Plex Sans``.',
+						],
+					},
 				],
 			],
 			datetimeLocale: 'ru-RU',
