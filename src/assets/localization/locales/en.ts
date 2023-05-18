@@ -535,6 +535,19 @@ const englishLocalization: Localization = {
 							'* Added PWA support. Now you can add site to the main screen of your phone.',
 						],
 					},
+
+					{
+						version: '1.4.3',
+						date: {
+							day: 18,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: [
+							'Font update.',
+							'* New main font - ``IBM Plex Sans``.',
+						],
+					},
 				],
 			],
 			datetimeLocale: 'en-US',
