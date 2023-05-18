@@ -1,12 +1,12 @@
 import { ChangelogRecord } from '@type/ChangelogRecord';
 import cn from 'classnames';
-import {
-	FC,
-	PropsWithChildren,
-	ReactElement,
-	ReactNode,
-	useEffect,
-} from 'react';
+import { FC, ReactNode, useContext } from 'react';
+
+import { SettingsTabs, TabContext } from '@pages/SettingsPage/SettingsPage';
+
+import ExternalLink, {
+	ExternalRouterLink,
+} from '@ui/ExternalLink/ExternalLink';
 
 import useLocalization from '@hooks/useLocalization';
 
@@ -15,6 +15,7 @@ import { ChangelogTabProps } from './ChangelogTab.props';
 
 const ChangelogTab: FC<ChangelogTabProps> = ({}) => {
 	const loc = useLocalization();
+	const [tab, setTab] = useContext(TabContext);
 
 	const Record: FC<{
 		recordLocale: ChangelogRecord;
@@ -34,11 +35,13 @@ const ChangelogTab: FC<ChangelogTabProps> = ({}) => {
 
 				<div className={cn(styles.paragraphGroup)}>
 					{recordLocale.paragraphs?.map((paragraph, index) => {
-						const replacedText = paragraph.replace(/^\*/i, ' • ');
+						const replacedText = paragraph.replace(/^\*(?!\*)/i, ' • ');
 
 						// Replace text styles
 						let output: ReactNode[] = replacedText
-							.split(/(``.*``)|(\|.*\|)|(\*\*.*\*\*)|(\/\/.*\/\/)/g)
+							.split(
+								/(``.*``)|(\|.*\|)|(\*\*.*\*\*)|(\/\/.*\/\/)|(\[.*\]\(.*\))/g
+							)
 							.map(res => {
 								// Replace `` `` with <mark/> (marked)
 								if (/(``.*``)/g.test(res)) {
@@ -62,6 +65,31 @@ const ChangelogTab: FC<ChangelogTabProps> = ({}) => {
 								// Replace // // with <i/> (italic)
 								if (/(\/\/.*\/\/)/g.test(res)) {
 									return <i>{res.replace(/(^\/\/)|(\/\/$)/g, '')}</i>;
+								}
+
+								if (/(\[.*\]\(.*\))/g.test(res)) {
+									const editedStringArray = res
+										.replace(/[\[\]\(\)]/g, '')
+										.split(/(((\/{2})|(~)).*)/gi);
+
+									const text = editedStringArray[0];
+									const link = editedStringArray[1];
+
+									// External link to other site
+									if (/^\/.*/.test(link)) {
+										return (
+											<ExternalLink href={link.replace(/^\//g, '')}>
+												{text}
+											</ExternalLink>
+										);
+									}
+
+									// Return external link
+									return (
+										<ExternalLink href={link.replace('~', '')}>
+											{text}
+										</ExternalLink>
+									);
 								}
 
 								return res;

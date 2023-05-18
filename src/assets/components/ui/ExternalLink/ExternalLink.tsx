@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { FC, PropsWithChildren } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, createSearchParams, useNavigate } from 'react-router-dom';
 
 import styles from './ExternalLink.module.scss';
 import {
@@ -28,7 +28,11 @@ const ExternalLink: FC<PropsWithChildren<ExternalLinkProps>> = ({
 	return (
 		<a
 			href={href}
-			style={style}
+			style={{
+				display: 'inline-flex',
+				margin: '0 .15em',
+				...style,
+			}}
 			onClick={callback}
 			className={cn(className, styles.link)}
 		>
@@ -45,11 +49,22 @@ const ExternalLink: FC<PropsWithChildren<ExternalLinkProps>> = ({
 export const ExternalRouterLink: FC<
 	PropsWithChildren<ExternalRouterLinkProps>
 > = ({ children, style, className, to, callback }) => {
+	const navigate = useNavigate();
+
 	return (
 		<Link
 			to={to}
-			style={style}
-			onClick={callback}
+			style={{
+				display: 'inline-flex',
+				margin: '0 .15em',
+				...style,
+			}}
+			onClick={() => {
+				// Execute callback
+				if (callback) {
+					callback();
+				}
+			}}
 			className={cn(className, styles.link)}
 		>
 			{children}
