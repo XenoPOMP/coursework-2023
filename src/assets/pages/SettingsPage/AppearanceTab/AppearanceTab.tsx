@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import { FC } from 'react';
+import { isMobile } from 'react-device-detect';
 import Emoji from 'react-ios-emojis';
 
 import SelectButton from '@ui/SelectButton/SelectButton';
@@ -55,29 +56,34 @@ const AppearanceTab: FC<AppearanceTabProps> = () => {
 				</SelectButton>
 			</SetItemBlock>
 
-			<SetItemBlock locales={loc.settingsPage.appearance.items.popups} flexWrap>
-				<SelectButton
-					isTriggered={!popups.get()}
-					onClick={() => {
-						popups.set(false);
-					}}
-					variant={'with-icon-right'}
+			{!isMobile && (
+				<SetItemBlock
+					locales={loc.settingsPage.appearance.items.popups}
+					flexWrap
 				>
-					{loc.settingsPage.appearance.items.popupVariants.prohibited}{' '}
-					<Emoji name={'prohibited'} />
-				</SelectButton>
+					<SelectButton
+						isTriggered={!popups.get()}
+						onClick={() => {
+							popups.set(false);
+						}}
+						variant={'with-icon-right'}
+					>
+						{loc.settingsPage.appearance.items.popupVariants.prohibited}{' '}
+						<Emoji name={'prohibited'} />
+					</SelectButton>
 
-				<SelectButton
-					isTriggered={popups.get()}
-					onClick={() => {
-						popups.set(true);
-					}}
-					variant={'with-icon-right'}
-				>
-					{loc.settingsPage.appearance.items.popupVariants.allowed}{' '}
-					<Emoji name={'checkMarkButton'} />
-				</SelectButton>
-			</SetItemBlock>
+					<SelectButton
+						isTriggered={popups.get()}
+						onClick={() => {
+							popups.set(true);
+						}}
+						variant={'with-icon-right'}
+					>
+						{loc.settingsPage.appearance.items.popupVariants.allowed}{' '}
+						<Emoji name={'checkMarkButton'} />
+					</SelectButton>
+				</SetItemBlock>
+			)}
 		</>
 	);
 };

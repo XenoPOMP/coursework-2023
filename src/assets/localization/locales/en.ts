@@ -519,11 +519,7 @@ const englishLocalization: Localization = {
 							month: 5,
 							year: 2023,
 						},
-						paragraphs: [
-							'* Added popup messages switcher.',
-							'* Added **easter egg**.',
-							'//Can you find it?//',
-						],
+						paragraphs: ['* Added popup messages switcher.'],
 					},
 				],
 			],
