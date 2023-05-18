@@ -40,7 +40,7 @@ const ChangelogTab: FC<ChangelogTabProps> = ({}) => {
 						let output: ReactNode[] = replacedText
 							.split(/(``.*``)|(\|.*\|)|(\*\*.*\*\*)|(\/\/.*\/\/)/g)
 							.map(res => {
-								// Replace `` `` with <mark/>
+								// Replace `` `` with <mark/> (marked)
 								if (/(``.*``)/g.test(res)) {
 									return (
 										<mark key={`fragment-${res}`}>
@@ -49,17 +49,17 @@ const ChangelogTab: FC<ChangelogTabProps> = ({}) => {
 									);
 								}
 
-								// Replace | | with <u/>
+								// Replace | | with <u/> (underscored)
 								if (/(\|.*\|)/g.test(res)) {
 									return <u>{res.replace(/(^\|)|(\|$)/gi, '')}</u>;
 								}
 
-								// Replace ** ** with <b/>
+								// Replace ** ** with <b/> (bold)
 								if (/(\*\*.*\*\*)/g.test(res)) {
 									return <b>{res.replace(/(^\*\*)|(\*\*$)/gi, '')}</b>;
 								}
 
-								// Replace // // with <i/>
+								// Replace // // with <i/> (italic)
 								if (/(\/\/.*\/\/)/g.test(res)) {
 									return <i>{res.replace(/(^\/\/)|(\/\/$)/g, '')}</i>;
 								}
