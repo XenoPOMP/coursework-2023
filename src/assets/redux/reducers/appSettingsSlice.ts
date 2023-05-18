@@ -16,7 +16,7 @@ export type AppSettings = {
 };
 
 const initialState: AppSettings = {
-	appVersion: '1.4.3',
+	appVersion: '1.4.4',
 	language: 'ru',
 	cookiePrefix: 'smart-ace',
 	theme: 'light',
