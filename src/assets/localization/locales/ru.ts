@@ -553,6 +553,16 @@ const russianLocalization: Localization = {
 							'* Новый основной шрифт ``IBM Plex Sans``.',
 						],
 					},
+
+					{
+						version: '1.4.4',
+						date: {
+							day: 18,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: ['Обновлена мобильная версия страницы настроек.'],
+					},
 				],
 			],
 			datetimeLocale: 'ru-RU',

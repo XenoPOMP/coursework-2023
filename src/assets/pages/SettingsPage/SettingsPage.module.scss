@@ -2,6 +2,7 @@
 
 .page {
   $mobileBreakpoint: 884px;
+  $sidebarDownBreakpoint: 600px;
   --sidebar-width: 416px;
 
   @media (max-width: 1300px) {
@@ -16,6 +17,13 @@
     $sidebarWidth: calc(2.2em + globalPadding(1));
 
     grid-template-columns: $sidebarWidth 1fr;
+  }
+
+  @media (max-width: $sidebarDownBreakpoint) {
+    $sidebarHeight: calc(2.2em + globalPadding(1.5));
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr $sidebarHeight;
   }
 
   @media (max-width: 692px) {
@@ -50,6 +58,7 @@
     padding-right: globalPadding(1);
     display: flex;
     flex-direction: column;
+    column-gap: globalPadding(.5);
     row-gap: globalPadding(.5);
     padding-bottom: globalPadding(1);
 
@@ -59,6 +68,21 @@
 
     @media (max-width: $mobileBreakpoint) {
       padding-right: 0;
+    }
+
+    @media (max-width: $sidebarDownBreakpoint) {
+      grid-row-start: 2;
+      width: 100%;
+      flex-direction: row;
+      overflow: hidden;
+      padding-top: globalPadding(.75);
+      padding-bottom: globalPadding(.75);
+      column-gap: globalPadding(1);
+      justify-content: center;
+
+      .item {
+        width: unset;
+      }
     }
 
     .item {

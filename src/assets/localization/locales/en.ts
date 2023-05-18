@@ -548,6 +548,16 @@ const englishLocalization: Localization = {
 							'* New main font - ``IBM Plex Sans``.',
 						],
 					},
+
+					{
+						version: '1.4.4',
+						date: {
+							day: 18,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: ['Updated mobile version of settings page.'],
+					},
 				],
 			],
 			datetimeLocale: 'en-US',
