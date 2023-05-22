@@ -1,5 +1,1 @@
 /* /index.html 200
-
-/api/* http://80.78.255.103:4200/login 200
-/api/* http://80.78.255.103:4200/session/average/:datepart 200
-/api/* http://80.78.255.103:4200/session/count/:datepart 200
