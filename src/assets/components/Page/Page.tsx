@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
+import Helmet from 'react-helmet';
 
 import Layout from '@components/Layout/Layout';
-import MetaTitle from '@components/MetaTitle/MetaTitle';
 
 import type { HeaderProps } from '@ui/Header/Header.props';
 
@@ -20,11 +20,11 @@ import type { MetaInfo } from './Page.props';
 const Page: FC<PageProps> = ({ meta, children, header }) => {
 	return (
 		<Layout header={header}>
-			<MetaTitle
-				pageTitle={meta.pageTitle}
-				pageDescription={meta.pageDescription}
-				keywords={meta.keywords}
-			/>
+			<Helmet>
+				<title>{meta.pageTitle}</title>
+				<meta name={'description'} content={meta.pageDescription} />
+				<meta name={'keywords'} content={meta.keywords} />
+			</Helmet>
 			{children}
 		</Layout>
 	);
