@@ -1,5 +1,6 @@
-import Localization from '@localization/Localization';
 import Emoji from 'react-ios-emojis';
+
+import Localization from '@localization/Localization';
 
 import blackFridayGuideBanner from '@media/images/blog/xas12dsa.png';
 
@@ -7,15 +8,21 @@ const englishLocalization: Localization = {
 	meta: {
 		mainPage: {
 			pageTitle: 'Main page',
-			pageDescription: '',
-			keywords: '',
+			pageDescription:
+				'Welcome to SmartAce! We are a company with 20 years of experience in the IT services market!',
+			keywords:
+				'smart ace,SmartAce,web development, web application development, website development, ' +
+				'web design + and development,html web development, mobile web development',
 		},
 
 		servicePage: {
 			initial: {
 				pageTitle: 'Services',
-				pageDescription: '',
-				keywords: '',
+				pageDescription:
+					'Order services on our website: landing or online store, VPS server or website hosting.',
+				keywords:
+					'smart ace,SmartAce,web development, web application development, website development, ' +
+					'web design + and development,html web development, mobile web development',
 			},
 		},
 
@@ -33,8 +40,10 @@ const englishLocalization: Localization = {
 
 		blogPage: {
 			pageTitle: 'Blog',
-			pageDescription: '',
-			keywords: '',
+			pageDescription: 'SmartAce`s blog.',
+			keywords:
+				'blog smart ace,smart ace,SmartAce,web development, web application development, website development, ' +
+				'web design + and development,html web development, mobile web development',
 		},
 
 		authForm: {
@@ -557,6 +566,16 @@ const englishLocalization: Localization = {
 							year: 2023,
 						},
 						paragraphs: ['Updated mobile version of settings page.'],
+					},
+
+					{
+						version: '1.4.5',
+						date: {
+							day: 25,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: ['SEO update.'],
 					},
 				],
 			],
