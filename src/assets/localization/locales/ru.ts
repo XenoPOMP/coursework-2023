@@ -1,5 +1,6 @@
-import Localization from '@localization/Localization';
 import Emoji from 'react-ios-emojis';
+
+import Localization from '@localization/Localization';
 
 import blackFridayGuideBanner from '@media/images/blog/xas12dsa.png';
 
@@ -7,15 +8,21 @@ const russianLocalization: Localization = {
 	meta: {
 		mainPage: {
 			pageTitle: 'Главная',
-			pageDescription: '',
-			keywords: '',
+			pageDescription:
+				'Добро пожаловать в SmartAce! Мы - компания с 20-и летним опытом работы на рынке IT-услуг!',
+			keywords:
+				'smart ace,SmartAce,веб разработка, разработка веб приложений, разработка веб сайтов, веб дизайн +и разработка, ' +
+				'веб разработка html, мобильная веб разработка',
 		},
 
 		servicePage: {
 			initial: {
 				pageTitle: 'Услуги',
-				pageDescription: '',
-				keywords: '',
+				pageDescription:
+					'Закажите услуги на нашем сайте: лендинг или интернет-магазин, VPS-сервер или хостинг сайта.',
+				keywords:
+					'smart ace,SmartAce,веб разработка, разработка веб приложений, разработка веб сайтов, веб дизайн +и разработка, ' +
+					'веб разработка html, мобильная веб разработка',
 			},
 		},
 
@@ -33,8 +40,10 @@ const russianLocalization: Localization = {
 
 		blogPage: {
 			pageTitle: 'Блог',
-			pageDescription: '',
-			keywords: '',
+			pageDescription: 'Страница блога SmartAce.',
+			keywords:
+				'блог smart ace,smart ace,SmartAce,веб разработка, разработка веб приложений, разработка веб сайтов, веб дизайн +и разработка, ' +
+				'веб разработка html, мобильная веб разработка',
 		},
 
 		authForm: {
@@ -562,6 +571,16 @@ const russianLocalization: Localization = {
 							year: 2023,
 						},
 						paragraphs: ['Обновлена мобильная версия страницы настроек.'],
+					},
+
+					{
+						version: '1.4.5',
+						date: {
+							day: 25,
+							month: 5,
+							year: 2023,
+						},
+						paragraphs: ['Обновление SEO.'],
 					},
 				],
 			],
