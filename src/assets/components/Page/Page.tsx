@@ -5,6 +5,8 @@ import Layout from '@components/Layout/Layout';
 
 import type { HeaderProps } from '@ui/Header/Header.props';
 
+import useAppSettings from '@hooks/useAppSettings';
+
 import { PageProps } from './Page.props';
 import type { MetaInfo } from './Page.props';
 
@@ -18,9 +20,15 @@ import type { MetaInfo } from './Page.props';
  * @constructor
  */
 const Page: FC<PageProps> = ({ meta, children, header }) => {
+	const { language } = useAppSettings();
+
 	return (
 		<Layout header={header}>
-			<Helmet>
+			<Helmet
+				htmlAttributes={{
+					lang: language.get(),
+				}}
+			>
 				<title>{meta.pageTitle}</title>
 				<meta name={'description'} content={meta.pageDescription} />
 				<meta name={'keywords'} content={meta.keywords} />
