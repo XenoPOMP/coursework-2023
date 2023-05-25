@@ -7,6 +7,8 @@ import { MetaTitleProps } from './MetaTitle.props';
 /**
  * Adds meta tags to head filled with your data.
  *
+ * @deprecated Template uses new type of meta tag insertion.
+ *
  * @param {string} pageTitle              title of the page that is being shown
  *                                        in browser tab.
  *
